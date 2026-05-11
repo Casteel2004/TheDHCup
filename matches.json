@@ -1,0 +1,2390 @@
+[
+  {
+    "year": "2019",
+    "format": "Best Ball",
+    "dallas": [
+      "Taylor",
+      "Travis"
+    ],
+    "houston": [
+      "Hardig",
+      "Dewey"
+    ],
+    "result": "Dallas",
+    "score": "4 & 2"
+  },
+  {
+    "year": "2019",
+    "format": "Best Ball",
+    "dallas": [
+      "Meek",
+      "Hammy"
+    ],
+    "houston": [
+      "A. Rice",
+      "Country"
+    ],
+    "result": "Dallas",
+    "score": "5 & 4"
+  },
+  {
+    "year": "2019",
+    "format": "Best Ball",
+    "dallas": [
+      "Cat",
+      "Elliott"
+    ],
+    "houston": [
+      "Law Dog",
+      "Wortsmith"
+    ],
+    "result": "Houston",
+    "score": "1 Up"
+  },
+  {
+    "year": "2019",
+    "format": "Best Ball",
+    "dallas": [
+      "Coby",
+      "Coady"
+    ],
+    "houston": [
+      "Mitchell",
+      "Hunter"
+    ],
+    "result": "Dallas",
+    "score": "5 & 3"
+  },
+  {
+    "year": "2019",
+    "format": "Best Ball",
+    "dallas": [
+      "Faulkner",
+      "Drew"
+    ],
+    "houston": [
+      "Lednicky",
+      "Stinneford"
+    ],
+    "result": "Houston",
+    "score": "5 & 4"
+  },
+  {
+    "year": "2019",
+    "format": "Best Ball",
+    "dallas": [
+      "Nugget",
+      "Sherm"
+    ],
+    "houston": [
+      "Hollywood",
+      "Hotdame"
+    ],
+    "result": "Half",
+    "score": "Half"
+  },
+  {
+    "year": "2019",
+    "format": "Singles",
+    "dallas": [
+      "Meek"
+    ],
+    "houston": [
+      "Hollywood"
+    ],
+    "result": "Dallas",
+    "score": "2 & 1"
+  },
+  {
+    "year": "2019",
+    "format": "Singles",
+    "dallas": [
+      "Taylor"
+    ],
+    "houston": [
+      "Law Dog"
+    ],
+    "result": "Houston",
+    "score": "2 & 1"
+  },
+  {
+    "year": "2019",
+    "format": "Singles",
+    "dallas": [
+      "Cat"
+    ],
+    "houston": [
+      "Dewey"
+    ],
+    "result": "Houston",
+    "score": "2 & 1"
+  },
+  {
+    "year": "2019",
+    "format": "Singles",
+    "dallas": [
+      "Coady"
+    ],
+    "houston": [
+      "Wortsmith"
+    ],
+    "result": "Dallas",
+    "score": "2 Up"
+  },
+  {
+    "year": "2019",
+    "format": "Singles",
+    "dallas": [
+      "Drew"
+    ],
+    "houston": [
+      "Hotdame"
+    ],
+    "result": "Houston",
+    "score": "6 & 5"
+  },
+  {
+    "year": "2019",
+    "format": "Singles",
+    "dallas": [
+      "Travis"
+    ],
+    "houston": [
+      "Hardig"
+    ],
+    "result": "Houston",
+    "score": "1 Up"
+  },
+  {
+    "year": "2019",
+    "format": "Singles",
+    "dallas": [
+      "Elliott"
+    ],
+    "houston": [
+      "A. Rice"
+    ],
+    "result": "Houston",
+    "score": "2 & 1"
+  },
+  {
+    "year": "2019",
+    "format": "Singles",
+    "dallas": [
+      "Coby"
+    ],
+    "houston": [
+      "Lednicky"
+    ],
+    "result": "Dallas",
+    "score": "5 & 4"
+  },
+  {
+    "year": "2019",
+    "format": "Singles",
+    "dallas": [
+      "Nugget"
+    ],
+    "houston": [
+      "Hunter"
+    ],
+    "result": "Dallas",
+    "score": "3 & 1"
+  },
+  {
+    "year": "2019",
+    "format": "Singles",
+    "dallas": [
+      "Sherm"
+    ],
+    "houston": [
+      "Country"
+    ],
+    "result": "Houston",
+    "score": "3 & 2"
+  },
+  {
+    "year": "2019",
+    "format": "Singles",
+    "dallas": [
+      "Hammy"
+    ],
+    "houston": [
+      "Mitchell"
+    ],
+    "result": "Half",
+    "score": "Half"
+  },
+  {
+    "year": "2019",
+    "format": "Singles",
+    "dallas": [
+      "Faulkner"
+    ],
+    "houston": [
+      "Stinneford"
+    ],
+    "result": "Houston",
+    "score": "6 & 5"
+  },
+  {
+    "year": "2018",
+    "format": "Scramble",
+    "dallas": [
+      "Taylor",
+      "Cat"
+    ],
+    "houston": [
+      "A. Rice",
+      "Gabe"
+    ],
+    "result": "Dallas",
+    "score": "2 & 1"
+  },
+  {
+    "year": "2018",
+    "format": "Scramble",
+    "dallas": [
+      "Coby",
+      "Elliott"
+    ],
+    "houston": [
+      "Hotdame",
+      "Hunter"
+    ],
+    "result": "Dallas",
+    "score": "3 & 2"
+  },
+  {
+    "year": "2018",
+    "format": "Scramble",
+    "dallas": [
+      "Dewey",
+      "Wortsmith"
+    ],
+    "houston": [
+      "Stinneford",
+      "Poxy"
+    ],
+    "result": "Dallas",
+    "score": "6 & 5"
+  },
+  {
+    "year": "2018",
+    "format": "Scramble",
+    "dallas": [
+      "Hamilton",
+      "Meek"
+    ],
+    "houston": [
+      "Country",
+      "Law Dog"
+    ],
+    "result": "Houston",
+    "score": "5 & 4"
+  },
+  {
+    "year": "2018",
+    "format": "Scramble",
+    "dallas": [
+      "Hammy",
+      "Coady"
+    ],
+    "houston": [
+      "Hollywood",
+      "Hardig"
+    ],
+    "result": "Houston",
+    "score": "2 & 1"
+  },
+  {
+    "year": "2018",
+    "format": "Scramble",
+    "dallas": [
+      "Sherm",
+      "Nugget"
+    ],
+    "houston": [
+      "Mitchell",
+      "Lednicky"
+    ],
+    "result": "Dallas",
+    "score": null
+  },
+  {
+    "year": "2018",
+    "format": "Singles",
+    "dallas": [
+      "M. Wright"
+    ],
+    "houston": [
+      "Gabe"
+    ],
+    "result": "Dallas",
+    "score": "3 & 2"
+  },
+  {
+    "year": "2018",
+    "format": "Singles",
+    "dallas": [
+      "Dewey"
+    ],
+    "houston": [
+      "Hardig"
+    ],
+    "result": "Houston",
+    "score": "6 & 4"
+  },
+  {
+    "year": "2018",
+    "format": "Singles",
+    "dallas": [
+      "Taylor"
+    ],
+    "houston": [
+      "Law Dog"
+    ],
+    "result": "Dallas",
+    "score": "4 & 3"
+  },
+  {
+    "year": "2018",
+    "format": "Singles",
+    "dallas": [
+      "Sherm"
+    ],
+    "houston": [
+      "Lednicky"
+    ],
+    "result": "Houston",
+    "score": "4 & 3"
+  },
+  {
+    "year": "2018",
+    "format": "Singles",
+    "dallas": [
+      "Meek"
+    ],
+    "houston": [
+      "Hunter"
+    ],
+    "result": "Dallas",
+    "score": "3 & 2"
+  },
+  {
+    "year": "2018",
+    "format": "Singles",
+    "dallas": [
+      "Coady"
+    ],
+    "houston": [
+      "A. Rice"
+    ],
+    "result": "Houston",
+    "score": "2 & 1"
+  },
+  {
+    "year": "2018",
+    "format": "Singles",
+    "dallas": [
+      "Hammy"
+    ],
+    "houston": [
+      "Country"
+    ],
+    "result": "Houston",
+    "score": "2 & 1"
+  },
+  {
+    "year": "2018",
+    "format": "Singles",
+    "dallas": [
+      "Cat"
+    ],
+    "houston": [
+      "Poxy"
+    ],
+    "result": "Dallas",
+    "score": "3 & 2"
+  },
+  {
+    "year": "2018",
+    "format": "Singles",
+    "dallas": [
+      "Wortsmith"
+    ],
+    "houston": [
+      "Stinneford"
+    ],
+    "result": "Dallas",
+    "score": "8 & 6"
+  },
+  {
+    "year": "2018",
+    "format": "Singles",
+    "dallas": [
+      "Coby"
+    ],
+    "houston": [
+      "Mitchell"
+    ],
+    "result": "Houston",
+    "score": "4 & 3"
+  },
+  {
+    "year": "2018",
+    "format": "Singles",
+    "dallas": [
+      "Nugget"
+    ],
+    "houston": [
+      "Hollywood"
+    ],
+    "result": "Half",
+    "score": "Half"
+  },
+  {
+    "year": "2018",
+    "format": "Singles",
+    "dallas": [
+      "Elliott"
+    ],
+    "houston": [
+      "Hotdame"
+    ],
+    "result": "Houston",
+    "score": "5 & 4"
+  },
+  {
+    "year": "2017",
+    "format": "Scramble",
+    "dallas": [
+      "Hammy",
+      "Coady"
+    ],
+    "houston": [
+      "Law Dog",
+      "Dusty"
+    ],
+    "result": "Half",
+    "score": "Half"
+  },
+  {
+    "year": "2017",
+    "format": "Scramble",
+    "dallas": [
+      "Elliott",
+      "Cat"
+    ],
+    "houston": [
+      "A. Rice",
+      "Country"
+    ],
+    "result": "Dallas",
+    "score": null
+  },
+  {
+    "year": "2017",
+    "format": "Scramble",
+    "dallas": [
+      "Sherm",
+      "Meek"
+    ],
+    "houston": [
+      "Hardig",
+      "Hollywood"
+    ],
+    "result": "Houston",
+    "score": null
+  },
+  {
+    "year": "2017",
+    "format": "Scramble",
+    "dallas": [
+      "Wortsmith",
+      "Faulkner"
+    ],
+    "houston": [
+      "Gabe",
+      "Poxy"
+    ],
+    "result": "Houston",
+    "score": "6 & 5"
+  },
+  {
+    "year": "2017",
+    "format": "Scramble",
+    "dallas": [
+      "Coby",
+      "Nugget"
+    ],
+    "houston": [
+      "Lednicky",
+      "Mitchell"
+    ],
+    "result": "Dallas",
+    "score": null
+  },
+  {
+    "year": "2017",
+    "format": "Scramble",
+    "dallas": [
+      "Taylor",
+      "Travis"
+    ],
+    "houston": [
+      "Hotdame",
+      "Hunter"
+    ],
+    "result": "Houston",
+    "score": null
+  },
+  {
+    "year": "2017",
+    "format": "Singles",
+    "dallas": [
+      "Faulkner"
+    ],
+    "houston": [
+      "Dusty"
+    ],
+    "result": "Houston",
+    "score": "4 & 3"
+  },
+  {
+    "year": "2017",
+    "format": "Singles",
+    "dallas": [
+      "Wortsmith"
+    ],
+    "houston": [
+      "Hardig"
+    ],
+    "result": "Houston",
+    "score": "6 & 5"
+  },
+  {
+    "year": "2017",
+    "format": "Singles",
+    "dallas": [
+      "Travis"
+    ],
+    "houston": [
+      "A. Rice"
+    ],
+    "result": "Houston",
+    "score": "4 & 3"
+  },
+  {
+    "year": "2017",
+    "format": "Singles",
+    "dallas": [
+      "Cat"
+    ],
+    "houston": [
+      "Law Dog"
+    ],
+    "result": "Houston",
+    "score": "5 & 4"
+  },
+  {
+    "year": "2017",
+    "format": "Singles",
+    "dallas": [
+      "Taylor"
+    ],
+    "houston": [
+      "Hotdame"
+    ],
+    "result": "Houston",
+    "score": "4 & 3"
+  },
+  {
+    "year": "2017",
+    "format": "Singles",
+    "dallas": [
+      "Elliott"
+    ],
+    "houston": [
+      "Hollywood"
+    ],
+    "result": "Houston",
+    "score": "8 & 7"
+  },
+  {
+    "year": "2017",
+    "format": "Singles",
+    "dallas": [
+      "Coady"
+    ],
+    "houston": [
+      "Gabe"
+    ],
+    "result": "Houston",
+    "score": "2 & 1"
+  },
+  {
+    "year": "2017",
+    "format": "Singles",
+    "dallas": [
+      "Hammy"
+    ],
+    "houston": [
+      "Hunter"
+    ],
+    "result": "Dallas",
+    "score": "6 & 5"
+  },
+  {
+    "year": "2017",
+    "format": "Singles",
+    "dallas": [
+      "Sherm"
+    ],
+    "houston": [
+      "Poxy"
+    ],
+    "result": "Dallas",
+    "score": null
+  },
+  {
+    "year": "2017",
+    "format": "Singles",
+    "dallas": [
+      "Meek"
+    ],
+    "houston": [
+      "Mitchell"
+    ],
+    "result": "Houston",
+    "score": "6 & 5"
+  },
+  {
+    "year": "2017",
+    "format": "Singles",
+    "dallas": [
+      "Coby"
+    ],
+    "houston": [
+      "Lednicky"
+    ],
+    "result": "Dallas",
+    "score": "2 & 1"
+  },
+  {
+    "year": "2017",
+    "format": "Singles",
+    "dallas": [
+      "Nugget"
+    ],
+    "houston": [
+      "Country"
+    ],
+    "result": "Dallas",
+    "score": "4 & 2"
+  },
+  {
+    "year": "2016",
+    "format": "Scramble",
+    "dallas": [
+      "Hammy",
+      "Coady"
+    ],
+    "houston": [
+      "Lednicky",
+      "Hollywood"
+    ],
+    "result": "Dallas",
+    "score": "4 & 3"
+  },
+  {
+    "year": "2016",
+    "format": "Scramble",
+    "dallas": [
+      "Coby",
+      "Meek"
+    ],
+    "houston": [
+      "Mitchell",
+      "A. Rice"
+    ],
+    "result": "Half",
+    "score": "Half"
+  },
+  {
+    "year": "2016",
+    "format": "Scramble",
+    "dallas": [
+      "Elliott",
+      "Taylor"
+    ],
+    "houston": [
+      "Hotdame",
+      "Law Dog"
+    ],
+    "result": "Dallas",
+    "score": null
+  },
+  {
+    "year": "2016",
+    "format": "Scramble",
+    "dallas": [
+      "Cat",
+      "Sherm"
+    ],
+    "houston": [
+      "Hardig",
+      "Mike W"
+    ],
+    "result": "Half",
+    "score": "Half"
+  },
+  {
+    "year": "2016",
+    "format": "Scramble",
+    "dallas": [
+      "Nugget",
+      "Travis"
+    ],
+    "houston": [
+      "Hunter",
+      "Country"
+    ],
+    "result": "Houston",
+    "score": "4 & 3"
+  },
+  {
+    "year": "2016",
+    "format": "Scramble",
+    "dallas": [
+      "Wortsmith",
+      "Faulkner"
+    ],
+    "houston": [
+      "Dusty",
+      "Poxy"
+    ],
+    "result": "Houston",
+    "score": "3 & 2"
+  },
+  {
+    "year": "2016",
+    "format": "Singles",
+    "dallas": [
+      "Travis"
+    ],
+    "houston": [
+      "Dewey"
+    ],
+    "result": "Dallas",
+    "score": "4 & 3"
+  },
+  {
+    "year": "2016",
+    "format": "Singles",
+    "dallas": [
+      "Cat"
+    ],
+    "houston": [
+      "Dusty"
+    ],
+    "result": "Dallas",
+    "score": "4 & 2"
+  },
+  {
+    "year": "2016",
+    "format": "Singles",
+    "dallas": [
+      "Coady"
+    ],
+    "houston": [
+      "Poxy"
+    ],
+    "result": "Houston",
+    "score": "6 & 5"
+  },
+  {
+    "year": "2016",
+    "format": "Singles",
+    "dallas": [
+      "Wortsmith"
+    ],
+    "houston": [
+      "Law Dog"
+    ],
+    "result": "Dallas",
+    "score": "6 & 5*"
+  },
+  {
+    "year": "2016",
+    "format": "Singles",
+    "dallas": [
+      "Taylor"
+    ],
+    "houston": [
+      "Hollywood"
+    ],
+    "result": "Houston",
+    "score": null
+  },
+  {
+    "year": "2016",
+    "format": "Singles",
+    "dallas": [
+      "Sherm"
+    ],
+    "houston": [
+      "Country"
+    ],
+    "result": "Houston",
+    "score": "7 & 5"
+  },
+  {
+    "year": "2016",
+    "format": "Singles",
+    "dallas": [
+      "Faulkner"
+    ],
+    "houston": [
+      "Hunter"
+    ],
+    "result": "Houston",
+    "score": "10 & 8"
+  },
+  {
+    "year": "2016",
+    "format": "Singles",
+    "dallas": [
+      "Hammy"
+    ],
+    "houston": [
+      "A. Rice"
+    ],
+    "result": "Houston",
+    "score": "5 & 3"
+  },
+  {
+    "year": "2016",
+    "format": "Singles",
+    "dallas": [
+      "Nugget"
+    ],
+    "houston": [
+      "Hotdame"
+    ],
+    "result": "Houston",
+    "score": "2 & 1"
+  },
+  {
+    "year": "2016",
+    "format": "Singles",
+    "dallas": [
+      "Meek"
+    ],
+    "houston": [
+      "Mike W."
+    ],
+    "result": "Dallas",
+    "score": "8 & 7"
+  },
+  {
+    "year": "2016",
+    "format": "Singles",
+    "dallas": [
+      "Coby"
+    ],
+    "houston": [
+      "Mitchell"
+    ],
+    "result": "Houston",
+    "score": "5 & 4"
+  },
+  {
+    "year": "2016",
+    "format": "Singles",
+    "dallas": [
+      "Elliott"
+    ],
+    "houston": [
+      "Lednicky"
+    ],
+    "result": "Houston",
+    "score": "4 & 3"
+  },
+  {
+    "year": "2015",
+    "format": "Scramble",
+    "dallas": [
+      "Nugget",
+      "Hammy"
+    ],
+    "houston": [
+      "Hollywood",
+      "Hunter"
+    ],
+    "result": "Half",
+    "score": "Half"
+  },
+  {
+    "year": "2015",
+    "format": "Scramble",
+    "dallas": [
+      "Sherm",
+      "Meek"
+    ],
+    "houston": [
+      "Lednicky",
+      "Hanski"
+    ],
+    "result": "Dallas",
+    "score": "3 & 2"
+  },
+  {
+    "year": "2015",
+    "format": "Scramble",
+    "dallas": [
+      "Elliott",
+      "Taylor"
+    ],
+    "houston": [
+      "Hotdame",
+      "Country"
+    ],
+    "result": "Dallas",
+    "score": "2 & 1"
+  },
+  {
+    "year": "2015",
+    "format": "Scramble",
+    "dallas": [
+      "Travis",
+      "Faulkner"
+    ],
+    "houston": [
+      "Gabe",
+      "Law Dog"
+    ],
+    "result": "Houston",
+    "score": "2 & 1"
+  },
+  {
+    "year": "2015",
+    "format": "Scramble",
+    "dallas": [
+      "Coady",
+      "Wortsmith"
+    ],
+    "houston": [
+      "Mitchell",
+      "Hardig"
+    ],
+    "result": "Houston",
+    "score": "2 & 1"
+  },
+  {
+    "year": "2015",
+    "format": "Scramble",
+    "dallas": [
+      "Coby",
+      "Cat"
+    ],
+    "houston": [
+      "A. Rice",
+      "Stinneford"
+    ],
+    "result": "Dallas",
+    "score": "6 & 5"
+  },
+  {
+    "year": "2015",
+    "format": "Singles",
+    "dallas": [
+      "Coby"
+    ],
+    "houston": [
+      "A. Rice"
+    ],
+    "result": "Houston",
+    "score": null
+  },
+  {
+    "year": "2015",
+    "format": "Singles",
+    "dallas": [
+      "Wortsmith"
+    ],
+    "houston": [
+      "Hanski"
+    ],
+    "result": "Houston",
+    "score": "4 & 3"
+  },
+  {
+    "year": "2015",
+    "format": "Singles",
+    "dallas": [
+      "Travis"
+    ],
+    "houston": [
+      "Hotdame"
+    ],
+    "result": "Houston",
+    "score": "4 & 3"
+  },
+  {
+    "year": "2015",
+    "format": "Singles",
+    "dallas": [
+      "Nugget"
+    ],
+    "houston": [
+      "Hunter"
+    ],
+    "result": "Dallas",
+    "score": null
+  },
+  {
+    "year": "2015",
+    "format": "Singles",
+    "dallas": [
+      "Elliott"
+    ],
+    "houston": [
+      "Country"
+    ],
+    "result": "Half",
+    "score": "Half"
+  },
+  {
+    "year": "2015",
+    "format": "Singles",
+    "dallas": [
+      "Hammy"
+    ],
+    "houston": [
+      "Lednicky"
+    ],
+    "result": "Houston",
+    "score": "2 & 1"
+  },
+  {
+    "year": "2015",
+    "format": "Singles",
+    "dallas": [
+      "Cat"
+    ],
+    "houston": [
+      "Mitchell"
+    ],
+    "result": "Houston",
+    "score": "7 & 5"
+  },
+  {
+    "year": "2015",
+    "format": "Singles",
+    "dallas": [
+      "Coady"
+    ],
+    "houston": [
+      "Hardig"
+    ],
+    "result": "Dallas",
+    "score": null
+  },
+  {
+    "year": "2015",
+    "format": "Singles",
+    "dallas": [
+      "Taylor"
+    ],
+    "houston": [
+      "Hollywood"
+    ],
+    "result": "Houston",
+    "score": "2 & 1"
+  },
+  {
+    "year": "2015",
+    "format": "Singles",
+    "dallas": [
+      "Faulkner"
+    ],
+    "houston": [
+      "Stinneford"
+    ],
+    "result": "Dallas",
+    "score": "3 & 2"
+  },
+  {
+    "year": "2015",
+    "format": "Singles",
+    "dallas": [
+      "Sherm"
+    ],
+    "houston": [
+      "Law Dog"
+    ],
+    "result": "Dallas",
+    "score": "2 & 1"
+  },
+  {
+    "year": "2015",
+    "format": "Singles",
+    "dallas": [
+      "Meek"
+    ],
+    "houston": [
+      "Gabe"
+    ],
+    "result": "Dallas",
+    "score": "6 & 5"
+  },
+  {
+    "year": "2014",
+    "format": "Scramble",
+    "dallas": [
+      "Roger",
+      "Travis"
+    ],
+    "houston": [
+      "Hotdame",
+      "Hollywood"
+    ],
+    "result": "Dallas",
+    "score": "3 & 1"
+  },
+  {
+    "year": "2014",
+    "format": "Scramble",
+    "dallas": [
+      "Elliott",
+      "Wortsmith"
+    ],
+    "houston": [
+      "Hanski",
+      "Country"
+    ],
+    "result": "Houston",
+    "score": "2 Up"
+  },
+  {
+    "year": "2014",
+    "format": "Scramble",
+    "dallas": [
+      "Nugget",
+      "Meek"
+    ],
+    "houston": [
+      "Mitchell",
+      "A. Rice"
+    ],
+    "result": "Houston",
+    "score": "1 Up"
+  },
+  {
+    "year": "2014",
+    "format": "Scramble",
+    "dallas": [
+      "Coady",
+      "Faulkner"
+    ],
+    "houston": [
+      "Dewey",
+      "Stinneford"
+    ],
+    "result": "Half",
+    "score": "Half"
+  },
+  {
+    "year": "2014",
+    "format": "Scramble",
+    "dallas": [
+      "Coby",
+      "Sherm"
+    ],
+    "houston": [
+      "Lednicky",
+      "Law Dog"
+    ],
+    "result": "Houston",
+    "score": "5 & 4"
+  },
+  {
+    "year": "2014",
+    "format": "Scramble",
+    "dallas": [
+      "Taylor",
+      "Mike W."
+    ],
+    "houston": [
+      "Hunter",
+      "Slocomb"
+    ],
+    "result": "Houston",
+    "score": "4 & 3"
+  },
+  {
+    "year": "2014",
+    "format": "Alt Shot",
+    "dallas": [
+      "Roger",
+      "Travis"
+    ],
+    "houston": [
+      "Slocomb",
+      "Hunter"
+    ],
+    "result": "Dallas",
+    "score": "3 & 2"
+  },
+  {
+    "year": "2014",
+    "format": "Alt Shot",
+    "dallas": [
+      "Sherm",
+      "Meek"
+    ],
+    "houston": [
+      "Law Dog",
+      "Country"
+    ],
+    "result": "Dallas",
+    "score": "2 & 1"
+  },
+  {
+    "year": "2014",
+    "format": "Alt Shot",
+    "dallas": [
+      "Taylor",
+      "Mike W."
+    ],
+    "houston": [
+      "A. Rice",
+      "Hotdame"
+    ],
+    "result": "Houston",
+    "score": "6 & 5"
+  },
+  {
+    "year": "2014",
+    "format": "Alt Shot",
+    "dallas": [
+      "Coady",
+      "Faulkner"
+    ],
+    "houston": [
+      "Dewey",
+      "Hollywood"
+    ],
+    "result": "Houston",
+    "score": "3 & 1"
+  },
+  {
+    "year": "2014",
+    "format": "Alt Shot",
+    "dallas": [
+      "Coby",
+      "Nugget"
+    ],
+    "houston": [
+      "Mitchell",
+      "Lednicky"
+    ],
+    "result": "Dallas",
+    "score": "1 Up"
+  },
+  {
+    "year": "2014",
+    "format": "Alt Shot",
+    "dallas": [
+      "Elliott",
+      "Wortsmith"
+    ],
+    "houston": [
+      "Stinneford",
+      "Hanski"
+    ],
+    "result": "Dallas",
+    "score": "4 & 2"
+  },
+  {
+    "year": "2014",
+    "format": "Singles",
+    "dallas": [
+      "Roger"
+    ],
+    "houston": [
+      "Slocomb"
+    ],
+    "result": "Dallas",
+    "score": "9 & 8"
+  },
+  {
+    "year": "2014",
+    "format": "Singles",
+    "dallas": [
+      "Travis"
+    ],
+    "houston": [
+      "Hollywood"
+    ],
+    "result": "Dallas",
+    "score": "3 & 2"
+  },
+  {
+    "year": "2014",
+    "format": "Singles",
+    "dallas": [
+      "Elliott"
+    ],
+    "houston": [
+      "A. Rice"
+    ],
+    "result": "Dallas",
+    "score": "3 & 2"
+  },
+  {
+    "year": "2014",
+    "format": "Singles",
+    "dallas": [
+      "Wortsmith"
+    ],
+    "houston": [
+      "Law Dog"
+    ],
+    "result": "Houston",
+    "score": "9 & 8"
+  },
+  {
+    "year": "2014",
+    "format": "Singles",
+    "dallas": [
+      "Nugget"
+    ],
+    "houston": [
+      "Hotdame"
+    ],
+    "result": "Houston",
+    "score": "6 & 5"
+  },
+  {
+    "year": "2014",
+    "format": "Singles",
+    "dallas": [
+      "Meek"
+    ],
+    "houston": [
+      "Mitchell"
+    ],
+    "result": "Houston",
+    "score": "3 & 2"
+  },
+  {
+    "year": "2014",
+    "format": "Singles",
+    "dallas": [
+      "Coady"
+    ],
+    "houston": [
+      "Hanski"
+    ],
+    "result": "Houston",
+    "score": null
+  },
+  {
+    "year": "2014",
+    "format": "Singles",
+    "dallas": [
+      "Faulkner"
+    ],
+    "houston": [
+      "Dewey"
+    ],
+    "result": "Houston",
+    "score": "3 & 2"
+  },
+  {
+    "year": "2014",
+    "format": "Singles",
+    "dallas": [
+      "Coby"
+    ],
+    "houston": [
+      "Lednicky"
+    ],
+    "result": "Dallas",
+    "score": "5 & 4"
+  },
+  {
+    "year": "2014",
+    "format": "Singles",
+    "dallas": [
+      "Sherm"
+    ],
+    "houston": [
+      "Stinneford"
+    ],
+    "result": "Dallas",
+    "score": "8 & 7"
+  },
+  {
+    "year": "2014",
+    "format": "Singles",
+    "dallas": [
+      "Taylor"
+    ],
+    "houston": [
+      "Hunter"
+    ],
+    "result": "Houston",
+    "score": "1 Up"
+  },
+  {
+    "year": "2014",
+    "format": "Singles",
+    "dallas": [
+      "Mike W."
+    ],
+    "houston": [
+      "Country"
+    ],
+    "result": "Houston",
+    "score": "1 Up"
+  },
+  {
+    "year": "2013",
+    "format": "Scramble",
+    "dallas": [
+      "Taylor",
+      "Travis"
+    ],
+    "houston": [
+      "Lednicky",
+      "Law Dog"
+    ],
+    "result": "Dallas",
+    "score": "4 & 2"
+  },
+  {
+    "year": "2013",
+    "format": "Scramble",
+    "dallas": [
+      "Meek",
+      "Cat"
+    ],
+    "houston": [
+      "Hanski",
+      "Country"
+    ],
+    "result": "Houston",
+    "score": "2 & 1"
+  },
+  {
+    "year": "2013",
+    "format": "Scramble",
+    "dallas": [
+      "Sherm",
+      "Hammy"
+    ],
+    "houston": [
+      "Hollywood",
+      "Hotdame"
+    ],
+    "result": "Houston",
+    "score": "5 & 4"
+  },
+  {
+    "year": "2013",
+    "format": "Scramble",
+    "dallas": [
+      "Coby",
+      "Elliott"
+    ],
+    "houston": [
+      "Gabe",
+      "Hunter"
+    ],
+    "result": "Dallas",
+    "score": "2 & 1"
+  },
+  {
+    "year": "2013",
+    "format": "Scramble",
+    "dallas": [
+      "Roger",
+      "Nugget"
+    ],
+    "houston": [
+      "Mitchell",
+      "A. Rice"
+    ],
+    "result": "Houston",
+    "score": "2 & 1"
+  },
+  {
+    "year": "2013",
+    "format": "Scramble",
+    "dallas": [
+      "Faulkner",
+      "Coady"
+    ],
+    "houston": [
+      "Hardig",
+      "Stinneford"
+    ],
+    "result": "Houston",
+    "score": "4 & 3"
+  },
+  {
+    "year": "2013",
+    "format": "Alt Shot",
+    "dallas": [
+      "Elliott",
+      "Hammy"
+    ],
+    "houston": [
+      "Country",
+      "Law Dog"
+    ],
+    "result": "Houston",
+    "score": "4 & 3"
+  },
+  {
+    "year": "2013",
+    "format": "Alt Shot",
+    "dallas": [
+      "Faulkner",
+      "Cat"
+    ],
+    "houston": [
+      "Stinneford",
+      "Hanski"
+    ],
+    "result": "Dallas",
+    "score": "10 & 8"
+  },
+  {
+    "year": "2013",
+    "format": "Alt Shot",
+    "dallas": [
+      "Taylor",
+      "Travis"
+    ],
+    "houston": [
+      "Hollywood",
+      "Hotdame"
+    ],
+    "result": "Houston",
+    "score": "3 & 2"
+  },
+  {
+    "year": "2013",
+    "format": "Alt Shot",
+    "dallas": [
+      "Meek",
+      "Roger"
+    ],
+    "houston": [
+      "Lednicky",
+      "A. Rice"
+    ],
+    "result": "Houston",
+    "score": "3 & 2"
+  },
+  {
+    "year": "2013",
+    "format": "Alt Shot",
+    "dallas": [
+      "Coby",
+      "Nugget"
+    ],
+    "houston": [
+      "Mitchell",
+      "Hunter"
+    ],
+    "result": "Dallas",
+    "score": null
+  },
+  {
+    "year": "2013",
+    "format": "Alt Shot",
+    "dallas": [
+      "Coady",
+      "Sherm"
+    ],
+    "houston": [
+      "Gabe",
+      "Hardig"
+    ],
+    "result": "Houston",
+    "score": "6 & 5"
+  },
+  {
+    "year": "2013",
+    "format": "Singles",
+    "dallas": [
+      "Hammy"
+    ],
+    "houston": [
+      "Lednicky"
+    ],
+    "result": "Houston",
+    "score": null
+  },
+  {
+    "year": "2013",
+    "format": "Singles",
+    "dallas": [
+      "Taylor"
+    ],
+    "houston": [
+      "Hotdame"
+    ],
+    "result": "Dallas",
+    "score": null
+  },
+  {
+    "year": "2013",
+    "format": "Singles",
+    "dallas": [
+      "Elliott"
+    ],
+    "houston": [
+      "Gabe"
+    ],
+    "result": "Houston",
+    "score": null
+  },
+  {
+    "year": "2013",
+    "format": "Singles",
+    "dallas": [
+      "Meek"
+    ],
+    "houston": [
+      "Hanski"
+    ],
+    "result": "Dallas",
+    "score": "5 & 4"
+  },
+  {
+    "year": "2013",
+    "format": "Singles",
+    "dallas": [
+      "Travis"
+    ],
+    "houston": [
+      "Law Dog"
+    ],
+    "result": "Dallas",
+    "score": "5 & 4"
+  },
+  {
+    "year": "2013",
+    "format": "Singles",
+    "dallas": [
+      "Faulkner"
+    ],
+    "houston": [
+      "Hollywood"
+    ],
+    "result": "Houston",
+    "score": "5 & 3"
+  },
+  {
+    "year": "2013",
+    "format": "Singles",
+    "dallas": [
+      "Roger"
+    ],
+    "houston": [
+      "Mitchell"
+    ],
+    "result": "Houston",
+    "score": "5 & 4"
+  },
+  {
+    "year": "2013",
+    "format": "Singles",
+    "dallas": [
+      "Cat"
+    ],
+    "houston": [
+      "Country"
+    ],
+    "result": "Houston",
+    "score": "5 & 4"
+  },
+  {
+    "year": "2013",
+    "format": "Singles",
+    "dallas": [
+      "Sherm"
+    ],
+    "houston": [
+      "A. Rice"
+    ],
+    "result": "Houston",
+    "score": "4 & 3"
+  },
+  {
+    "year": "2013",
+    "format": "Singles",
+    "dallas": [
+      "Nugget"
+    ],
+    "houston": [
+      "Hardig"
+    ],
+    "result": "Dallas",
+    "score": null
+  },
+  {
+    "year": "2013",
+    "format": "Singles",
+    "dallas": [
+      "Coady"
+    ],
+    "houston": [
+      "Stinneford"
+    ],
+    "result": "Houston",
+    "score": "4 & 3"
+  },
+  {
+    "year": "2013",
+    "format": "Singles",
+    "dallas": [
+      "Coby"
+    ],
+    "houston": [
+      "Hunter"
+    ],
+    "result": "Dallas",
+    "score": "5 & 4"
+  },
+  {
+    "year": "2012",
+    "format": "Scramble",
+    "dallas": [
+      "Drew",
+      "Taylor"
+    ],
+    "houston": [
+      "Country",
+      "Hanski"
+    ],
+    "result": "Dallas",
+    "score": "5 & 4"
+  },
+  {
+    "year": "2012",
+    "format": "Scramble",
+    "dallas": [
+      "Hammy",
+      "Sherm"
+    ],
+    "houston": [
+      "Gabe",
+      "Hollywood"
+    ],
+    "result": "Dallas",
+    "score": "3 & 1"
+  },
+  {
+    "year": "2012",
+    "format": "Scramble",
+    "dallas": [
+      "Meek",
+      "Cat"
+    ],
+    "houston": [
+      "Hardig",
+      "Law Dog"
+    ],
+    "result": "Dallas",
+    "score": "3 & 2"
+  },
+  {
+    "year": "2012",
+    "format": "Scramble",
+    "dallas": [
+      "Coady",
+      "Faulkner"
+    ],
+    "houston": [
+      "Wortsmith",
+      "Stinneford"
+    ],
+    "result": "Houston",
+    "score": "2 & 1"
+  },
+  {
+    "year": "2012",
+    "format": "Scramble",
+    "dallas": [
+      "Nugget",
+      "Travis"
+    ],
+    "houston": [
+      "Lednicky",
+      "A. Rice"
+    ],
+    "result": "Dallas",
+    "score": "2 & 1"
+  },
+  {
+    "year": "2012",
+    "format": "Scramble",
+    "dallas": [
+      "Coby",
+      "Elliott"
+    ],
+    "houston": [
+      "Hotdame",
+      "Hunter"
+    ],
+    "result": "Houston",
+    "score": "3 & 2"
+  },
+  {
+    "year": "2012",
+    "format": "Alt Shot",
+    "dallas": [
+      "Coady",
+      "Drew"
+    ],
+    "houston": [
+      "Gabe",
+      "Stinneford"
+    ],
+    "result": "Houston",
+    "score": null
+  },
+  {
+    "year": "2012",
+    "format": "Alt Shot",
+    "dallas": [
+      "Taylor",
+      "Elliott"
+    ],
+    "houston": [
+      "Hanski",
+      "Law Dog"
+    ],
+    "result": "Houston",
+    "score": null
+  },
+  {
+    "year": "2012",
+    "format": "Alt Shot",
+    "dallas": [
+      "Hammy",
+      "Meek"
+    ],
+    "houston": [
+      "Dewey",
+      "A. Rice"
+    ],
+    "result": "Dallas",
+    "score": "6 & 4"
+  },
+  {
+    "year": "2012",
+    "format": "Alt Shot",
+    "dallas": [
+      "Travis",
+      "Sherm"
+    ],
+    "houston": [
+      "Hollywood",
+      "Hardig"
+    ],
+    "result": "Houston",
+    "score": "5 & 4"
+  },
+  {
+    "year": "2012",
+    "format": "Alt Shot",
+    "dallas": [
+      "Cat",
+      "Faulkner"
+    ],
+    "houston": [
+      "Lednicky",
+      "Country"
+    ],
+    "result": "Houston",
+    "score": "2 & 1"
+  },
+  {
+    "year": "2012",
+    "format": "Alt Shot",
+    "dallas": [
+      "Coby",
+      "Nugget"
+    ],
+    "houston": [
+      "Hunter",
+      "Hotdame"
+    ],
+    "result": "Dallas",
+    "score": "2 & 1"
+  },
+  {
+    "year": "2012",
+    "format": "Singles",
+    "dallas": [
+      "Coby"
+    ],
+    "houston": [
+      "Hunter"
+    ],
+    "result": "Half",
+    "score": "Half"
+  },
+  {
+    "year": "2012",
+    "format": "Singles",
+    "dallas": [
+      "Travis"
+    ],
+    "houston": [
+      "Hollywood"
+    ],
+    "result": "Half",
+    "score": "Half"
+  },
+  {
+    "year": "2012",
+    "format": "Singles",
+    "dallas": [
+      "Nugget"
+    ],
+    "houston": [
+      "Hotdame"
+    ],
+    "result": "Dallas",
+    "score": "5 & 4"
+  },
+  {
+    "year": "2012",
+    "format": "Singles",
+    "dallas": [
+      "Elliott"
+    ],
+    "houston": [
+      "Wortsmith"
+    ],
+    "result": "Dallas",
+    "score": null
+  },
+  {
+    "year": "2012",
+    "format": "Singles",
+    "dallas": [
+      "Hammy"
+    ],
+    "houston": [
+      "Hardig"
+    ],
+    "result": "Dallas",
+    "score": "4 & 3"
+  },
+  {
+    "year": "2012",
+    "format": "Singles",
+    "dallas": [
+      "Cat"
+    ],
+    "houston": [
+      "Stinneford"
+    ],
+    "result": "Dallas",
+    "score": "6 & 5"
+  },
+  {
+    "year": "2012",
+    "format": "Singles",
+    "dallas": [
+      "Coady"
+    ],
+    "houston": [
+      "Dewey"
+    ],
+    "result": "Houston",
+    "score": "4 & 3"
+  },
+  {
+    "year": "2012",
+    "format": "Singles",
+    "dallas": [
+      "Taylor"
+    ],
+    "houston": [
+      "Law Dog"
+    ],
+    "result": "Dallas",
+    "score": "4 & 3"
+  },
+  {
+    "year": "2012",
+    "format": "Singles",
+    "dallas": [
+      "Faulkner"
+    ],
+    "houston": [
+      "Lednicky"
+    ],
+    "result": "Houston",
+    "score": "5 & 4"
+  },
+  {
+    "year": "2012",
+    "format": "Singles",
+    "dallas": [
+      "Sherm"
+    ],
+    "houston": [
+      "Country"
+    ],
+    "result": "Dallas",
+    "score": null
+  },
+  {
+    "year": "2012",
+    "format": "Singles",
+    "dallas": [
+      "Drew"
+    ],
+    "houston": [
+      "Gabe"
+    ],
+    "result": "Houston",
+    "score": null
+  },
+  {
+    "year": "2012",
+    "format": "Singles",
+    "dallas": [
+      "Meek"
+    ],
+    "houston": [
+      "Hanski"
+    ],
+    "result": "Dallas",
+    "score": "5 & 4"
+  },
+  {
+    "year": "2011",
+    "format": "Scramble",
+    "dallas": [
+      "Taylor",
+      "Travis"
+    ],
+    "houston": [
+      "Gabe",
+      "Country"
+    ],
+    "result": "Dallas",
+    "score": "1 Up"
+  },
+  {
+    "year": "2011",
+    "format": "Scramble",
+    "dallas": [
+      "Nugget",
+      "Sherm"
+    ],
+    "houston": [
+      "Mitchell",
+      "A. Rice"
+    ],
+    "result": "Houston",
+    "score": null
+  },
+  {
+    "year": "2011",
+    "format": "Scramble",
+    "dallas": [
+      "Faulkner",
+      "Wortsmith"
+    ],
+    "houston": [
+      "Stinneford",
+      "Schawb"
+    ],
+    "result": "Dallas",
+    "score": "1 Up"
+  },
+  {
+    "year": "2011",
+    "format": "Scramble",
+    "dallas": [
+      "Hammy",
+      "Roger"
+    ],
+    "houston": [
+      "Lednicky",
+      "Hotdame"
+    ],
+    "result": "Dallas",
+    "score": "1 Up"
+  },
+  {
+    "year": "2011",
+    "format": "Scramble",
+    "dallas": [
+      "Coby",
+      "Cat"
+    ],
+    "houston": [
+      "Hollywood",
+      "Dewey"
+    ],
+    "result": "Dallas",
+    "score": null
+  },
+  {
+    "year": "2011",
+    "format": "Scramble",
+    "dallas": [
+      "Elliott",
+      "Coady"
+    ],
+    "houston": [
+      "Law Dog",
+      "A. Jimenez"
+    ],
+    "result": "Houston",
+    "score": "5 & 4"
+  },
+  {
+    "year": "2011",
+    "format": "Alt Shot",
+    "dallas": [
+      "Taylor",
+      "Elliott"
+    ],
+    "houston": [
+      "A. Rice",
+      "A. Jimenez"
+    ],
+    "result": "Half",
+    "score": "Half"
+  },
+  {
+    "year": "2011",
+    "format": "Alt Shot",
+    "dallas": [
+      "Cat",
+      "Faulkner"
+    ],
+    "houston": [
+      "Gabe",
+      "Schawb"
+    ],
+    "result": "Houston",
+    "score": null
+  },
+  {
+    "year": "2011",
+    "format": "Alt Shot",
+    "dallas": [
+      "Wortsmith",
+      "Hammy"
+    ],
+    "houston": [
+      "Law Dog",
+      "Country"
+    ],
+    "result": "Houston",
+    "score": "2 & 1"
+  },
+  {
+    "year": "2011",
+    "format": "Alt Shot",
+    "dallas": [
+      "Roger",
+      "Travis"
+    ],
+    "houston": [
+      "Mitchell",
+      "Hotdame"
+    ],
+    "result": "Houston",
+    "score": "3 & 2"
+  },
+  {
+    "year": "2011",
+    "format": "Alt Shot",
+    "dallas": [
+      "Coady",
+      "Sherm"
+    ],
+    "houston": [
+      "Hollywood",
+      "Stinneford"
+    ],
+    "result": "Houston",
+    "score": null
+  },
+  {
+    "year": "2011",
+    "format": "Alt Shot",
+    "dallas": [
+      "Coby",
+      "Nuggett"
+    ],
+    "houston": [
+      "Lednicky",
+      "Dewey"
+    ],
+    "result": "Dallas",
+    "score": null
+  },
+  {
+    "year": "2011",
+    "format": "Singles",
+    "dallas": [
+      "Taylor"
+    ],
+    "houston": [
+      "Law Dog"
+    ],
+    "result": "Houston",
+    "score": "3 & 2"
+  },
+  {
+    "year": "2011",
+    "format": "Singles",
+    "dallas": [
+      "Cat"
+    ],
+    "houston": [
+      "Country"
+    ],
+    "result": "Half",
+    "score": "Half"
+  },
+  {
+    "year": "2011",
+    "format": "Singles",
+    "dallas": [
+      "Travis"
+    ],
+    "houston": [
+      "A. Rice"
+    ],
+    "result": "Dallas",
+    "score": "4 & 3"
+  },
+  {
+    "year": "2011",
+    "format": "Singles",
+    "dallas": [
+      "Nugget"
+    ],
+    "houston": [
+      "Hotdame"
+    ],
+    "result": "Dallas",
+    "score": null
+  },
+  {
+    "year": "2011",
+    "format": "Singles",
+    "dallas": [
+      "Sherm"
+    ],
+    "houston": [
+      "Mitchell"
+    ],
+    "result": "Houston",
+    "score": null
+  },
+  {
+    "year": "2011",
+    "format": "Singles",
+    "dallas": [
+      "Faulkner"
+    ],
+    "houston": [
+      "Hollywood"
+    ],
+    "result": "Houston",
+    "score": null
+  },
+  {
+    "year": "2011",
+    "format": "Singles",
+    "dallas": [
+      "Wortsmith"
+    ],
+    "houston": [
+      "A. Jimenez"
+    ],
+    "result": "Dallas",
+    "score": "1 Up"
+  },
+  {
+    "year": "2011",
+    "format": "Singles",
+    "dallas": [
+      "Hammy"
+    ],
+    "houston": [
+      "Gabe"
+    ],
+    "result": "Half",
+    "score": "Half"
+  },
+  {
+    "year": "2011",
+    "format": "Singles",
+    "dallas": [
+      "Roger"
+    ],
+    "houston": [
+      "Lednicky"
+    ],
+    "result": "Dallas",
+    "score": null
+  },
+  {
+    "year": "2011",
+    "format": "Singles",
+    "dallas": [
+      "Coby"
+    ],
+    "houston": [
+      "Dewey"
+    ],
+    "result": "Dallas",
+    "score": null
+  },
+  {
+    "year": "2011",
+    "format": "Singles",
+    "dallas": [
+      "Elliott"
+    ],
+    "houston": [
+      "Stinneford"
+    ],
+    "result": "Dallas",
+    "score": "6 & 5"
+  },
+  {
+    "year": "2011",
+    "format": "Singles",
+    "dallas": [
+      "Coady"
+    ],
+    "houston": [
+      "Schwab"
+    ],
+    "result": "Dallas",
+    "score": null
+  }
+]

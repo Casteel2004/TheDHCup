@@ -1,0 +1,2178 @@
+{
+  "M. Wright": [
+    {
+      "opponent": "Gabe",
+      "W": 1,
+      "L": 0,
+      "T": 0
+    }
+  ],
+  "Hardig": [
+    {
+      "opponent": "Taylor",
+      "W": 0,
+      "L": 1,
+      "T": 0
+    },
+    {
+      "opponent": "Travis",
+      "W": 2,
+      "L": 1,
+      "T": 0
+    },
+    {
+      "opponent": "Hammy",
+      "W": 1,
+      "L": 1,
+      "T": 0
+    },
+    {
+      "opponent": "Coady",
+      "W": 4,
+      "L": 1,
+      "T": 0
+    },
+    {
+      "opponent": "Dewey",
+      "W": 1,
+      "L": 0,
+      "T": 0
+    },
+    {
+      "opponent": "Sherm",
+      "W": 3,
+      "L": 0,
+      "T": 1
+    },
+    {
+      "opponent": "Meek",
+      "W": 1,
+      "L": 1,
+      "T": 0
+    },
+    {
+      "opponent": "Wortsmith",
+      "W": 2,
+      "L": 0,
+      "T": 0
+    },
+    {
+      "opponent": "Cat",
+      "W": 0,
+      "L": 1,
+      "T": 1
+    },
+    {
+      "opponent": "Faulkner",
+      "W": 1,
+      "L": 0,
+      "T": 0
+    },
+    {
+      "opponent": "Nugget",
+      "W": 0,
+      "L": 1,
+      "T": 0
+    }
+  ],
+  "Elliott": [
+    {
+      "opponent": "Law Dog",
+      "W": 1,
+      "L": 4,
+      "T": 0
+    },
+    {
+      "opponent": "Wortsmith",
+      "W": 1,
+      "L": 1,
+      "T": 0
+    },
+    {
+      "opponent": "A. Rice",
+      "W": 2,
+      "L": 1,
+      "T": 1
+    },
+    {
+      "opponent": "Hotdame",
+      "W": 3,
+      "L": 2,
+      "T": 0
+    },
+    {
+      "opponent": "Hunter",
+      "W": 2,
+      "L": 1,
+      "T": 0
+    },
+    {
+      "opponent": "Country",
+      "W": 2,
+      "L": 2,
+      "T": 1
+    },
+    {
+      "opponent": "Hollywood",
+      "W": 0,
+      "L": 1,
+      "T": 0
+    },
+    {
+      "opponent": "Lednicky",
+      "W": 0,
+      "L": 1,
+      "T": 0
+    },
+    {
+      "opponent": "Hanski",
+      "W": 1,
+      "L": 2,
+      "T": 0
+    },
+    {
+      "opponent": "Stinneford",
+      "W": 2,
+      "L": 0,
+      "T": 0
+    },
+    {
+      "opponent": "Gabe",
+      "W": 1,
+      "L": 1,
+      "T": 0
+    },
+    {
+      "opponent": "A. Jimenez",
+      "W": 0,
+      "L": 1,
+      "T": 1
+    }
+  ],
+  "A. Jimenez": [
+    {
+      "opponent": "Elliott",
+      "W": 1,
+      "L": 0,
+      "T": 1
+    },
+    {
+      "opponent": "Coady",
+      "W": 1,
+      "L": 0,
+      "T": 0
+    },
+    {
+      "opponent": "Taylor",
+      "W": 0,
+      "L": 0,
+      "T": 1
+    },
+    {
+      "opponent": "Wortsmith",
+      "W": 0,
+      "L": 1,
+      "T": 0
+    }
+  ],
+  "Hamilton": [
+    {
+      "opponent": "Country",
+      "W": 0,
+      "L": 1,
+      "T": 0
+    },
+    {
+      "opponent": "Law Dog",
+      "W": 0,
+      "L": 1,
+      "T": 0
+    }
+  ],
+  "Meek": [
+    {
+      "opponent": "A. Rice",
+      "W": 2,
+      "L": 2,
+      "T": 1
+    },
+    {
+      "opponent": "Country",
+      "W": 2,
+      "L": 2,
+      "T": 0
+    },
+    {
+      "opponent": "Hollywood",
+      "W": 1,
+      "L": 1,
+      "T": 0
+    },
+    {
+      "opponent": "Law Dog",
+      "W": 2,
+      "L": 1,
+      "T": 0
+    },
+    {
+      "opponent": "Hunter",
+      "W": 1,
+      "L": 0,
+      "T": 0
+    },
+    {
+      "opponent": "Hardig",
+      "W": 1,
+      "L": 1,
+      "T": 0
+    },
+    {
+      "opponent": "Mitchell",
+      "W": 0,
+      "L": 3,
+      "T": 1
+    },
+    {
+      "opponent": "Mike W.",
+      "W": 1,
+      "L": 0,
+      "T": 0
+    },
+    {
+      "opponent": "Lednicky",
+      "W": 1,
+      "L": 1,
+      "T": 0
+    },
+    {
+      "opponent": "Hanski",
+      "W": 3,
+      "L": 1,
+      "T": 0
+    },
+    {
+      "opponent": "Gabe",
+      "W": 1,
+      "L": 0,
+      "T": 0
+    },
+    {
+      "opponent": "Dewey",
+      "W": 1,
+      "L": 0,
+      "T": 0
+    }
+  ],
+  "Nuggett": [
+    {
+      "opponent": "Lednicky",
+      "W": 1,
+      "L": 0,
+      "T": 0
+    },
+    {
+      "opponent": "Dewey",
+      "W": 1,
+      "L": 0,
+      "T": 0
+    }
+  ],
+  "A. Rice": [
+    {
+      "opponent": "Meek",
+      "W": 2,
+      "L": 2,
+      "T": 1
+    },
+    {
+      "opponent": "Hammy",
+      "W": 1,
+      "L": 2,
+      "T": 0
+    },
+    {
+      "opponent": "Elliott",
+      "W": 1,
+      "L": 2,
+      "T": 1
+    },
+    {
+      "opponent": "Taylor",
+      "W": 1,
+      "L": 1,
+      "T": 1
+    },
+    {
+      "opponent": "Cat",
+      "W": 0,
+      "L": 3,
+      "T": 0
+    },
+    {
+      "opponent": "Coady",
+      "W": 1,
+      "L": 0,
+      "T": 0
+    },
+    {
+      "opponent": "Travis",
+      "W": 1,
+      "L": 2,
+      "T": 0
+    },
+    {
+      "opponent": "Coby",
+      "W": 1,
+      "L": 1,
+      "T": 1
+    },
+    {
+      "opponent": "Nugget",
+      "W": 3,
+      "L": 1,
+      "T": 0
+    },
+    {
+      "opponent": "Mike W.",
+      "W": 1,
+      "L": 0,
+      "T": 0
+    },
+    {
+      "opponent": "Roger",
+      "W": 2,
+      "L": 0,
+      "T": 0
+    },
+    {
+      "opponent": "Sherm",
+      "W": 2,
+      "L": 0,
+      "T": 0
+    }
+  ],
+  "Hanski": [
+    {
+      "opponent": "Sherm",
+      "W": 0,
+      "L": 1,
+      "T": 0
+    },
+    {
+      "opponent": "Meek",
+      "W": 1,
+      "L": 3,
+      "T": 0
+    },
+    {
+      "opponent": "Wortsmith",
+      "W": 2,
+      "L": 1,
+      "T": 0
+    },
+    {
+      "opponent": "Elliott",
+      "W": 2,
+      "L": 1,
+      "T": 0
+    },
+    {
+      "opponent": "Coady",
+      "W": 1,
+      "L": 0,
+      "T": 0
+    },
+    {
+      "opponent": "Cat",
+      "W": 1,
+      "L": 1,
+      "T": 0
+    },
+    {
+      "opponent": "Faulkner",
+      "W": 0,
+      "L": 1,
+      "T": 0
+    },
+    {
+      "opponent": "Drew",
+      "W": 0,
+      "L": 1,
+      "T": 0
+    },
+    {
+      "opponent": "Taylor",
+      "W": 1,
+      "L": 1,
+      "T": 0
+    }
+  ],
+  "Wortsmith": [
+    {
+      "opponent": "Cat",
+      "W": 1,
+      "L": 0,
+      "T": 0
+    },
+    {
+      "opponent": "Elliott",
+      "W": 1,
+      "L": 1,
+      "T": 0
+    },
+    {
+      "opponent": "Coady",
+      "W": 1,
+      "L": 1,
+      "T": 0
+    },
+    {
+      "opponent": "Stinneford",
+      "W": 4,
+      "L": 0,
+      "T": 0
+    },
+    {
+      "opponent": "Poxy",
+      "W": 1,
+      "L": 2,
+      "T": 0
+    },
+    {
+      "opponent": "Gabe",
+      "W": 0,
+      "L": 1,
+      "T": 0
+    },
+    {
+      "opponent": "Hardig",
+      "W": 0,
+      "L": 2,
+      "T": 0
+    },
+    {
+      "opponent": "Dusty",
+      "W": 0,
+      "L": 1,
+      "T": 0
+    },
+    {
+      "opponent": "Law Dog",
+      "W": 1,
+      "L": 2,
+      "T": 0
+    },
+    {
+      "opponent": "Mitchell",
+      "W": 0,
+      "L": 1,
+      "T": 0
+    },
+    {
+      "opponent": "Hanski",
+      "W": 1,
+      "L": 2,
+      "T": 0
+    },
+    {
+      "opponent": "Country",
+      "W": 0,
+      "L": 2,
+      "T": 0
+    },
+    {
+      "opponent": "Faulkner",
+      "W": 1,
+      "L": 0,
+      "T": 0
+    },
+    {
+      "opponent": "Schawb",
+      "W": 1,
+      "L": 0,
+      "T": 0
+    },
+    {
+      "opponent": "A. Jimenez",
+      "W": 1,
+      "L": 0,
+      "T": 0
+    }
+  ],
+  "Poxy": [
+    {
+      "opponent": "Dewey",
+      "W": 0,
+      "L": 1,
+      "T": 0
+    },
+    {
+      "opponent": "Wortsmith",
+      "W": 2,
+      "L": 1,
+      "T": 0
+    },
+    {
+      "opponent": "Cat",
+      "W": 0,
+      "L": 1,
+      "T": 0
+    },
+    {
+      "opponent": "Faulkner",
+      "W": 2,
+      "L": 0,
+      "T": 0
+    },
+    {
+      "opponent": "Sherm",
+      "W": 0,
+      "L": 1,
+      "T": 0
+    },
+    {
+      "opponent": "Coady",
+      "W": 1,
+      "L": 0,
+      "T": 0
+    }
+  ],
+  "Schwab": [
+    {
+      "opponent": "Coady",
+      "W": 0,
+      "L": 1,
+      "T": 0
+    }
+  ],
+  "Hunter": [
+    {
+      "opponent": "Coby",
+      "W": 1,
+      "L": 6,
+      "T": 1
+    },
+    {
+      "opponent": "Coady",
+      "W": 0,
+      "L": 1,
+      "T": 0
+    },
+    {
+      "opponent": "Nugget",
+      "W": 1,
+      "L": 4,
+      "T": 1
+    },
+    {
+      "opponent": "Elliott",
+      "W": 1,
+      "L": 2,
+      "T": 0
+    },
+    {
+      "opponent": "Meek",
+      "W": 0,
+      "L": 1,
+      "T": 0
+    },
+    {
+      "opponent": "Taylor",
+      "W": 3,
+      "L": 0,
+      "T": 0
+    },
+    {
+      "opponent": "Travis",
+      "W": 2,
+      "L": 1,
+      "T": 0
+    },
+    {
+      "opponent": "Hammy",
+      "W": 0,
+      "L": 1,
+      "T": 1
+    },
+    {
+      "opponent": "Faulkner",
+      "W": 1,
+      "L": 0,
+      "T": 0
+    },
+    {
+      "opponent": "Mike W.",
+      "W": 1,
+      "L": 0,
+      "T": 0
+    },
+    {
+      "opponent": "Roger",
+      "W": 0,
+      "L": 1,
+      "T": 0
+    }
+  ],
+  "Country": [
+    {
+      "opponent": "Meek",
+      "W": 2,
+      "L": 2,
+      "T": 0
+    },
+    {
+      "opponent": "Hammy",
+      "W": 3,
+      "L": 1,
+      "T": 0
+    },
+    {
+      "opponent": "Sherm",
+      "W": 2,
+      "L": 2,
+      "T": 0
+    },
+    {
+      "opponent": "Hamilton",
+      "W": 1,
+      "L": 0,
+      "T": 0
+    },
+    {
+      "opponent": "Elliott",
+      "W": 2,
+      "L": 2,
+      "T": 1
+    },
+    {
+      "opponent": "Cat",
+      "W": 3,
+      "L": 1,
+      "T": 1
+    },
+    {
+      "opponent": "Nugget",
+      "W": 1,
+      "L": 1,
+      "T": 0
+    },
+    {
+      "opponent": "Travis",
+      "W": 1,
+      "L": 1,
+      "T": 0
+    },
+    {
+      "opponent": "Taylor",
+      "W": 0,
+      "L": 3,
+      "T": 0
+    },
+    {
+      "opponent": "Wortsmith",
+      "W": 2,
+      "L": 0,
+      "T": 0
+    },
+    {
+      "opponent": "Mike W.",
+      "W": 1,
+      "L": 0,
+      "T": 0
+    },
+    {
+      "opponent": "Drew",
+      "W": 0,
+      "L": 1,
+      "T": 0
+    },
+    {
+      "opponent": "Faulkner",
+      "W": 1,
+      "L": 0,
+      "T": 0
+    }
+  ],
+  "Schawb": [
+    {
+      "opponent": "Faulkner",
+      "W": 1,
+      "L": 1,
+      "T": 0
+    },
+    {
+      "opponent": "Wortsmith",
+      "W": 0,
+      "L": 1,
+      "T": 0
+    },
+    {
+      "opponent": "Cat",
+      "W": 1,
+      "L": 0,
+      "T": 0
+    }
+  ],
+  "Lednicky": [
+    {
+      "opponent": "Faulkner",
+      "W": 3,
+      "L": 0,
+      "T": 0
+    },
+    {
+      "opponent": "Drew",
+      "W": 1,
+      "L": 0,
+      "T": 0
+    },
+    {
+      "opponent": "Coby",
+      "W": 1,
+      "L": 6,
+      "T": 0
+    },
+    {
+      "opponent": "Sherm",
+      "W": 2,
+      "L": 2,
+      "T": 0
+    },
+    {
+      "opponent": "Nugget",
+      "W": 0,
+      "L": 4,
+      "T": 0
+    },
+    {
+      "opponent": "Hammy",
+      "W": 2,
+      "L": 2,
+      "T": 0
+    },
+    {
+      "opponent": "Coady",
+      "W": 0,
+      "L": 1,
+      "T": 0
+    },
+    {
+      "opponent": "Elliott",
+      "W": 1,
+      "L": 0,
+      "T": 0
+    },
+    {
+      "opponent": "Meek",
+      "W": 1,
+      "L": 1,
+      "T": 0
+    },
+    {
+      "opponent": "Taylor",
+      "W": 0,
+      "L": 1,
+      "T": 0
+    },
+    {
+      "opponent": "Travis",
+      "W": 0,
+      "L": 2,
+      "T": 0
+    },
+    {
+      "opponent": "Roger",
+      "W": 1,
+      "L": 2,
+      "T": 0
+    },
+    {
+      "opponent": "Cat",
+      "W": 1,
+      "L": 0,
+      "T": 0
+    },
+    {
+      "opponent": "Nuggett",
+      "W": 0,
+      "L": 1,
+      "T": 0
+    }
+  ],
+  "Faulkner": [
+    {
+      "opponent": "Lednicky",
+      "W": 0,
+      "L": 3,
+      "T": 0
+    },
+    {
+      "opponent": "Stinneford",
+      "W": 3,
+      "L": 4,
+      "T": 1
+    },
+    {
+      "opponent": "Gabe",
+      "W": 0,
+      "L": 3,
+      "T": 0
+    },
+    {
+      "opponent": "Poxy",
+      "W": 0,
+      "L": 2,
+      "T": 0
+    },
+    {
+      "opponent": "Dusty",
+      "W": 0,
+      "L": 2,
+      "T": 0
+    },
+    {
+      "opponent": "Hunter",
+      "W": 0,
+      "L": 1,
+      "T": 0
+    },
+    {
+      "opponent": "Law Dog",
+      "W": 0,
+      "L": 1,
+      "T": 0
+    },
+    {
+      "opponent": "Dewey",
+      "W": 0,
+      "L": 2,
+      "T": 1
+    },
+    {
+      "opponent": "Hollywood",
+      "W": 0,
+      "L": 3,
+      "T": 0
+    },
+    {
+      "opponent": "Hardig",
+      "W": 0,
+      "L": 1,
+      "T": 0
+    },
+    {
+      "opponent": "Hanski",
+      "W": 1,
+      "L": 0,
+      "T": 0
+    },
+    {
+      "opponent": "Wortsmith",
+      "W": 0,
+      "L": 1,
+      "T": 0
+    },
+    {
+      "opponent": "Country",
+      "W": 0,
+      "L": 1,
+      "T": 0
+    },
+    {
+      "opponent": "Schawb",
+      "W": 1,
+      "L": 1,
+      "T": 0
+    }
+  ],
+  "Travis": [
+    {
+      "opponent": "Hardig",
+      "W": 1,
+      "L": 2,
+      "T": 0
+    },
+    {
+      "opponent": "Dewey",
+      "W": 2,
+      "L": 0,
+      "T": 0
+    },
+    {
+      "opponent": "Hotdame",
+      "W": 1,
+      "L": 4,
+      "T": 0
+    },
+    {
+      "opponent": "Hunter",
+      "W": 1,
+      "L": 2,
+      "T": 0
+    },
+    {
+      "opponent": "A. Rice",
+      "W": 2,
+      "L": 1,
+      "T": 0
+    },
+    {
+      "opponent": "Country",
+      "W": 1,
+      "L": 1,
+      "T": 0
+    },
+    {
+      "opponent": "Gabe",
+      "W": 1,
+      "L": 1,
+      "T": 0
+    },
+    {
+      "opponent": "Law Dog",
+      "W": 2,
+      "L": 1,
+      "T": 0
+    },
+    {
+      "opponent": "Hollywood",
+      "W": 2,
+      "L": 2,
+      "T": 1
+    },
+    {
+      "opponent": "Slocomb",
+      "W": 1,
+      "L": 0,
+      "T": 0
+    },
+    {
+      "opponent": "Lednicky",
+      "W": 2,
+      "L": 0,
+      "T": 0
+    },
+    {
+      "opponent": "Mitchell",
+      "W": 0,
+      "L": 1,
+      "T": 0
+    }
+  ],
+  "Mitchell": [
+    {
+      "opponent": "Coby",
+      "W": 2,
+      "L": 4,
+      "T": 1
+    },
+    {
+      "opponent": "Coady",
+      "W": 1,
+      "L": 1,
+      "T": 0
+    },
+    {
+      "opponent": "Hammy",
+      "W": 0,
+      "L": 0,
+      "T": 1
+    },
+    {
+      "opponent": "Sherm",
+      "W": 2,
+      "L": 1,
+      "T": 0
+    },
+    {
+      "opponent": "Nugget",
+      "W": 3,
+      "L": 4,
+      "T": 0
+    },
+    {
+      "opponent": "Meek",
+      "W": 3,
+      "L": 0,
+      "T": 1
+    },
+    {
+      "opponent": "Wortsmith",
+      "W": 1,
+      "L": 0,
+      "T": 0
+    },
+    {
+      "opponent": "Cat",
+      "W": 1,
+      "L": 0,
+      "T": 0
+    },
+    {
+      "opponent": "Roger",
+      "W": 3,
+      "L": 0,
+      "T": 0
+    },
+    {
+      "opponent": "Travis",
+      "W": 1,
+      "L": 0,
+      "T": 0
+    }
+  ],
+  "Mike W": [
+    {
+      "opponent": "Cat",
+      "W": 0,
+      "L": 0,
+      "T": 1
+    },
+    {
+      "opponent": "Sherm",
+      "W": 0,
+      "L": 0,
+      "T": 1
+    }
+  ],
+  "Roger": [
+    {
+      "opponent": "Hotdame",
+      "W": 2,
+      "L": 1,
+      "T": 0
+    },
+    {
+      "opponent": "Hollywood",
+      "W": 1,
+      "L": 0,
+      "T": 0
+    },
+    {
+      "opponent": "Slocomb",
+      "W": 2,
+      "L": 0,
+      "T": 0
+    },
+    {
+      "opponent": "Hunter",
+      "W": 1,
+      "L": 0,
+      "T": 0
+    },
+    {
+      "opponent": "Mitchell",
+      "W": 0,
+      "L": 3,
+      "T": 0
+    },
+    {
+      "opponent": "A. Rice",
+      "W": 0,
+      "L": 2,
+      "T": 0
+    },
+    {
+      "opponent": "Lednicky",
+      "W": 2,
+      "L": 1,
+      "T": 0
+    }
+  ],
+  "Cat": [
+    {
+      "opponent": "Law Dog",
+      "W": 1,
+      "L": 2,
+      "T": 0
+    },
+    {
+      "opponent": "Wortsmith",
+      "W": 0,
+      "L": 1,
+      "T": 0
+    },
+    {
+      "opponent": "Dewey",
+      "W": 1,
+      "L": 1,
+      "T": 0
+    },
+    {
+      "opponent": "A. Rice",
+      "W": 3,
+      "L": 0,
+      "T": 0
+    },
+    {
+      "opponent": "Gabe",
+      "W": 1,
+      "L": 1,
+      "T": 0
+    },
+    {
+      "opponent": "Poxy",
+      "W": 1,
+      "L": 0,
+      "T": 0
+    },
+    {
+      "opponent": "Country",
+      "W": 1,
+      "L": 3,
+      "T": 1
+    },
+    {
+      "opponent": "Hardig",
+      "W": 1,
+      "L": 0,
+      "T": 1
+    },
+    {
+      "opponent": "Mike W",
+      "W": 0,
+      "L": 0,
+      "T": 1
+    },
+    {
+      "opponent": "Dusty",
+      "W": 1,
+      "L": 0,
+      "T": 0
+    },
+    {
+      "opponent": "Stinneford",
+      "W": 3,
+      "L": 0,
+      "T": 0
+    },
+    {
+      "opponent": "Mitchell",
+      "W": 0,
+      "L": 1,
+      "T": 0
+    },
+    {
+      "opponent": "Hanski",
+      "W": 1,
+      "L": 1,
+      "T": 0
+    },
+    {
+      "opponent": "Lednicky",
+      "W": 0,
+      "L": 1,
+      "T": 0
+    },
+    {
+      "opponent": "Hollywood",
+      "W": 1,
+      "L": 0,
+      "T": 0
+    },
+    {
+      "opponent": "Schawb",
+      "W": 0,
+      "L": 1,
+      "T": 0
+    }
+  ],
+  "Dusty": [
+    {
+      "opponent": "Hammy",
+      "W": 0,
+      "L": 0,
+      "T": 1
+    },
+    {
+      "opponent": "Coady",
+      "W": 0,
+      "L": 0,
+      "T": 1
+    },
+    {
+      "opponent": "Faulkner",
+      "W": 2,
+      "L": 0,
+      "T": 0
+    },
+    {
+      "opponent": "Wortsmith",
+      "W": 1,
+      "L": 0,
+      "T": 0
+    },
+    {
+      "opponent": "Cat",
+      "W": 0,
+      "L": 1,
+      "T": 0
+    }
+  ],
+  "Hollywood": [
+    {
+      "opponent": "Nugget",
+      "W": 0,
+      "L": 0,
+      "T": 3
+    },
+    {
+      "opponent": "Sherm",
+      "W": 4,
+      "L": 1,
+      "T": 1
+    },
+    {
+      "opponent": "Meek",
+      "W": 1,
+      "L": 1,
+      "T": 0
+    },
+    {
+      "opponent": "Hammy",
+      "W": 2,
+      "L": 2,
+      "T": 1
+    },
+    {
+      "opponent": "Coady",
+      "W": 3,
+      "L": 1,
+      "T": 0
+    },
+    {
+      "opponent": "Elliott",
+      "W": 1,
+      "L": 0,
+      "T": 0
+    },
+    {
+      "opponent": "Taylor",
+      "W": 3,
+      "L": 0,
+      "T": 0
+    },
+    {
+      "opponent": "Roger",
+      "W": 0,
+      "L": 1,
+      "T": 0
+    },
+    {
+      "opponent": "Travis",
+      "W": 2,
+      "L": 2,
+      "T": 1
+    },
+    {
+      "opponent": "Faulkner",
+      "W": 3,
+      "L": 0,
+      "T": 0
+    },
+    {
+      "opponent": "Coby",
+      "W": 0,
+      "L": 1,
+      "T": 0
+    },
+    {
+      "opponent": "Cat",
+      "W": 0,
+      "L": 1,
+      "T": 0
+    }
+  ],
+  "Gabe": [
+    {
+      "opponent": "Taylor",
+      "W": 0,
+      "L": 2,
+      "T": 0
+    },
+    {
+      "opponent": "Cat",
+      "W": 1,
+      "L": 1,
+      "T": 0
+    },
+    {
+      "opponent": "M. Wright",
+      "W": 0,
+      "L": 1,
+      "T": 0
+    },
+    {
+      "opponent": "Wortsmith",
+      "W": 1,
+      "L": 0,
+      "T": 0
+    },
+    {
+      "opponent": "Faulkner",
+      "W": 3,
+      "L": 0,
+      "T": 0
+    },
+    {
+      "opponent": "Coady",
+      "W": 3,
+      "L": 0,
+      "T": 0
+    },
+    {
+      "opponent": "Travis",
+      "W": 1,
+      "L": 1,
+      "T": 0
+    },
+    {
+      "opponent": "Meek",
+      "W": 0,
+      "L": 1,
+      "T": 0
+    },
+    {
+      "opponent": "Coby",
+      "W": 0,
+      "L": 1,
+      "T": 0
+    },
+    {
+      "opponent": "Elliott",
+      "W": 1,
+      "L": 1,
+      "T": 0
+    },
+    {
+      "opponent": "Sherm",
+      "W": 1,
+      "L": 1,
+      "T": 0
+    },
+    {
+      "opponent": "Hammy",
+      "W": 0,
+      "L": 1,
+      "T": 1
+    },
+    {
+      "opponent": "Drew",
+      "W": 2,
+      "L": 0,
+      "T": 0
+    }
+  ],
+  "Hammy": [
+    {
+      "opponent": "A. Rice",
+      "W": 2,
+      "L": 1,
+      "T": 0
+    },
+    {
+      "opponent": "Country",
+      "W": 1,
+      "L": 3,
+      "T": 0
+    },
+    {
+      "opponent": "Mitchell",
+      "W": 0,
+      "L": 0,
+      "T": 1
+    },
+    {
+      "opponent": "Hollywood",
+      "W": 2,
+      "L": 2,
+      "T": 1
+    },
+    {
+      "opponent": "Hardig",
+      "W": 1,
+      "L": 1,
+      "T": 0
+    },
+    {
+      "opponent": "Law Dog",
+      "W": 0,
+      "L": 2,
+      "T": 1
+    },
+    {
+      "opponent": "Dusty",
+      "W": 0,
+      "L": 0,
+      "T": 1
+    },
+    {
+      "opponent": "Hunter",
+      "W": 1,
+      "L": 0,
+      "T": 1
+    },
+    {
+      "opponent": "Lednicky",
+      "W": 2,
+      "L": 2,
+      "T": 0
+    },
+    {
+      "opponent": "Hotdame",
+      "W": 1,
+      "L": 1,
+      "T": 0
+    },
+    {
+      "opponent": "Gabe",
+      "W": 1,
+      "L": 0,
+      "T": 1
+    },
+    {
+      "opponent": "Dewey",
+      "W": 1,
+      "L": 0,
+      "T": 0
+    }
+  ],
+  "Drew": [
+    {
+      "opponent": "Lednicky",
+      "W": 0,
+      "L": 1,
+      "T": 0
+    },
+    {
+      "opponent": "Stinneford",
+      "W": 0,
+      "L": 2,
+      "T": 0
+    },
+    {
+      "opponent": "Hotdame",
+      "W": 0,
+      "L": 1,
+      "T": 0
+    },
+    {
+      "opponent": "Country",
+      "W": 1,
+      "L": 0,
+      "T": 0
+    },
+    {
+      "opponent": "Hanski",
+      "W": 1,
+      "L": 0,
+      "T": 0
+    },
+    {
+      "opponent": "Gabe",
+      "W": 0,
+      "L": 2,
+      "T": 0
+    }
+  ],
+  "Mike W.": [
+    {
+      "opponent": "Meek",
+      "W": 0,
+      "L": 1,
+      "T": 0
+    },
+    {
+      "opponent": "Hunter",
+      "W": 0,
+      "L": 1,
+      "T": 0
+    },
+    {
+      "opponent": "Slocomb",
+      "W": 0,
+      "L": 1,
+      "T": 0
+    },
+    {
+      "opponent": "A. Rice",
+      "W": 0,
+      "L": 1,
+      "T": 0
+    },
+    {
+      "opponent": "Hotdame",
+      "W": 0,
+      "L": 1,
+      "T": 0
+    },
+    {
+      "opponent": "Country",
+      "W": 0,
+      "L": 1,
+      "T": 0
+    }
+  ],
+  "Stinneford": [
+    {
+      "opponent": "Faulkner",
+      "W": 4,
+      "L": 3,
+      "T": 1
+    },
+    {
+      "opponent": "Drew",
+      "W": 2,
+      "L": 0,
+      "T": 0
+    },
+    {
+      "opponent": "Dewey",
+      "W": 0,
+      "L": 1,
+      "T": 0
+    },
+    {
+      "opponent": "Wortsmith",
+      "W": 0,
+      "L": 4,
+      "T": 0
+    },
+    {
+      "opponent": "Coby",
+      "W": 0,
+      "L": 1,
+      "T": 0
+    },
+    {
+      "opponent": "Cat",
+      "W": 0,
+      "L": 3,
+      "T": 0
+    },
+    {
+      "opponent": "Coady",
+      "W": 5,
+      "L": 0,
+      "T": 1
+    },
+    {
+      "opponent": "Elliott",
+      "W": 0,
+      "L": 2,
+      "T": 0
+    },
+    {
+      "opponent": "Sherm",
+      "W": 1,
+      "L": 1,
+      "T": 0
+    }
+  ],
+  "Coady": [
+    {
+      "opponent": "Mitchell",
+      "W": 1,
+      "L": 1,
+      "T": 0
+    },
+    {
+      "opponent": "Hunter",
+      "W": 1,
+      "L": 0,
+      "T": 0
+    },
+    {
+      "opponent": "Wortsmith",
+      "W": 1,
+      "L": 1,
+      "T": 0
+    },
+    {
+      "opponent": "Hollywood",
+      "W": 1,
+      "L": 3,
+      "T": 0
+    },
+    {
+      "opponent": "Hardig",
+      "W": 1,
+      "L": 4,
+      "T": 0
+    },
+    {
+      "opponent": "A. Rice",
+      "W": 0,
+      "L": 1,
+      "T": 0
+    },
+    {
+      "opponent": "Law Dog",
+      "W": 0,
+      "L": 1,
+      "T": 1
+    },
+    {
+      "opponent": "Dusty",
+      "W": 0,
+      "L": 0,
+      "T": 1
+    },
+    {
+      "opponent": "Gabe",
+      "W": 0,
+      "L": 3,
+      "T": 0
+    },
+    {
+      "opponent": "Lednicky",
+      "W": 1,
+      "L": 0,
+      "T": 0
+    },
+    {
+      "opponent": "Poxy",
+      "W": 0,
+      "L": 1,
+      "T": 0
+    },
+    {
+      "opponent": "Dewey",
+      "W": 0,
+      "L": 2,
+      "T": 1
+    },
+    {
+      "opponent": "Stinneford",
+      "W": 0,
+      "L": 5,
+      "T": 1
+    },
+    {
+      "opponent": "Hanski",
+      "W": 0,
+      "L": 1,
+      "T": 0
+    },
+    {
+      "opponent": "A. Jimenez",
+      "W": 0,
+      "L": 1,
+      "T": 0
+    },
+    {
+      "opponent": "Schwab",
+      "W": 1,
+      "L": 0,
+      "T": 0
+    }
+  ],
+  "Hotdame": [
+    {
+      "opponent": "Nugget",
+      "W": 2,
+      "L": 3,
+      "T": 1
+    },
+    {
+      "opponent": "Sherm",
+      "W": 1,
+      "L": 0,
+      "T": 1
+    },
+    {
+      "opponent": "Drew",
+      "W": 1,
+      "L": 0,
+      "T": 0
+    },
+    {
+      "opponent": "Coby",
+      "W": 1,
+      "L": 2,
+      "T": 0
+    },
+    {
+      "opponent": "Elliott",
+      "W": 2,
+      "L": 3,
+      "T": 0
+    },
+    {
+      "opponent": "Taylor",
+      "W": 4,
+      "L": 3,
+      "T": 0
+    },
+    {
+      "opponent": "Travis",
+      "W": 4,
+      "L": 1,
+      "T": 0
+    },
+    {
+      "opponent": "Roger",
+      "W": 1,
+      "L": 2,
+      "T": 0
+    },
+    {
+      "opponent": "Mike W.",
+      "W": 1,
+      "L": 0,
+      "T": 0
+    },
+    {
+      "opponent": "Hammy",
+      "W": 1,
+      "L": 1,
+      "T": 0
+    }
+  ],
+  "Taylor": [
+    {
+      "opponent": "Hardig",
+      "W": 1,
+      "L": 0,
+      "T": 0
+    },
+    {
+      "opponent": "Dewey",
+      "W": 1,
+      "L": 0,
+      "T": 0
+    },
+    {
+      "opponent": "Law Dog",
+      "W": 4,
+      "L": 3,
+      "T": 0
+    },
+    {
+      "opponent": "A. Rice",
+      "W": 1,
+      "L": 1,
+      "T": 1
+    },
+    {
+      "opponent": "Gabe",
+      "W": 2,
+      "L": 0,
+      "T": 0
+    },
+    {
+      "opponent": "Hotdame",
+      "W": 3,
+      "L": 4,
+      "T": 0
+    },
+    {
+      "opponent": "Hunter",
+      "W": 0,
+      "L": 3,
+      "T": 0
+    },
+    {
+      "opponent": "Hollywood",
+      "W": 0,
+      "L": 3,
+      "T": 0
+    },
+    {
+      "opponent": "Country",
+      "W": 3,
+      "L": 0,
+      "T": 0
+    },
+    {
+      "opponent": "Slocomb",
+      "W": 0,
+      "L": 1,
+      "T": 0
+    },
+    {
+      "opponent": "Lednicky",
+      "W": 1,
+      "L": 0,
+      "T": 0
+    },
+    {
+      "opponent": "Hanski",
+      "W": 1,
+      "L": 1,
+      "T": 0
+    },
+    {
+      "opponent": "A. Jimenez",
+      "W": 0,
+      "L": 0,
+      "T": 1
+    }
+  ],
+  "Coby": [
+    {
+      "opponent": "Mitchell",
+      "W": 4,
+      "L": 2,
+      "T": 1
+    },
+    {
+      "opponent": "Hunter",
+      "W": 6,
+      "L": 1,
+      "T": 1
+    },
+    {
+      "opponent": "Lednicky",
+      "W": 6,
+      "L": 1,
+      "T": 0
+    },
+    {
+      "opponent": "Hotdame",
+      "W": 2,
+      "L": 1,
+      "T": 0
+    },
+    {
+      "opponent": "A. Rice",
+      "W": 1,
+      "L": 1,
+      "T": 1
+    },
+    {
+      "opponent": "Stinneford",
+      "W": 1,
+      "L": 0,
+      "T": 0
+    },
+    {
+      "opponent": "Law Dog",
+      "W": 0,
+      "L": 1,
+      "T": 0
+    },
+    {
+      "opponent": "Gabe",
+      "W": 1,
+      "L": 0,
+      "T": 0
+    },
+    {
+      "opponent": "Hollywood",
+      "W": 1,
+      "L": 0,
+      "T": 0
+    },
+    {
+      "opponent": "Dewey",
+      "W": 3,
+      "L": 0,
+      "T": 0
+    }
+  ],
+  "Law Dog": [
+    {
+      "opponent": "Cat",
+      "W": 2,
+      "L": 1,
+      "T": 0
+    },
+    {
+      "opponent": "Elliott",
+      "W": 4,
+      "L": 1,
+      "T": 0
+    },
+    {
+      "opponent": "Taylor",
+      "W": 3,
+      "L": 4,
+      "T": 0
+    },
+    {
+      "opponent": "Hamilton",
+      "W": 1,
+      "L": 0,
+      "T": 0
+    },
+    {
+      "opponent": "Meek",
+      "W": 1,
+      "L": 2,
+      "T": 0
+    },
+    {
+      "opponent": "Hammy",
+      "W": 2,
+      "L": 0,
+      "T": 1
+    },
+    {
+      "opponent": "Coady",
+      "W": 1,
+      "L": 0,
+      "T": 1
+    },
+    {
+      "opponent": "Wortsmith",
+      "W": 2,
+      "L": 1,
+      "T": 0
+    },
+    {
+      "opponent": "Travis",
+      "W": 1,
+      "L": 2,
+      "T": 0
+    },
+    {
+      "opponent": "Faulkner",
+      "W": 1,
+      "L": 0,
+      "T": 0
+    },
+    {
+      "opponent": "Sherm",
+      "W": 1,
+      "L": 2,
+      "T": 0
+    },
+    {
+      "opponent": "Coby",
+      "W": 1,
+      "L": 0,
+      "T": 0
+    }
+  ],
+  "Sherm": [
+    {
+      "opponent": "Hollywood",
+      "W": 1,
+      "L": 4,
+      "T": 1
+    },
+    {
+      "opponent": "Hotdame",
+      "W": 0,
+      "L": 1,
+      "T": 1
+    },
+    {
+      "opponent": "Country",
+      "W": 2,
+      "L": 2,
+      "T": 0
+    },
+    {
+      "opponent": "Mitchell",
+      "W": 1,
+      "L": 2,
+      "T": 0
+    },
+    {
+      "opponent": "Lednicky",
+      "W": 2,
+      "L": 2,
+      "T": 0
+    },
+    {
+      "opponent": "Hardig",
+      "W": 0,
+      "L": 3,
+      "T": 1
+    },
+    {
+      "opponent": "Poxy",
+      "W": 1,
+      "L": 0,
+      "T": 0
+    },
+    {
+      "opponent": "Mike W",
+      "W": 0,
+      "L": 0,
+      "T": 1
+    },
+    {
+      "opponent": "Hanski",
+      "W": 1,
+      "L": 0,
+      "T": 0
+    },
+    {
+      "opponent": "Law Dog",
+      "W": 2,
+      "L": 1,
+      "T": 0
+    },
+    {
+      "opponent": "Stinneford",
+      "W": 1,
+      "L": 1,
+      "T": 0
+    },
+    {
+      "opponent": "Gabe",
+      "W": 1,
+      "L": 1,
+      "T": 0
+    },
+    {
+      "opponent": "A. Rice",
+      "W": 0,
+      "L": 2,
+      "T": 0
+    }
+  ],
+  "Nugget": [
+    {
+      "opponent": "Hollywood",
+      "W": 0,
+      "L": 0,
+      "T": 3
+    },
+    {
+      "opponent": "Hotdame",
+      "W": 3,
+      "L": 2,
+      "T": 1
+    },
+    {
+      "opponent": "Hunter",
+      "W": 4,
+      "L": 1,
+      "T": 1
+    },
+    {
+      "opponent": "Mitchell",
+      "W": 4,
+      "L": 3,
+      "T": 0
+    },
+    {
+      "opponent": "Lednicky",
+      "W": 4,
+      "L": 0,
+      "T": 0
+    },
+    {
+      "opponent": "Country",
+      "W": 1,
+      "L": 1,
+      "T": 0
+    },
+    {
+      "opponent": "A. Rice",
+      "W": 1,
+      "L": 3,
+      "T": 0
+    },
+    {
+      "opponent": "Hardig",
+      "W": 1,
+      "L": 0,
+      "T": 0
+    }
+  ],
+  "Dewey": [
+    {
+      "opponent": "Taylor",
+      "W": 0,
+      "L": 1,
+      "T": 0
+    },
+    {
+      "opponent": "Travis",
+      "W": 0,
+      "L": 2,
+      "T": 0
+    },
+    {
+      "opponent": "Cat",
+      "W": 1,
+      "L": 1,
+      "T": 0
+    },
+    {
+      "opponent": "Stinneford",
+      "W": 1,
+      "L": 0,
+      "T": 0
+    },
+    {
+      "opponent": "Poxy",
+      "W": 1,
+      "L": 0,
+      "T": 0
+    },
+    {
+      "opponent": "Hardig",
+      "W": 0,
+      "L": 1,
+      "T": 0
+    },
+    {
+      "opponent": "Coady",
+      "W": 2,
+      "L": 0,
+      "T": 1
+    },
+    {
+      "opponent": "Faulkner",
+      "W": 2,
+      "L": 0,
+      "T": 1
+    },
+    {
+      "opponent": "Hammy",
+      "W": 0,
+      "L": 1,
+      "T": 0
+    },
+    {
+      "opponent": "Meek",
+      "W": 0,
+      "L": 1,
+      "T": 0
+    },
+    {
+      "opponent": "Coby",
+      "W": 0,
+      "L": 3,
+      "T": 0
+    },
+    {
+      "opponent": "Nuggett",
+      "W": 0,
+      "L": 1,
+      "T": 0
+    }
+  ],
+  "Slocomb": [
+    {
+      "opponent": "Taylor",
+      "W": 1,
+      "L": 0,
+      "T": 0
+    },
+    {
+      "opponent": "Mike W.",
+      "W": 1,
+      "L": 0,
+      "T": 0
+    },
+    {
+      "opponent": "Roger",
+      "W": 0,
+      "L": 2,
+      "T": 0
+    },
+    {
+      "opponent": "Travis",
+      "W": 0,
+      "L": 1,
+      "T": 0
+    }
+  ]
+}
