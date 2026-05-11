@@ -34,7 +34,9 @@ fetch('blowouts.json')
     if (top) {
       document.getElementById('blowouts').innerHTML =
         `<h2>💀 Worst Beatdown</h2>
-         <p>${top.dallas.join(' / ')} vs ${top.houston.join(' / ')}</p>
+       <p>${top.dallas.join(' / ')} vs ${top.houston.join(' / ')}</p>
+<p>Winner: ${top.result === 'Dallas' ? 'Dallas Team' : 'Houston Team'}</p>
+``
          <p>${top.score} (${top.year})</p>`;
     }
   });
