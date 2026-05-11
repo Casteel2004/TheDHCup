@@ -32,6 +32,20 @@
       color: #ccc;
       font-size: 14px;
     }
+
+    .link {
+      margin-top: 20px;
+    }
+
+    a {
+      color: #38bdf8;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
   </style>
 </head>
 
@@ -42,10 +56,17 @@
 <div class="card" id="blowouts">Loading beatdowns...</div>
 <div class="card" id="rivalries">Loading rivalries...</div>
 
+<!-- ✅ THIS IS YOUR LINK (now permanent) -->
+<div class="link">
+  <p>
+    <a href="blowouts.html">💀 View Full Beatdown List →</a>
+  </p>
+</div>
+
 <script>
 
 // ======================
-// 💀 BLOWOUT (FIXED PROPERLY)
+// 💀 BLOWOUT (STABLE VERSION)
 // ======================
 
 fetch('blowouts.json')
@@ -54,7 +75,6 @@ fetch('blowouts.json')
 
     let valid = null;
 
-    // find FIRST valid blowout
     for (let m of data) {
       if (
         m &&
@@ -91,7 +111,7 @@ fetch('blowouts.json')
 
 
 // ======================
-// 😈 RIVALRY (YOUR WORKING VERSION)
+// 😈 RIVALRY (WORKING VERSION)
 // ======================
 
 fetch('rivalries.json')
