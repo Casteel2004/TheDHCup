@@ -26,6 +26,12 @@
       font-size: 18px;
       font-weight: bold;
     }
+
+    .sub {
+      font-size: 14px;
+      color: #ccc;
+    }
+
   </style>
 </head>
 
@@ -45,6 +51,9 @@ fetch('blowouts.json')
 
     data.forEach((m, i) => {
 
+      // SAFETY (avoid broken rows)
+      if (!m.dallas || !m.houston || !m.result) return;
+
       let winner = m.result === "Dallas"
         ? m.dallas.join(" / ")
         : m.houston.join(" / ");
@@ -55,8 +64,9 @@ fetch('blowouts.json')
 
       html += `
         <div class="row">
-          <p class="big">#${i+1} ${winner} destroyed ${loser}</p>
+          <p class="big">#${i+1} ${winner} DESTROYED ${loser}</p>
           <p>${m.score} (${m.year})</p>
+          <p class="sub">${m.format ? m.format : "Format not recorded"}</p>
         </div>`;
     });
 
