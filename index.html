@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>DH Cup Leaderboard 💀</title>
+  <title>DH Cup 💀 Savage Mode</title>
   <style>
     body {
       font-family: Arial;
@@ -23,25 +23,35 @@
 
 <h1>🏆 DH Cup – Savage Mode</h1>
 
-<div class="card">
-  <h2>💀 Biggest Beatdown</h2>
-  <p>Faulkner destroyed Hunter (10 & 8)</p>
-</div>
+<div class="card" id="blowouts"></div>
+<div class="card" id="rivalries"></div>
 
-<div class="card">
-  <h2>😈 Rivalries</h2>
-  <p>Hotdame OWNS Mitchell</p>
-</div>
+<script>
+fetch('blowouts.json')
+  .then(res => res.json())
+  .then(data => {
+    const top = data[0];
+    if (top) {
+      document.getElementById('blowouts').innerHTML =
+        `<h2>💀 Worst Beatdown</h2>
+         <p>${top.dallas.join(' / ')} vs ${top.houston.join(' / ')}</p>
+         <p>${top.score} (${top.year})</p>`;
+    }
+  });
 
-<div class="card">
-  <h2>🤝 Toxic Pairing</h2>
-  <p>Whoever lost most recently 😬</p>
-</div>
+fetch('rivalries.json')
+  .then(res => res.json())
+  .then(data => {
+    const players = Object.keys(data);
+    const p = players[0];
+    const rival = data[p][0];
 
-<div class="card">
-  <h2>🏆 GOAT</h2>
-  <p>Determined by wins… and group chat reputation</p>
-</div>
+    document.getElementById('rivalries').innerHTML =
+      `<h2>😈 Rivalry</h2>
+       <p>${p} vs ${rival.opponent}</p>
+       <p>${p}: ${rival.W}-${rival.L}-${rival.T}</p>`;
+  });
+</script>
 
 </body>
 </html>
