@@ -1,7 +1,4 @@
 
-<a href="blowouts.html" style="color:#38bdf8;">View Full Beatdown List →</a>
-``
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -14,10 +11,7 @@
       text-align: center;
     }
 
-    h1 {
-      color: #38bdf8;
-      margin-bottom: 30px;
-    }
+    h1 { color: #38bdf8; }
 
     .card {
       background: #121a2b;
@@ -45,45 +39,60 @@
 
 <h1>🏆 DH Cup – Savage Mode 💀</h1>
 
-<div class="card" id="blowouts"></div>
-<div class="card" id="rivalries"></div>
+<div class="card" id="blowouts">Loading beatdowns...</div>
+<div class="card" id="rivalries">Loading rivalries...</div>
 
 <script>
 
-// ----------------------
-// 💀 BLOWOUT LOGIC
-// ----------------------
+// ======================
+// 💀 BLOWOUT (FIXED PROPERLY)
+// ======================
 
 fetch('blowouts.json')
   .then(res => res.json())
   .then(data => {
 
-    let top = data[0];
+    let valid = null;
 
-    if (top) {
-
-      let winnerTeam =
-        top.result === "Dallas"
-          ? top.dallas.join(" / ")
-          : top.houston.join(" / ");
-
-      let loserTeam =
-        top.result === "Dallas"
-          ? top.houston.join(" / ")
-          : top.dallas.join(" / ");
-
-      document.getElementById('blowouts').innerHTML =
-        `<h2>💀 Worst Beatdown</h2>
-         <p class="big">${winnerTeam} DESTROYED ${loserTeam}</p>
-         <p>${top.score} (${top.year})</p>
-         <p class="sub">Somebody check on them...</p>`;
+    // find FIRST valid blowout
+    for (let m of data) {
+      if (
+        m &&
+        m.dallas && m.dallas.length &&
+        m.houston && m.houston.length &&
+        m.score &&
+        m.result
+      ) {
+        valid = m;
+        break;
+      }
     }
+
+    if (!valid) {
+      document.getElementById('blowouts').innerHTML =
+        "<h2>💀 Worst Beatdown</h2><p>No valid data found</p>";
+      return;
+    }
+
+    let winner = valid.result === "Dallas"
+      ? valid.dallas.join(" / ")
+      : valid.houston.join(" / ");
+
+    let loser = valid.result === "Dallas"
+      ? valid.houston.join(" / ")
+      : valid.dallas.join(" / ");
+
+    document.getElementById('blowouts').innerHTML =
+      `<h2>💀 Worst Beatdown</h2>
+       <p class="big">${winner} DESTROYED ${loser}</p>
+       <p>${valid.score} (${valid.year})</p>
+       <p class="sub">No mercy was shown.</p>`;
   });
 
 
-// ----------------------
-// 😈 RIVALRY LOGIC
-// ----------------------
+// ======================
+// 😈 RIVALRY (YOUR WORKING VERSION)
+// ======================
 
 fetch('rivalries.json')
   .then(res => res.json())
@@ -110,23 +119,19 @@ fetch('rivalries.json')
       });
     });
 
-    if (best) {
+    let label = best.diff > 0
+      ? "OWNS"
+      : "IS OWNED BY";
 
-      let label = best.diff > 0
-        ? "OWNS"
-        : "IS OWNED BY";
+    let note = best.diff > 0
+      ? "Rent free living situation"
+      : "This matchup is NOT competitive";
 
-      let savageNote = best.diff > 0
-        ? "Rent free living situation"
-        : "This matchup is NOT competitive";
-
-      document.getElementById('rivalries').innerHTML =
-        `<h2>😈 Most One-Sided Rivalry</h2>
-         <p class="big">${best.player} ${label} ${best.opponent}</p>
-         <p>${best.W}-${best.L}-${best.T}</p>
-         <p class="sub">${savageNote}</p>`;
-    }
-
+    document.getElementById('rivalries').innerHTML =
+      `<h2>😈 Most One-Sided Rivalry</h2>
+       <p class="big">${best.player} ${label} ${best.opponent}</p>
+       <p>${best.W}-${best.L}-${best.T}</p>
+       <p class="sub">${note}</p>`;
   });
 
 </script>
