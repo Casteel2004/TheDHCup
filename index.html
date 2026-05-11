@@ -4,14 +4,48 @@
 <head>
   <title>DH Cup 💀 Savage Mode</title>
   <style>
+
     body {
       font-family: Arial;
       background: #0b1220;
       color: white;
       text-align: center;
+      margin: 0;
     }
 
-    h1 { color: #38bdf8; }
+    h1 {
+      color: #38bdf8;
+      margin-top: 20px;
+    }
+
+    .header {
+      padding: 20px;
+    }
+
+    .intro {
+      max-width: 600px;
+      margin: 0 auto;
+      color: #ccc;
+    }
+
+    .nav {
+      margin: 25px 0;
+    }
+
+    .nav a {
+      margin: 10px;
+      padding: 10px 15px;
+      background: #121a2b;
+      border-radius: 8px;
+      text-decoration: none;
+      color: #38bdf8;
+      font-weight: bold;
+      display: inline-block;
+    }
+
+    .nav a:hover {
+      background: #1e293b;
+    }
 
     .card {
       background: #121a2b;
@@ -33,40 +67,46 @@
       font-size: 14px;
     }
 
-    .link {
-      margin-top: 20px;
-    }
-
-    a {
+    .section-title {
+      margin-top: 40px;
+      font-size: 20px;
       color: #38bdf8;
-      text-decoration: none;
-      font-weight: bold;
     }
 
-    a:hover {
-      text-decoration: underline;
-    }
   </style>
 </head>
 
 <body>
 
-<h1>🏆 DH Cup – Savage Mode 💀</h1>
+<!-- ✅ HEADER -->
+<div class="header">
+  <h1>🏆 DH Cup – Savage Mode 💀</h1>
+  <p class="intro">
+    The official (and brutally honest) record of DH Cup history.
+    Every win remembered. Every loss documented. No excuses.
+  </p>
+</div>
+
+<!-- ✅ NAVIGATION -->
+<div class="nav">
+  <a href="blowouts.html">💀 Top Beatdowns</a>
+  <!-- future pages -->
+  <!-- <a href="rivalries.html">😈 Rivalries</a> -->
+  <!-- <a href="partners.html">🤝 Partners</a> -->
+</div>
+
+<!-- ✅ FEATURED STATS -->
+<div class="section-title">
+  🔥 Featured Receipts
+</div>
 
 <div class="card" id="blowouts">Loading beatdowns...</div>
 <div class="card" id="rivalries">Loading rivalries...</div>
 
-<!-- ✅ THIS IS YOUR LINK (now permanent) -->
-<div class="link">
-  <p>
-    <a href="blowouts.html">💀 View Full Beatdown List →</a>
-  </p>
-</div>
-
 <script>
 
 // ======================
-// 💀 BLOWOUT (STABLE VERSION)
+// 💀 BLOWOUT (WITH FORMAT)
 // ======================
 
 fetch('blowouts.json')
@@ -106,12 +146,12 @@ fetch('blowouts.json')
       `<h2>💀 Worst Beatdown</h2>
        <p class="big">${winner} DESTROYED ${loser}</p>
        <p>${valid.score} (${valid.year})</p>
-       <p class="sub">No mercy was shown.</p>`;
+       <p class="sub">${valid.format || "Format unknown"}</p>`;
   });
 
 
 // ======================
-// 😈 RIVALRY (WORKING VERSION)
+// 😈 RIVALRY
 // ======================
 
 fetch('rivalries.json')
