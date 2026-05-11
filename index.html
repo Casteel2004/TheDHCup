@@ -10,37 +10,77 @@
       color: white;
       text-align: center;
     }
-    h1 { color: #38bdf8; }
+
+    h1 {
+      color: #38bdf8;
+      margin-bottom: 30px;
+    }
+
     .card {
       background: #121a2b;
-      margin: 20px;
+      margin: 20px auto;
       padding: 20px;
-      border-radius: 10px;
+      border-radius: 12px;
+      width: 80%;
+      max-width: 600px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    }
+
+    .big {
+      font-size: 22px;
+      font-weight: bold;
+    }
+
+    .sub {
+      color: #ccc;
+      font-size: 14px;
     }
   </style>
 </head>
+
 <body>
 
-<h1>🏆 DH Cup – Savage Mode</h1>
+<h1>🏆 DH Cup – Savage Mode 💀</h1>
 
 <div class="card" id="blowouts"></div>
 <div class="card" id="rivalries"></div>
 
 <script>
+
+// ----------------------
+// 💀 BLOWOUT LOGIC
+// ----------------------
+
 fetch('blowouts.json')
   .then(res => res.json())
   .then(data => {
-    const top = data[0];
+
+    let top = data[0];
+
     if (top) {
+
+      let winnerTeam =
+        top.result === "Dallas"
+          ? top.dallas.join(" / ")
+          : top.houston.join(" / ");
+
+      let loserTeam =
+        top.result === "Dallas"
+          ? top.houston.join(" / ")
+          : top.dallas.join(" / ");
+
       document.getElementById('blowouts').innerHTML =
         `<h2>💀 Worst Beatdown</h2>
-       <p>${top.dallas.join(' / ')} vs ${top.houston.join(' / ')}</p>
-<p>Winner: ${top.result === 'Dallas' ? 'Dallas Team' : 'Houston Team'}</p>
-``
-         <p>${top.score} (${top.year})</p>`;
+         <p class="big">${winnerTeam} DESTROYED ${loserTeam}</p>
+         <p>${top.score} (${top.year})</p>
+         <p class="sub">Somebody check on them...</p>`;
     }
   });
 
+
+// ----------------------
+// 😈 RIVALRY LOGIC
+// ----------------------
 
 fetch('rivalries.json')
   .then(res => res.json())
@@ -50,7 +90,8 @@ fetch('rivalries.json')
 
     Object.keys(data).forEach(player => {
       data[player].forEach(r => {
-        const diff = r.W - r.L;
+
+        let diff = r.W - r.L;
 
         if (!best || Math.abs(diff) > Math.abs(best.diff)) {
           best = {
@@ -62,21 +103,28 @@ fetch('rivalries.json')
             T: r.T
           };
         }
+
       });
     });
 
     if (best) {
-      const label = best.diff > 0
+
+      let label = best.diff > 0
         ? "OWNS"
-        : "OWNED BY";
+        : "IS OWNED BY";
+
+      let savageNote = best.diff > 0
+        ? "Rent free living situation"
+        : "This matchup is NOT competitive";
 
       document.getElementById('rivalries').innerHTML =
-        `<h2>😈 Rivalry</h2>
-         <p><strong>${best.player}</strong> ${label} ${best.opponent}</p>
-         <p>${best.W}-${best.L}-${best.T}</p>`;
+        `<h2>😈 Most One-Sided Rivalry</h2>
+         <p class="big">${best.player} ${label} ${best.opponent}</p>
+         <p>${best.W}-${best.L}-${best.T}</p>
+         <p class="sub">${savageNote}</p>`;
     }
+
   });
-``
 
 </script>
 
