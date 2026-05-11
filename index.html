@@ -41,18 +41,43 @@ fetch('blowouts.json')
     }
   });
 
+
 fetch('rivalries.json')
   .then(res => res.json())
   .then(data => {
-    const players = Object.keys(data);
-    const p = players[0];
-    const rival = data[p][0];
 
-    document.getElementById('rivalries').innerHTML =
-      `<h2>😈 Rivalry</h2>
-       <p>${p} vs ${rival.opponent}</p>
-       <p>${p}: ${rival.W}-${rival.L}-${rival.T}</p>`;
+    let best = null;
+
+    Object.keys(data).forEach(player => {
+      data[player].forEach(r => {
+        const diff = r.W - r.L;
+
+        if (!best || Math.abs(diff) > Math.abs(best.diff)) {
+          best = {
+            player,
+            opponent: r.opponent,
+            diff,
+            W: r.W,
+            L: r.L,
+            T: r.T
+          };
+        }
+      });
+    });
+
+    if (best) {
+      const label = best.diff > 0
+        ? "OWNS"
+        : "OWNED BY";
+
+      document.getElementById('rivalries').innerHTML =
+        `<h2>😈 Rivalry</h2>
+         <p><strong>${best.player}</strong> ${label} ${best.opponent}</p>
+         <p>${best.W}-${best.L}-${best.T}</p>`;
+    }
   });
+``
+
 </script>
 
 </body>
