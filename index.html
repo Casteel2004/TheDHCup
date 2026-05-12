@@ -2,75 +2,106 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>DH Cup 💀 Savage Mode</title>
-  <style>
+  <title>DH Cup</title>
 
+  <style>
     body {
       font-family: Arial;
+      margin: 0;
       background: #0b1220;
       color: white;
-      text-align: center;
-      margin: 0;
+      line-height: 1.6;
     }
 
-    h1 {
-      color: #38bdf8;
-      margin-top: 20px;
-    }
-
-    .header {
-      padding: 20px;
-    }
-
-    .intro {
-      max-width: 600px;
-      margin: 0 auto;
-      color: #ccc;
-    }
-
+    /* ✅ NAV BAR */
     .nav {
-      margin: 25px 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: #0f172a;
+      padding: 10px 20px;
+      position: sticky;
+      top: 0;
+      z-index: 10;
     }
 
-    .nav a {
-      margin: 10px;
-      padding: 10px 15px;
-      background: #121a2b;
-      border-radius: 8px;
+    .nav-left {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: bold;
+      color: gold;
+      font-size: 20px;
+    }
+
+    .nav-left img {
+      height: 40px;
+    }
+
+    .nav-links a {
+      margin: 0 10px;
       text-decoration: none;
       color: #38bdf8;
       font-weight: bold;
-      display: inline-block;
-    }
-
-    .nav a:hover {
-      background: #1e293b;
-    }
-
-    .card {
-      background: #121a2b;
-      margin: 20px auto;
-      padding: 20px;
-      border-radius: 12px;
-      width: 80%;
-      max-width: 600px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.5);
-    }
-
-    .big {
-      font-size: 22px;
-      font-weight: bold;
-    }
-
-    .sub {
-      color: #ccc;
       font-size: 14px;
     }
 
-    .section-title {
-      margin-top: 40px;
-      font-size: 20px;
+    .nav-links a:hover {
+      text-decoration: underline;
+    }
+
+    /* ✅ HERO */
+    .hero {
+      background: url('https://images.unsplash.com/photo-1505842465776-3d90f6163108?q=80&w=1974&auto=format&fit=crop') center/cover;
+      padding: 100px 20px;
+      text-align: center;
+    }
+
+    .hero h1 {
+      font-size: 48px;
+      color: gold;
+      margin-bottom: 10px;
+    }
+
+    .hero p {
+      font-size: 18px;
+      color: #ddd;
+    }
+
+    /* ✅ CONTENT */
+    .content {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 20px;
+    }
+
+    .section {
+      margin-bottom: 40px;
+    }
+
+    .section h2 {
+      color: gold;
+      margin-bottom: 10px;
+    }
+
+    .highlight {
+      text-align: center;
+      font-size: 22px;
+      font-weight: bold;
+      margin: 30px 0;
       color: #38bdf8;
+    }
+
+    /* ✅ BULLETS WITH LOGO */
+    .bullet {
+      display: flex;
+      align-items: center;
+      margin: 8px 0;
+    }
+
+    .bullet img {
+      width: 18px;
+      margin-right: 10px;
     }
 
   </style>
@@ -78,123 +109,130 @@
 
 <body>
 
-<!-- ✅ HEADER -->
-<div class="header">
-  <h1>🏆 DH Cup – Savage Mode 💀</h1>
-  <p class="intro">
-    The official (and brutally honest) record of DH Cup history.
-    Every win remembered. Every loss documented. No excuses.
-  </p>
-</div>
-
 <!-- ✅ NAVIGATION -->
 <div class="nav">
-  <a href="blowouts.html">💀 Top Beatdowns</a>
-  <!-- future pages -->
-  <!-- <a href="rivalries.html">😈 Rivalries</a> -->
-  <!-- <a href="partners.html">🤝 Partners</a> -->
+  <div class="nav-left">
+    <!-- CIRCLE LOGO -->
+    <img src="logo-circle.png">
+    DH Cup
+  </div>
+
+  <div class="nav-links">
+    <a href="index.html">Home</a>
+    <a href="timeline.html">Timeline</a>
+    <a href="history.html">History</a>
+    <a href="highlights.html">Highlights</a>
+    <a href="players.html">Players</a>
+    <a href="streaks.html">Streaks</a>
+    <a href="teammates.html">Teammates</a>
+    <a href="handicap.html">Handicap History</a>
+    <a href="years.html">Year by Year Results</a>
+  </div>
 </div>
 
-<!-- ✅ FEATURED STATS -->
-<div class="section-title">
-  🔥 Featured Receipts
+<!-- ✅ HERO -->
+<div class="hero">
+  <h1>THE DH CUP</h1>
+  <p>A tradition unlike any other… just significantly less classy.</p>
 </div>
 
-<div class="card" id="blowouts">Loading beatdowns...</div>
-<div class="card" id="rivalries">Loading rivalries...</div>
+<!-- ✅ MAIN CONTENT -->
+<div class="content">
 
-<script>
+  <div class="section">
+    <p>There are certain traditions in golf that stand the test of time.</p>
 
-// ======================
-// 💀 BLOWOUT (WITH FORMAT)
-// ======================
+    <div class="bullet"><img src="logo-icon.png">The Masters at Augusta National Golf Club.</div>
+    <div class="bullet"><img src="logo-icon.png">The Ryder Cup.</div>
+    <div class="bullet"><img src="logo-icon.png">The Open Championship.</div>
 
-fetch('blowouts.json')
-  .then(res => res.json())
-  .then(data => {
-
-    let valid = null;
-
-    for (let m of data) {
-      if (
-        m &&
-        m.dallas && m.dallas.length &&
-        m.houston && m.houston.length &&
-        m.score &&
-        m.result
-      ) {
-        valid = m;
-        break;
-      }
-    }
-
-    if (!valid) {
-      document.getElementById('blowouts').innerHTML =
-        "<h2>💀 Worst Beatdown</h2><p>No valid data found</p>";
-      return;
-    }
-
-    let winner = valid.result === "Dallas"
-      ? valid.dallas.join(" / ")
-      : valid.houston.join(" / ");
-
-    let loser = valid.result === "Dallas"
-      ? valid.houston.join(" / ")
-      : valid.dallas.join(" / ");
-
-    document.getElementById('blowouts').innerHTML =
-      `<h2>💀 Worst Beatdown</h2>
-       <p class="big">${winner} DESTROYED ${loser}</p>
-       <p>${valid.score} (${valid.year})</p>
-       <p class="sub">${valid.format || "Format unknown"}</p>`;
-  });
+    <p>And somewhere well beneath those sacred institutions — both in prestige and overall human behavior — sits the DH Cup.</p>
+  </div>
 
 
-// ======================
-// 😈 RIVALRY
-// ======================
+  <div class="section">
+    <p>Conceptualized in 1999 during the wedding festivities of Drew Roberts, the DH Cup began the same way many legendary ideas begin: with a group of SAE fraternity brothers drinking heavily and dramatically overestimating both their golf ability and organizational skills.</p>
 
-fetch('rivalries.json')
-  .then(res => res.json())
-  .then(data => {
+    <p>Inspired by the grandeur of the Ryder Cup, the founding members envisioned an annual competition built on honor, camaraderie, tradition, and excellence.</p>
 
-    let best = null;
+    <p class="highlight">
+      Instead, they accidentally created a traveling circus fueled by trash talk, gambling, Tito’s vodka, and men well past their prime trying to ignore the fact that college was over 30 years ago.
+    </p>
 
-    Object.keys(data).forEach(player => {
-      data[player].forEach(r => {
+    <p>The inaugural DH Cup was contested in 2000.</p>
+  </div>
 
-        let diff = r.W - r.L;
 
-        if (!best || Math.abs(diff) > Math.abs(best.diff)) {
-          best = {
-            player,
-            opponent: r.opponent,
-            diff,
-            W: r.W,
-            L: r.L,
-            T: r.T
-          };
-        }
+  <div class="section">
+    <p>What started as a modest gathering of friends has since grown into a 12-versus-12 annual battle between Dallas and Houston — a rivalry steeped in history, competition, and wildly selective memory regarding actual past results.</p>
 
-      });
-    });
+    <p>Though careers advanced, families grew, and waistlines expanded, one thing remained beautifully unchanged:</p>
 
-    let label = best.diff > 0
-      ? "OWNS"
-      : "IS OWNED BY";
+    <p class="highlight">The emotional maturity of the participants.</p>
+  </div>
 
-    let note = best.diff > 0
-      ? "Rent free living situation"
-      : "This matchup is NOT competitive";
 
-    document.getElementById('rivalries').innerHTML =
-      `<h2>😈 Most One-Sided Rivalry</h2>
-       <p class="big">${best.player} ${label} ${best.opponent}</p>
-       <p>${best.W}-${best.L}-${best.T}</p>
-       <p class="sub">${note}</p>`;
-  });
+  <div class="section">
+    <p>To this day, arguments over gimmies, breakfast ball legality, and whether a putt was “good from there earlier” continue to echo through clubhouses with the same intensity normally reserved for Supreme Court hearings.</p>
 
-</script>
+    <p>Each year, competitors arrive carrying the hopes of their city and approximately six different anti-inflammatory medications.</p>
+  </div>
+
+
+  <div class="section">
+    <h2>Traditions</h2>
+
+    <div class="bullet"><img src="logo-icon.png">The motivational speeches.</div>
+    <div class="bullet"><img src="logo-icon.png">The first tee nerves.</div>
+    <div class="bullet"><img src="logo-icon.png">The annual declaration from at least one player that he’s “finally figured something out in his swing.”</div>
+    <div class="bullet"><img src="logo-icon.png">Coby insuring that everyone knows they are losers.</div>
+  </div>
+
+
+  <div class="section">
+    <p>Over 26 Cups, legends have emerged.</p>
+
+    <div class="bullet"><img src="logo-icon.png">Heroes have risen.</div>
+    <div class="bullet"><img src="logo-icon.png">Captains have inspired.</div>
+    <div class="bullet"><img src="logo-icon.png">Friendships have strengthened.</div>
+    <div class="bullet"><img src="logo-icon.png">-Milk jugs have been filled.</div>
+
+    <p>And countless golfers have carded an 8 while confidently explaining why they “actually hit it pretty well today.”</p>
+  </div>
+
+
+  <div class="section">
+    <p>The DH Cup has never been about perfection.</p>
+
+    <div class="bullet"><img src="logo-icon.png">It is about brotherhood.</div>
+    <div class="bullet"><img src="logo-icon.png">Competition.</div>
+    <div class="bullet"><img src="logo-icon.png">Tradition.Houston sitting in a circle listening to Led play his guitar.</div>
+  </div>
+
+
+  <div class="section">
+    <p>And the unwavering belief that this year — despite all available historical evidence — your team finally has the guys to bring the Cup home.</p>
+
+    <p>The jackets at Augusta may be green.</p>
+
+    <p class="highlight">
+      But at the DH Cup, the only color that matters is whatever color Meek decides to dye his hair and pubes that year.
+    </p>
+
+    <p class="highlight">
+      Welcome to the DH Cup.
+    </p>
+
+    <p class="highlight">
+      A tradition unlike any other.
+    </p>
+
+    <p class="highlight">
+      Just significantly less classy.
+    </p>
+  </div>
+
+</div>
 
 </body>
 </html>
