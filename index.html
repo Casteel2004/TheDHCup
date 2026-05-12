@@ -13,25 +13,22 @@
       line-height: 1.6;
     }
 
-    /* ✅ NAV BAR */
+    /* NAV */
     .nav {
       display: flex;
-      align-items: center;
       justify-content: space-between;
+      align-items: center;
       background: #0f172a;
-      padding: 10px 20px;
-      position: sticky;
-      top: 0;
-      z-index: 10;
+      padding: 12px 20px;
     }
 
     .nav-left {
       display: flex;
       align-items: center;
       gap: 10px;
-      font-weight: bold;
-      color: gold;
       font-size: 20px;
+      color: gold;
+      font-weight: bold;
     }
 
     .nav-left img {
@@ -46,19 +43,18 @@
       font-size: 14px;
     }
 
-    .nav-links a:hover {
-      text-decoration: underline;
-    }
-
-    /* ✅ HERO */
+    /* HERO */
     .hero {
-      background: url('https://images.unsplash.com/photo-1505842465776-3d90f6163108?q=80&w=1974&auto=format&fit=crop') center/cover;
-      padding: 100px 20px;
+      background: linear-gradient(rgba(0,0,0,.7), rgba(0,0,0,.7)),
+        url('https://images.unsplash.com/photo-1599058917212-d750089bc2e4?q=80&w=2000');
+      background-size: cover;
+      background-position: center;
+      padding: 120px 20px;
       text-align: center;
     }
 
     .hero h1 {
-      font-size: 48px;
+      font-size: 50px;
       color: gold;
       margin-bottom: 10px;
     }
@@ -68,7 +64,6 @@
       color: #ddd;
     }
 
-    /* ✅ CONTENT */
     .content {
       max-width: 900px;
       margin: 40px auto;
@@ -79,11 +74,6 @@
       margin-bottom: 40px;
     }
 
-    .section h2 {
-      color: gold;
-      margin-bottom: 10px;
-    }
-
     .highlight {
       text-align: center;
       font-size: 22px;
@@ -92,11 +82,11 @@
       color: #38bdf8;
     }
 
-    /* ✅ BULLETS WITH LOGO */
+    /* BULLETS */
     .bullet {
       display: flex;
       align-items: center;
-      margin: 8px 0;
+      margin: 10px 0;
     }
 
     .bullet img {
@@ -109,10 +99,9 @@
 
 <body>
 
-<!-- ✅ NAVIGATION -->
+<!-- NAV -->
 <div class="nav">
   <div class="nav-left">
-    <!-- CIRCLE LOGO -->
     <img src="logo-circle.png">
     DH Cup
   </div>
@@ -130,16 +119,16 @@
   </div>
 </div>
 
-<!-- ✅ HERO -->
+<!-- HERO -->
 <div class="hero">
   <h1>THE DH CUP</h1>
   <p>A tradition unlike any other… just significantly less classy.</p>
 </div>
 
-<!-- ✅ MAIN CONTENT -->
 <div class="content">
 
   <div class="section">
+
     <p>There are certain traditions in golf that stand the test of time.</p>
 
     <div class="bullet"><img src="logo-icon.png">The Masters at Augusta National Golf Club.</div>
@@ -147,89 +136,7 @@
     <div class="bullet"><img src="logo-icon.png">The Open Championship.</div>
 
     <p>And somewhere well beneath those sacred institutions — both in prestige and overall human behavior — sits the DH Cup.</p>
-  </div>
 
-
-  <div class="section">
-    <p>Conceptualized in 1999 during the wedding festivities of Drew Roberts, the DH Cup began the same way many legendary ideas begin: with a group of SAE fraternity brothers drinking heavily and dramatically overestimating both their golf ability and organizational skills.</p>
-
-    <p>Inspired by the grandeur of the Ryder Cup, the founding members envisioned an annual competition built on honor, camaraderie, tradition, and excellence.</p>
-
-    <p class="highlight">
-      Instead, they accidentally created a traveling circus fueled by trash talk, gambling, Tito’s vodka, and men well past their prime trying to ignore the fact that college was over 30 years ago.
-    </p>
-
-    <p>The inaugural DH Cup was contested in 2000.</p>
-  </div>
-
-
-  <div class="section">
-    <p>What started as a modest gathering of friends has since grown into a 12-versus-12 annual battle between Dallas and Houston — a rivalry steeped in history, competition, and wildly selective memory regarding actual past results.</p>
-
-    <p>Though careers advanced, families grew, and waistlines expanded, one thing remained beautifully unchanged:</p>
-
-    <p class="highlight">The emotional maturity of the participants.</p>
-  </div>
-
-
-  <div class="section">
-    <p>To this day, arguments over gimmies, breakfast ball legality, and whether a putt was “good from there earlier” continue to echo through clubhouses with the same intensity normally reserved for Supreme Court hearings.</p>
-
-    <p>Each year, competitors arrive carrying the hopes of their city and approximately six different anti-inflammatory medications.</p>
-  </div>
-
-
-  <div class="section">
-    <h2>Traditions</h2>
-
-    <div class="bullet"><img src="logo-icon.png">The motivational speeches.</div>
-    <div class="bullet"><img src="logo-icon.png">The first tee nerves.</div>
-    <div class="bullet"><img src="logo-icon.png">The annual declaration from at least one player that he’s “finally figured something out in his swing.”</div>
-    <div class="bullet"><img src="logo-icon.png">Coby insuring that everyone knows they are losers.</div>
-  </div>
-
-
-  <div class="section">
-    <p>Over 26 Cups, legends have emerged.</p>
-
-    <div class="bullet"><img src="logo-icon.png">Heroes have risen.</div>
-    <div class="bullet"><img src="logo-icon.png">Captains have inspired.</div>
-    <div class="bullet"><img src="logo-icon.png">Friendships have strengthened.</div>
-    <div class="bullet"><img src="logo-icon.png">-Milk jugs have been filled.</div>
-
-    <p>And countless golfers have carded an 8 while confidently explaining why they “actually hit it pretty well today.”</p>
-  </div>
-
-
-  <div class="section">
-    <p>The DH Cup has never been about perfection.</p>
-
-    <div class="bullet"><img src="logo-icon.png">It is about brotherhood.</div>
-    <div class="bullet"><img src="logo-icon.png">Competition.</div>
-    <div class="bullet"><img src="logo-icon.png">Tradition.Houston sitting in a circle listening to Led play his guitar.</div>
-  </div>
-
-
-  <div class="section">
-    <p>And the unwavering belief that this year — despite all available historical evidence — your team finally has the guys to bring the Cup home.</p>
-
-    <p>The jackets at Augusta may be green.</p>
-
-    <p class="highlight">
-      But at the DH Cup, the only color that matters is whatever color Meek decides to dye his hair and pubes that year.
-    </p>
-
-    <p class="highlight">
-      Welcome to the DH Cup.
-    </p>
-
-    <p class="highlight">
-      A tradition unlike any other.
-    </p>
-
-    <p class="highlight">
-      Just significantly less classy.
-    </p>
   </div>
 
 </div>
