@@ -4,6 +4,8 @@
 <head>
   <title>DH Cup</title>
 
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
   <style>
     body {
       font-family: Arial;
@@ -11,10 +13,9 @@
       background: #2b3648;
       color: white;
       line-height: 1.7;
-      font-size: 19px; /* ✅ UNIFIED TEXT SIZE */
+      font-size: 19px;
     }
 
-    /* NAV BAR */
     .nav {
       position: fixed;
       top: 0;
@@ -24,63 +25,64 @@
       justify-content: space-between;
       align-items: center;
       background: #0f172a;
-      padding: 12px 40px;
+      padding: 12px 30px;
       box-sizing: border-box;
+      flex-wrap: wrap;
     }
 
     .nav-left {
       display: flex;
       align-items: center;
-      gap: 12px;
-      font-size: 22px;
+      gap: 10px;
+      font-size: 20px;
       color: gold;
       font-weight: bold;
     }
 
     .nav-left img {
-      height: 70px;
+      height: 60px;
     }
 
     .nav-links {
       display: flex;
-      gap: 12px;
-      flex-wrap: nowrap;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+      gap: 10px;
+      margin-top: 5px;
     }
 
     .nav-links a {
       text-decoration: none;
       color: #38bdf8;
       font-weight: bold;
-      font-size: 14px;
-      white-space: nowrap;
+      font-size: 13px;
     }
 
-    /* HERO */
     .hero {
-      margin-top: 90px;
+      margin-top: 100px;
       background: linear-gradient(rgba(0,0,0,.35), rgba(0,0,0,.35)),
                   url("./golf-bg.jpg");
       background-size: cover;
       background-position: center;
-      padding: 170px 20px;
+      padding: 150px 20px;
       text-align: center;
     }
 
-    /* BIG LOGO */
     .hero img {
-      width: 520px;
+      width: 420px;
+      max-width: 90%;
       margin-bottom: 10px;
     }
 
     .hero h1 {
-      font-size: 80px;
+      font-size: 70px;
       color: gold;
       text-shadow: 4px 4px 15px black;
-      margin: 5px 0 10px;
+      margin: 10px 0;
     }
 
     .hero p {
-      font-size: 24px;
+      font-size: 22px;
       color: gold;
       text-shadow: 3px 3px 10px black;
       font-weight: bold;
@@ -92,7 +94,6 @@
       padding: 20px;
     }
 
-    /* ✅ ALL BODY TEXT UNIFORM */
     .highlight {
       color: white;
       font-weight: normal;
@@ -106,18 +107,60 @@
     }
 
     .bullet img {
-      width: 40px;
+      width: 48px;
       margin-right: 15px;
     }
 
-    /* ✅ FINAL LINE FIXED */
     .final-line {
       color: #60a5fa;
       font-size: 26px;
       font-weight: bold;
       text-align: center;
       margin-top: 40px;
-      white-space: nowrap; /* ✅ FORCE ONE LINE */
+    }
+
+    @media (max-width: 768px) {
+
+      .hero {
+        padding: 100px 15px;
+      }
+
+      .hero img {
+        width: 250px;
+      }
+
+      .hero h1 {
+        font-size: 42px;
+      }
+
+      .hero p {
+        font-size: 16px;
+      }
+
+      .nav-left {
+        font-size: 16px;
+      }
+
+      .nav-left img {
+        height: 45px;
+      }
+
+      .nav-links {
+        justify-content: center;
+      }
+
+      .nav-links a {
+        font-size: 12px;
+      }
+
+      .bullet img {
+        width: 35px;
+      }
+
+      .final-line {
+        font-size: 18px;
+        padding: 0 10px;
+      }
     }
 
   </style>
@@ -125,9 +168,7 @@
 
 <body>
 
-<!-- NAV -->
 <div class="nav">
-
   <div class="nav-left">
     <img src="./logo-circle.png">
     DH Cup
@@ -144,38 +185,21 @@
     <a href="handicap.html">Handicap History</a>
     <a href="years.html">Year by Year Results</a>
   </div>
-
 </div>
 
-<!-- HERO -->
 <div class="hero">
-
   <img src="./logo-circle.png">
-
   <h1>THE DH CUP</h1>
-
   <p>A tradition unlike any other… just significantly less classy.</p>
-
 </div>
 
 <div class="content">
 
 <p>There are certain traditions in golf that stand the test of time.</p>
 
-<div class="bullet">
-  <img src="./logo-icon.png">
-  The Masters at Augusta National Golf Club.
-</div>
-
-<div class="bullet">
-  <img src="./logo-icon.png">
-  The Ryder Cup.
-</div>
-
-<div class="bullet">
-  <img src="./logo-icon.png">
-  The Open Championship.
-</div>
+<div class="bullet"><img src="./logo-icon.png">The Masters at Augusta National Golf Club.</div>
+<div class="bullet"><img src="./logo-icon.png">The Ryder Cup.</div>
+<div class="bullet"><img src="./logo-icon.png">The Open Championship.</div>
 
 <p>And somewhere well beneath those sacred institutions — both in prestige and overall human behavior — sits the DH Cup.</p>
 
@@ -201,66 +225,28 @@ Instead, they accidentally created a traveling circus fueled by trash talk, gamb
 
 <p><strong>Traditions:</strong></p>
 
-<div class="bullet">
-  <img src="./logo-icon.png">
-  The motivational speeches.
-</div>
-
-<div class="bullet">
-  <img src="./logo-icon.png">
-  The first tee nerves.
-</div>
-
-<div class="bullet">
-  <img src="./logo-icon.png">
-  The annual declaration from at least one player that he’s “finally figured something out in his swing.”
-</div>
-
-<div class="bullet">
-  <img src="./logo-icon.png">
-  Coby insuring that everyone knows they are losers.
-</div>
+<div class="bullet"><img src="./logo-icon.png">The motivational speeches.</div>
+<div class="bullet"><img src="./logo-icon.png">The first tee nerves.</div>
+<div class="bullet"><img src="./logo-icon.png">The annual declaration from at least one player that he’s “finally figured something out in his swing.”</div>
+<div class="bullet"><img src="./logo-icon.png">Coby insuring that everyone knows they are losers.</div>
 
 <p>Over 26 Cups, legends have emerged.</p>
 
-<div class="bullet">
-  <img src="./logo-icon.png">
-  Heroes have risen.
-</div>
-
-<div class="bullet">
-  <img src="./logo-icon.png">
-  Captains have inspired.
-</div>
-
-<div class="bullet">
-  <img src="./logo-icon.png">
-  Friendships have strengthened.
-</div>
-
-<div class="bullet">
-  <img src="./logo-icon.png">
-  Milk jugs have been filled.
-</div>
+<div class="bullet"><img src="./logo-icon.png">Heroes have risen.</div>
+<div class="bullet"><img src="./logo-icon.png">Captains have inspired.</div>
+<div class="bullet"><img src="./logo-icon.png">Friendships have strengthened.</div>
+<div class="bullet"><img src="./logo-icon.png">Milk jugs have been filled.</div>
 
 <p>And countless golfers have carded an 8 while confidently explaining why they “actually hit it pretty well today.”</p>
 
 <p>The DH Cup has never been about perfection.</p>
 
-<div class="bullet">
-  <img src="./logo-icon.png">
-  It is about brotherhood.
-</div>
+<div class="bullet"><img src="./logo-icon.png">It is about brotherhood.</div>
+<div class="bullet"><img src="./logo-icon.png">Competition.</div>
 
-<div class="bullet">
-  <img src="./logo-icon.png">
-  Competition.
-</div>
-
-<div class="bullet">
-  <img src="./logo-icon.png">
-  Tradition. Houston sitting in a circle listening to Led play his guitar.
-</div>
+<!-- ✅ FIXED HERE -->
+<div class="bullet"><img src="./logo-icon.png">Tradition.</div>
+<div class="bullet"><img src="./logo-icon.png">Houston sitting in a circle listening to Led play his guitar.</div>
 
 <p>And the unwavering belief that this year — despite all available historical evidence — your team finally has the guys to bring the Cup home.</p>
 
@@ -276,4 +262,3 @@ Welcome to the DH Cup........A tradition unlike any other.......Just significant
 
 </body>
 </html>
-``
