@@ -83,7 +83,7 @@
     /* CONTENT */
     .content {
       width: 98%;
-      max-width: 1800px;
+      max-width: 1600px;
       margin: 40px auto;
       padding: 20px;
     }
@@ -96,17 +96,14 @@
       font-weight: bold;
     }
 
-    /* TABLE CONTAINER */
+    /* TABLE */
     .table-container {
       overflow-x: auto;
-      -webkit-overflow-scrolling: touch; /* ✅ smoother mobile scroll */
-      border: 1px solid #444;
+      -webkit-overflow-scrolling: touch;
     }
 
-    /* TABLE */
     table {
       width: 100%;
-      min-width: 1400px;
       border-collapse: collapse;
       background: #1f2937;
     }
@@ -115,7 +112,13 @@
       padding: 12px;
       border-bottom: 1px solid #444;
       text-align: left;
-      white-space: nowrap;
+      white-space: nowrap; /* ✅ default = no wrap */
+    }
+
+    /* ✅ ONLY LOCATION WRAPS */
+    td.location-col {
+      white-space: normal;
+      line-height: 1.3;
     }
 
     th {
@@ -126,34 +129,14 @@
       background: #374151;
     }
 
-    /* ✅ MOBILE IMPROVEMENTS */
+    /* MOBILE */
     @media (max-width: 768px) {
-
       .hero h1 {
         font-size: 38px;
       }
 
       .record {
         font-size: 22px;
-      }
-
-      /* 👇 KEY FIX: force clear scrolling */
-      .table-container {
-        overflow-x: scroll;
-      }
-
-      /* 👇 Show scrollbar visually */
-      .table-container::-webkit-scrollbar {
-        height: 8px;
-      }
-
-      .table-container::-webkit-scrollbar-thumb {
-        background: #888;
-        border-radius: 4px;
-      }
-
-      .table-container::-webkit-scrollbar-track {
-        background: #1f2937;
       }
     }
 
@@ -162,23 +145,23 @@
 
 <body>
 
-<!-- NAV -->
+<!-- ✅ NAV FIXED -->
 <div class="nav">
   <div class="nav-left">
-    <img src="./logo-circle.png" alt="DH Cup Logo">
+    ./logo-circle.png
     DH Cup
   </div>
 
   <div class="nav-links">
-    <a href="index.html">Home</a>
-    <a href="timeline.html">Timeline</a>
-    <a href="history.html">History</a>
-    <a href="highlights.html">Highlights</a>
-    <a href="players.html">Players</a>
-    <a href="streaks.html">Streaks</a>
-    <a href="teammates.html">Teammates</a>
-    <a href="handicap.html">Handicap History</a>
-    <a href="years.html">Year by Year Results</a>
+    index.html">Home</a>
+    timeline.html">Timeline</a>
+    history.html">History</a>
+    highlights.html">Highlights</a>
+    players.html">Players</a>
+    streaks.html">Streaks</a>
+    teammates.html">Teammates</a>
+    handicap.html">Handicap History</a>
+    years.html">Year by Year Results</a>
   </div>
 </div>
 
@@ -223,7 +206,7 @@ fetch('history.json')
           <td>${item.year}</td>
           <td>${item.winner}</td>
           <td>${item.score}</td>
-          <td>${item.location}</td>
+          <td class="location-col">${item.location}</td>
           <td>${item.mvp}</td>
         </tr>
       `;
