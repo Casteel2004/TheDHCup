@@ -45,7 +45,7 @@
     .nav-links {
       display: flex;
       flex-wrap: wrap;
-      gap: 10px;
+      gap: 12px;
     }
 
     .nav-links a {
@@ -53,6 +53,10 @@
       text-decoration: none;
       font-size: 13px;
       font-weight: bold;
+    }
+
+    .nav-links a:hover {
+      color: gold;
     }
 
     /* HERO */
@@ -76,10 +80,10 @@
       font-size: 20px;
     }
 
-    /* CONTENT (IMPORTANT FIX HERE) */
+    /* CONTENT */
     .content {
-      width: 95%; /* ✅ MUCH wider */
-      max-width: 1500px; /* ✅ prevents shrinking on big screens */
+      width: 98%;
+      max-width: 1800px;
       margin: 40px auto;
       padding: 20px;
     }
@@ -92,15 +96,14 @@
       font-weight: bold;
     }
 
-    /* TABLE CONTAINER */
+    /* TABLE */
     .table-container {
       overflow-x: auto;
     }
 
-    /* TABLE */
     table {
       width: 100%;
-      min-width: 1200px; /* ✅ wider to prevent early scroll */
+      min-width: 1400px;
       border-collapse: collapse;
       background: #1f2937;
     }
@@ -109,7 +112,7 @@
       padding: 12px;
       border-bottom: 1px solid #444;
       text-align: left;
-      white-space: nowrap; /* ✅ no wrapping */
+      white-space: nowrap;
     }
 
     th {
@@ -139,20 +142,20 @@
 <!-- ✅ FIXED NAV -->
 <div class="nav">
   <div class="nav-left">
-    logo-circle.png
+    <img src="./logo-circle.png" alt="DH Cup Logo">
     DH Cup
   </div>
 
   <div class="nav-links">
-    index.htmlHome</a>
-    timeline.htmlTimeline</a>
-    history.htmlHistory</a>
-    highlights.htmlHighlights</a>
-    players.htmlPlayers</a>
-    streaks.htmlStreaks</a>
-    teammates.htmlTeammates</a>
-    handicap.htmlHandicap History</a>
-    years.htmlYear by Year Results</a>
+    <a href="index.html">Home</a>
+    <a href="timeline.html">Timeline</a>
+    <a href="history.html">History</a>
+    <a href="highlights.html">Highlights</a>
+    <a href="players.html">Players</a>
+    <a href="streaks.html">Streaks</a>
+    <a href="teammates.html">Teammates</a>
+    <a href="handicap.html">Handicap History</a>
+    <a href="years.html">Year by Year Results</a>
   </div>
 </div>
 
@@ -185,7 +188,7 @@
 
 </div>
 
-<!-- JSON DATA LOAD -->
+<!-- JSON LOAD -->
 <script>
 fetch('history.json')
   .then(response => response.json())
