@@ -96,11 +96,14 @@
       font-weight: bold;
     }
 
-    /* TABLE */
+    /* TABLE CONTAINER */
     .table-container {
       overflow-x: auto;
+      -webkit-overflow-scrolling: touch; /* ✅ smoother mobile scroll */
+      border: 1px solid #444;
     }
 
+    /* TABLE */
     table {
       width: 100%;
       min-width: 1400px;
@@ -123,14 +126,34 @@
       background: #374151;
     }
 
-    /* MOBILE */
+    /* ✅ MOBILE IMPROVEMENTS */
     @media (max-width: 768px) {
+
       .hero h1 {
         font-size: 38px;
       }
 
       .record {
         font-size: 22px;
+      }
+
+      /* 👇 KEY FIX: force clear scrolling */
+      .table-container {
+        overflow-x: scroll;
+      }
+
+      /* 👇 Show scrollbar visually */
+      .table-container::-webkit-scrollbar {
+        height: 8px;
+      }
+
+      .table-container::-webkit-scrollbar-thumb {
+        background: #888;
+        border-radius: 4px;
+      }
+
+      .table-container::-webkit-scrollbar-track {
+        background: #1f2937;
       }
     }
 
@@ -139,7 +162,7 @@
 
 <body>
 
-<!-- ✅ FIXED NAV -->
+<!-- NAV -->
 <div class="nav">
   <div class="nav-left">
     <img src="./logo-circle.png" alt="DH Cup Logo">
@@ -188,7 +211,6 @@
 
 </div>
 
-<!-- JSON LOAD -->
 <script>
 fetch('history.json')
   .then(response => response.json())
