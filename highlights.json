@@ -1,0 +1,50 @@
+
+{
+  "blowouts": {
+    "overall": [
+      {
+        "year": 2001,
+        "format": "Mixed",
+        "players": "Team Houston",
+        "winner": "Team Houston",
+        "result": "17 to 7"
+      }
+    ],
+
+    "singles": [
+      {
+        "year": 2010,
+        "players": "Player A vs Player B",
+        "winner": "Player A",
+        "result": "7 & 6"
+      }
+    ],
+
+    "scramble": [
+      {
+        "year": 2022,
+        "players": "Team A vs Team B",
+        "winner": "Team A",
+        "result": "5 & 4"
+      }
+    ],
+
+    "bestBall": [
+      {
+        "year": 2015,
+        "players": "Player A/B vs Player C/D",
+        "winner": "A/B",
+        "result": "6 & 5"
+      }
+    ],
+
+    "alternateShot": [
+      {
+        "year": 2018,
+        "players": "Team Pair 1 vs Team Pair 2",
+        "winner": "Pair 1",
+        "result": "5 & 4"
+      }
+    ]
+  }
+}
