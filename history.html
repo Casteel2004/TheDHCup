@@ -25,7 +25,6 @@
       align-items: center;
       box-sizing: border-box;
       z-index: 999;
-      flex-wrap: wrap;
     }
 
     .nav-left {
@@ -42,17 +41,12 @@
       border-radius: 50%;
     }
 
-    .nav-links {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 12px;
-    }
-
     .nav-links a {
       color: #38bdf8;
       text-decoration: none;
       font-size: 13px;
       font-weight: bold;
+      margin-left: 12px;
     }
 
     .nav-links a:hover {
@@ -67,7 +61,6 @@
       background: linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,.5)),
                   url("./golf-bg.jpg");
       background-size: cover;
-      background-position: center;
     }
 
     .hero h1 {
@@ -99,7 +92,6 @@
     /* TABLE */
     .table-container {
       overflow-x: auto;
-      -webkit-overflow-scrolling: touch;
     }
 
     table {
@@ -112,10 +104,10 @@
       padding: 12px;
       border-bottom: 1px solid #444;
       text-align: left;
-      white-space: nowrap; /* ✅ default = no wrap */
+      white-space: nowrap;
     }
 
-    /* ✅ ONLY LOCATION WRAPS */
+    /* ✅ LOCATION WRAPS */
     td.location-col {
       white-space: normal;
       line-height: 1.3;
@@ -145,23 +137,23 @@
 
 <body>
 
-<!-- ✅ NAV FIXED -->
+<!-- ✅ WORKING NAV (THIS IS THE CRITICAL FIX) -->
 <div class="nav">
   <div class="nav-left">
-    ./logo-circle.png
+    <img src="./logo-circle.png" alt="logo">
     DH Cup
   </div>
 
   <div class="nav-links">
-    index.html">Home</a>
-    timeline.html">Timeline</a>
-    history.html">History</a>
-    highlights.html">Highlights</a>
-    players.html">Players</a>
-    streaks.html">Streaks</a>
-    teammates.html">Teammates</a>
-    handicap.html">Handicap History</a>
-    years.html">Year by Year Results</a>
+    <a href="index.html">Home</a>
+    <a href="timeline.html">Timeline</a>
+    <a href="history.html">History</a>
+    <a href="highlights.html">Highlights</a>
+    <a href="players.html">Players</a>
+    <a href="streaks.html">Streaks</a>
+    <a href="teammates.html">Teammates</a>
+    <a href="handicap.html">Handicap History</a>
+    <a href="years.html">Year by Year Results</a>
   </div>
 </div>
 
