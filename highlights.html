@@ -1,0 +1,243 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>DH Cup Highlights</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <style>
+    body {
+      font-family: Arial;
+      margin: 0;
+      background: #2b3648;
+      color: white;
+    }
+
+    /* NAV */
+    .nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 999;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: #0f172a;
+      padding: 12px 30px;
+      box-sizing: border-box;
+      flex-wrap: wrap;
+    }
+
+    .nav-left {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 20px;
+      color: gold;
+      font-weight: bold;
+    }
+
+    .nav-left img {
+      height: 55px;
+      border-radius: 50%;
+    }
+
+    .nav-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .nav-links a {
+      color: #38bdf8;
+      text-decoration: none;
+      font-size: 13px;
+      font-weight: bold;
+    }
+
+    .nav-links a:hover {
+      color: gold;
+    }
+
+    /* ✅ ACTIVE PAGE */
+    .nav-links a.active {
+      color: gold;
+      text-decoration: underline;
+    }
+
+    /* ✅ MOBILE NAV STACK */
+    @media (max-width: 768px) {
+      .nav {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .nav-links {
+        margin-top: 10px;
+      }
+    }
+
+    /* HERO */
+    .hero {
+      margin-top: 120px;
+      padding: 120px 20px;
+      text-align: center;
+      background: linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,.5)),
+                  url("./golf-bg.jpg");
+      background-size: cover;
+    }
+
+    .hero h1 {
+      color: gold;
+      font-size: 55px;
+      margin-bottom: 10px;
+    }
+
+    .hero p {
+      font-size: 18px;
+    }
+
+    /* CONTENT */
+    .content {
+      width: 96%;
+      max-width: 1400px;
+      margin: 40px auto;
+      padding: 20px;
+    }
+
+    h2 {
+      color: gold;
+      margin-top: 40px;
+    }
+
+    /* TABLE */
+    .table-container {
+      overflow-x: auto;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      background: #1f2937;
+      margin-top: 10px;
+    }
+
+    th, td {
+      padding: 10px;
+      border-bottom: 1px solid #444;
+      text-align: left;
+      white-space: nowrap;
+    }
+
+    th {
+      color: gold;
+    }
+
+    tr:hover {
+      background: #374151;
+    }
+
+    /* MOBILE */
+    @media (max-width: 768px) {
+      .hero h1 {
+        font-size: 36px;
+      }
+    }
+
+  </style>
+</head>
+
+<body>
+
+<!-- NAV -->
+<div class="nav">
+  <div class="nav-left">
+    <img src="./logo-circle.png">
+    DH Cup
+  </div>
+
+  <div class="nav-links">
+    <a href="index.html">Home</a>
+    <a href="timeline.html">Timeline</a>
+    <a href="history.html">History</a>
+    <a class="active" href="highlights.html">Highlights</a>
+    <a href="players.html">Players</a>
+    <a href="streaks.html">Streaks</a>
+    <a href="teammates.html">Teammates</a>
+    <a href="handicap.html">Handicap History</a>
+    <a href="years.html">Year by Year Results</a>
+  </div>
+</div>
+
+<!-- HERO -->
+<div class="hero">
+  <h1>DH Cup Highlights</h1>
+  <p>The biggest performances, biggest wins, and biggest meltdowns.</p>
+</div>
+
+<div class="content" id="content"></div>
+
+<script>
+fetch('highlights.json')
+.then(res => res.json())
+.then(data => {
+
+  const c = document.getElementById('content');
+
+  function buildTable(title, rows, headers) {
+    let html = `<h2>${title}</h2><div class="table-container"><table><tr>`;
+    headers.forEach(h => html += `<th>${h}</th>`);
+    html += `</tr>`;
+
+    rows.forEach(r => {
+      html += "<tr>";
+      Object.values(r).forEach(v => {
+        html += `<td>${v}</td>`;
+      });
+      html += "</tr>";
+    });
+
+    html += "</table></div>";
+    return html;
+  }
+
+  // ✅ OVERALL
+  c.innerHTML += buildTable(
+    "Biggest Blowouts (Top 5 Overall)",
+    data.blowouts.overall,
+    ["Year","Format","Players","Winner","Result"]
+  );
+
+  // ✅ SINGLES
+  c.innerHTML += buildTable(
+    "Biggest Blowouts – Singles",
+    data.blowouts.singles,
+    ["Year","Players","Winner","Result"]
+  );
+
+  // ✅ SCRAMBLE
+  c.innerHTML += buildTable(
+    "Biggest Blowouts – Scramble",
+    data.blowouts.scramble,
+    ["Year","Players","Winner","Result"]
+  );
+
+  // ✅ BEST BALL
+  c.innerHTML += buildTable(
+    "Biggest Blowouts – Best Ball",
+    data.blowouts.bestBall,
+    ["Year","Players","Winner","Result"]
+  );
+
+  // ✅ ALT SHOT
+  c.innerHTML += buildTable(
+    "Biggest Blowouts – Alternate Shot",
+    data.blowouts.alternateShot,
+    ["Year","Players","Winner","Result"]
+  );
+
+});
+</script>
+
+</body>
+</html>
