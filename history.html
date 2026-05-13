@@ -13,6 +13,7 @@
       color: white;
     }
 
+    /* NAV */
     .nav {
       position: fixed;
       top: 0;
@@ -22,6 +23,9 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
+      box-sizing: border-box;
+      flex-wrap: wrap;
+      z-index: 999;
     }
 
     .nav-left {
@@ -30,6 +34,7 @@
       gap: 10px;
       color: gold;
       font-weight: bold;
+      font-size: 20px;
     }
 
     .nav-left img {
@@ -37,30 +42,41 @@
       border-radius: 50%;
     }
 
+    .nav-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
     .nav-links a {
       color: #38bdf8;
-      margin-left: 10px;
       text-decoration: none;
       font-size: 13px;
       font-weight: bold;
     }
 
+    /* HERO */
     .hero {
       margin-top: 100px;
       padding: 120px 20px;
       text-align: center;
-      background: url("./golf-bg.jpg") center/cover;
+      background: linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,.5)),
+                  url("./golf-bg.jpg");
+      background-size: cover;
+      background-position: center;
     }
 
     .hero h1 {
       color: gold;
       font-size: 60px;
+      margin-bottom: 10px;
     }
 
     .hero p {
       font-size: 20px;
     }
 
+    /* CONTENT */
     .content {
       max-width: 1100px;
       margin: 40px auto;
@@ -72,10 +88,18 @@
       font-size: 30px;
       color: #60a5fa;
       margin-bottom: 30px;
+      font-weight: bold;
     }
 
+    /* TABLE CONTAINER (for scroll) */
+    .table-container {
+      overflow-x: auto;
+    }
+
+    /* TABLE */
     table {
       width: 100%;
+      min-width: 900px;
       border-collapse: collapse;
       background: #1f2937;
     }
@@ -83,6 +107,8 @@
     th, td {
       padding: 12px;
       border-bottom: 1px solid #444;
+      text-align: left;
+      white-space: nowrap; /* ✅ prevents wrapping */
     }
 
     th {
@@ -93,23 +119,43 @@
       background: #374151;
     }
 
+    /* MOBILE */
+    @media (max-width: 768px) {
+      .hero h1 {
+        font-size: 38px;
+      }
+
+      .record {
+        font-size: 22px;
+      }
+    }
+
   </style>
 </head>
 
 <body>
 
+<!-- NAV -->
 <div class="nav">
   <div class="nav-left">
-    ./logo-circle.png
+    logo-circle.png
     DH Cup
   </div>
 
   <div class="nav-links">
-    index.html
+    index.htmlHome</a>
+    timeline.htmlTimeline</a>
     history.htmlHistory</a>
+    highlights.htmlHighlights</a>
+    players.htmlPlayers</a>
+    streaks.htmlStreaks</a>
+    teammates.htmlTeammates</a>
+    handicap.htmlHandicap History</a>
+    years.htmlYear by Year Results</a>
   </div>
 </div>
 
+<!-- HERO -->
 <div class="hero">
   <h1>DH Cup History</h1>
   <p>26 years of complete and utter greatness!</p>
@@ -121,21 +167,24 @@
     Houston Leads All-Time: 15 – 12
   </div>
 
-  <table>
-    <thead>
-      <tr>
-        <th>Year</th>
-        <th>Winner</th>
-        <th>Score</th>
-        <th>Location</th>
-        <th>MVP</th>
-      </tr>
-    </thead>
-    <tbody id="historyTable"></tbody>
-  </table>
+  <div class="table-container">
+    <table>
+      <thead>
+        <tr>
+          <th>Year</th>
+          <th>Winner</th>
+          <th>Score</th>
+          <th>Location</th>
+          <th>MVP</th>
+        </tr>
+      </thead>
+      <tbody id="historyTable"></tbody>
+    </table>
+  </div>
 
 </div>
 
+<!-- JSON SCRIPT -->
 <script>
 fetch('history.json')
   .then(response => response.json())
@@ -159,3 +208,4 @@ fetch('history.json')
 
 </body>
 </html>
+``
