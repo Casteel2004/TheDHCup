@@ -15,6 +15,10 @@
 
     /* NAV */
     .nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 999;
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -44,29 +48,32 @@
 
     /* HERO */
     .hero {
+      margin-top: 90px;
       background: linear-gradient(rgba(0,0,0,.35), rgba(0,0,0,.35)),
                   url("./golf-bg.jpg");
       background-size: cover;
       background-position: center;
-      padding: 180px 20px;
+      padding: 200px 20px;
       text-align: center;
     }
 
     .hero img {
-      width: 140px;
+      width: 280px;
       margin-bottom: 20px;
     }
 
     .hero h1 {
-      font-size: 75px;
+      font-size: 80px;
       color: gold;
       text-shadow: 4px 4px 15px black;
-      margin-bottom: 10px;
+      margin-bottom: 15px;
     }
 
     .hero p {
-      font-size: 22px;
-      color: #f0f0f0;
+      font-size: 24px;
+      color: gold;
+      text-shadow: 3px 3px 10px black;
+      font-weight: bold;
     }
 
     .content {
@@ -122,13 +129,9 @@
 
 <!-- HERO -->
 <div class="hero">
-
   <img src="./logo-circle.png">
-
   <h1>THE DH CUP</h1>
-
   <p>A tradition unlike any other… just significantly less classy.</p>
-
 </div>
 
 <div class="content">
@@ -187,9 +190,8 @@ Instead, they accidentally created a traveling circus fueled by trash talk, gamb
 
 <p>The jackets at Augusta may be green.</p>
 
-<p class="highlight">
-But at the DH Cup, the only color that matters is whatever color Meek decides to dye his hair and pubes that year.
-</p>
+<!-- ✅ FIXED LINE (NOW NORMAL TEXT) -->
+<p>But at the DH Cup, the only color that matters is whatever color Meek decides to dye his hair and pubes that year.</p>
 
 <p class="highlight">Welcome to the DH Cup.</p>
 <p class="highlight">A tradition unlike any other.</p>
@@ -199,3 +201,4 @@ But at the DH Cup, the only color that matters is whatever color Meek decides to
 
 </body>
 </html>
+``
