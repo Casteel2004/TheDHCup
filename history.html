@@ -1,0 +1,217 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>DH Cup History</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <style>
+    body {
+      font-family: Arial;
+      margin: 0;
+      background: #2b3648;
+      color: white;
+      line-height: 1.6;
+    }
+
+    /* NAV */
+    .nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 999;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: #0f172a;
+      padding: 12px 30px;
+      box-sizing: border-box;
+      flex-wrap: wrap;
+    }
+
+    .nav-left {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 20px;
+      color: gold;
+      font-weight: bold;
+    }
+
+    .nav-left img {
+      height: 55px;
+    }
+
+    .nav-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: #38bdf8;
+      font-weight: bold;
+      font-size: 13px;
+    }
+
+    /* HERO */
+    .hero {
+      margin-top: 100px;
+      padding: 120px 20px;
+      text-align: center;
+      background: linear-gradient(rgba(0,0,0,.6), rgba(0,0,0,.6)),
+                  url("./golf-bg.jpg");
+      background-size: cover;
+      background-position: center;
+    }
+
+    .hero h1 {
+      font-size: 60px;
+      color: gold;
+      text-shadow: 4px 4px 15px black;
+    }
+
+    .hero p {
+      font-size: 20px;
+      margin-top: 10px;
+    }
+
+    /* CONTENT */
+    .content {
+      max-width: 1100px;
+      margin: 40px auto;
+      padding: 20px;
+    }
+
+    /* RECORD BANNER */
+    .record {
+      text-align: center;
+      font-size: 32px;
+      font-weight: bold;
+      color: #60a5fa;
+      margin-bottom: 40px;
+    }
+
+    /* TABLE */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      background: #1f2937;
+    }
+
+    th, td {
+      padding: 12px;
+      border-bottom: 1px solid #444;
+      text-align: left;
+    }
+
+    th {
+      color: gold;
+      font-size: 16px;
+    }
+
+    tr:hover {
+      background: #374151;
+    }
+
+    /* MOBILE */
+    @media (max-width: 768px) {
+      .hero h1 {
+        font-size: 38px;
+      }
+
+      .record {
+        font-size: 22px;
+      }
+
+      th, td {
+        font-size: 12px;
+        padding: 8px;
+      }
+    }
+
+  </style>
+</head>
+
+<body>
+
+<!-- NAV -->
+<div class="nav">
+  <div class="nav-left">
+    ./logo-circle.png
+    DH Cup
+  </div>
+
+  <div class="nav-links">
+    index.htmlHome</a>
+    timeline.htmlTimeline</a>
+    history.htmlHistory</a>
+    highlights.htmlHighlights</a>
+    players.htmlPlayers</a>
+    streaks.htmlStreaks</a>
+    teammates.htmlTeammates</a>
+    handicap.htmlHandicap History</a>
+    years.htmlYear by Year Results</a>
+  </div>
+</div>
+
+<!-- HERO -->
+<div class="hero">
+  <h1>DH Cup History</h1>
+  <p>26 years of competition, controversy, and questionable decision-making.</p>
+</div>
+
+<div class="content">
+
+  <!-- RECORD -->
+  <div class="record">
+    Houston Leads All-Time: 15 – 12
+  </div>
+
+  <!-- TABLE -->
+  <table>
+    <tr>
+      <th>Year</th>
+      <th>Winner</th>
+      <th>Score</th>
+      <th>Location</th>
+      <th>MVP</th>
+    </tr>
+
+    <tr><td>2026</td><td>Houston</td><td>13 - 11</td><td>Bluejack National</td><td>Gabe & Rice</td></tr>
+    <tr><td>2025</td><td>Dallas</td><td>13.5 - 10.5</td><td>Bluejack National</td><td>Red Pants & Squabbit</td></tr>
+    <tr><td>2024</td><td>Dallas</td><td>13 - 11</td><td>Bluejack National</td><td>Quiet Lover</td></tr>
+    <tr><td>2023</td><td>Houston</td><td>14 - 10</td><td>Bluejack National</td><td>Travis Singleton</td></tr>
+    <tr><td>2022</td><td>Dallas</td><td>15 - 9</td><td>Bluejack National</td><td>Faulkner & Team</td></tr>
+    <tr><td>2021</td><td>Dallas</td><td>Retained</td><td>Bluejack National</td><td>Mutha Nature</td></tr>
+    <tr><td>2020</td><td>Dallas</td><td>15 - 9</td><td>Bluejack National</td><td>Brandon Meeks</td></tr>
+    <tr><td>2019</td><td>Houston</td><td>14 - 10</td><td>Streamsong</td><td>Stinneford & Adame</td></tr>
+    <tr><td>2018</td><td>Houston</td><td>13.5 - 10.5</td><td>Pebble Creek / Traditions</td><td>Noble Leslie DeVotie</td></tr>
+    <tr><td>2017</td><td>Houston</td><td>15 - 9</td><td>Bluejack National</td><td>Hugh Hamilton</td></tr>
+    <tr><td>2016</td><td>Houston</td><td>14 - 10</td><td>Traditions</td><td>Hunter & Poxy</td></tr>
+    <tr><td>2015</td><td>Houston</td><td>13 - 11</td><td>Traditions</td><td>Rice</td></tr>
+    <tr><td>2014</td><td>Houston</td><td>13.5 - 10.5</td><td>Shreveport</td><td>Hotdame</td></tr>
+    <tr><td>2013</td><td>Houston</td><td>15 - 9</td><td>Shreveport</td><td>BJT</td></tr>
+    <tr><td>2012</td><td>Dallas</td><td>14 - 10</td><td>Port Aransas</td><td>Nugget</td></tr>
+    <tr><td>2011</td><td>Dallas</td><td>13.5 - 10.5</td><td>Port Aransas</td><td>Coby Russell</td></tr>
+    <tr><td>2010</td><td>Dallas</td><td>13.5 - 10.5</td><td>Traditions</td><td>Hammy</td></tr>
+    <tr><td>2009</td><td>Dallas</td><td>13.5 - 10.5</td><td>Traditions</td><td>Brandon Meek</td></tr>
+    <tr><td>2008</td><td>Houston</td><td>16 - 8</td><td>Horseshoe Bay</td><td>Lednicky</td></tr>
+    <tr><td>2007</td><td>Dallas</td><td>13 - 11</td><td>Crown Colony</td><td>Adame & Lednicky</td></tr>
+    <tr><td>2006</td><td>Houston</td><td>14 - 10</td><td>The Falls</td><td>Hugh Hamilton</td></tr>
+    <tr><td>2005</td><td>Houston</td><td>13.5 - 10.5</td><td>Crown Colony</td><td>Schwab & Stinneford</td></tr>
+    <tr><td>2004</td><td>Houston</td><td>13 - 11</td><td>Crown Colony</td><td>Jeff Rice</td></tr>
+    <tr><td>2003</td><td>Dallas</td><td>12 - 12</td><td>Garden Valley</td><td>Roger Harris</td></tr>
+    <tr><td>2002</td><td>Dallas</td><td>13 - 11</td><td>Colovista</td><td>Travis Singleton</td></tr>
+    <tr><td>2001</td><td>Houston</td><td>17 - 7</td><td>White Bluff</td><td>-</td></tr>
+    <tr><td>2000</td><td>Houston</td><td>8 - 7</td><td>The Falls</td><td>-</td></tr>
+
+  </table>
+
+</div>
+
+</body>
+</html>
+``
