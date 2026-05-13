@@ -58,7 +58,13 @@
       color: gold;
     }
 
-    /* ✅ MOBILE NAV FIX */
+    /* ✅ ACTIVE LINK (THIS IS THE NEW ADD) */
+    .nav-links a.active {
+      color: gold;
+      text-decoration: underline;
+    }
+
+    /* ✅ MOBILE NAV STACK */
     @media (max-width: 768px) {
       .nav {
         flex-direction: column;
@@ -69,10 +75,6 @@
         width: 100%;
         flex-wrap: wrap;
         margin-top: 10px;
-      }
-
-      .nav-links a {
-        margin-right: 10px;
       }
     }
 
@@ -115,6 +117,7 @@
     /* TABLE */
     .table-container {
       overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
     }
 
     table {
@@ -144,7 +147,7 @@
       background: #374151;
     }
 
-    /* MOBILE TEXT ADJUSTMENTS */
+    /* MOBILE TEXT */
     @media (max-width: 768px) {
       .hero {
         margin-top: 160px;
@@ -174,7 +177,7 @@
   <div class="nav-links">
     <a href="index.html">Home</a>
     <a href="timeline.html">Timeline</a>
-    <a href="history.html">History</a>
+    <a href="history.html" class="active">History</a>
     <a href="highlights.html">Highlights</a>
     <a href="players.html">Players</a>
     <a href="streaks.html">Streaks</a>
@@ -236,3 +239,4 @@ fetch('history.json')
 
 </body>
 </html>
+``
