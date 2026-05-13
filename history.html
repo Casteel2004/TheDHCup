@@ -24,8 +24,8 @@
       justify-content: space-between;
       align-items: center;
       box-sizing: border-box;
-      flex-wrap: wrap;
       z-index: 999;
+      flex-wrap: wrap;
     }
 
     .nav-left {
@@ -76,9 +76,10 @@
       font-size: 20px;
     }
 
-    /* CONTENT */
+    /* CONTENT (IMPORTANT FIX HERE) */
     .content {
-      max-width: 1100px;
+      width: 95%; /* ✅ MUCH wider */
+      max-width: 1500px; /* ✅ prevents shrinking on big screens */
       margin: 40px auto;
       padding: 20px;
     }
@@ -91,7 +92,7 @@
       font-weight: bold;
     }
 
-    /* TABLE CONTAINER (for scroll) */
+    /* TABLE CONTAINER */
     .table-container {
       overflow-x: auto;
     }
@@ -99,7 +100,7 @@
     /* TABLE */
     table {
       width: 100%;
-      min-width: 900px;
+      min-width: 1200px; /* ✅ wider to prevent early scroll */
       border-collapse: collapse;
       background: #1f2937;
     }
@@ -108,7 +109,7 @@
       padding: 12px;
       border-bottom: 1px solid #444;
       text-align: left;
-      white-space: nowrap; /* ✅ prevents wrapping */
+      white-space: nowrap; /* ✅ no wrapping */
     }
 
     th {
@@ -135,7 +136,7 @@
 
 <body>
 
-<!-- NAV -->
+<!-- ✅ FIXED NAV -->
 <div class="nav">
   <div class="nav-left">
     logo-circle.png
@@ -184,7 +185,7 @@
 
 </div>
 
-<!-- JSON SCRIPT -->
+<!-- JSON DATA LOAD -->
 <script>
 fetch('history.json')
   .then(response => response.json())
@@ -208,4 +209,3 @@ fetch('history.json')
 
 </body>
 </html>
-``
