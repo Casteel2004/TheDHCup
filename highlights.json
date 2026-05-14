@@ -1,50 +1,83 @@
 
 {
+  "mvpLeaders": {
+    "dallas": [
+      { "name": "Meek", "count": 2, "years": "2009, 2020" },
+      { "name": "Hammy", "count": 1, "years": "2025 (Co)" },
+      { "name": "Red Pants", "count": 1, "years": "2025 (Co)" },
+      { "name": "Squabbit", "count": 1, "years": "2025 (Co)" },
+      { "name": "Drew", "count": 1, "years": "2024" },
+      { "name": "Faulkner", "count": 1, "years": "2022" },
+      { "name": "Mutha Nature", "count": 1, "years": "2021" }
+    ],
+    "houston": [
+      { "name": "Stinneford", "count": 2, "years": "2005 (Co), 2019 (Co)" },
+      { "name": "Hollywood", "count": 2, "years": "2006, 2017" },
+      { "name": "Travis", "count": 1, "years": "2023" },
+      { "name": "Law Dog", "count": 1, "years": "2019 (Co)" },
+      { "name": "Hunter", "count": 1, "years": "2016 (Co)" }
+    ]
+  },
+
+  "threeAndZero": {
+    "dallas": [
+      { "name": "Coby", "years": "2011, 2013, 2022, 2024" },
+      { "name": "Nugget", "years": "2012, 2017, 2023" },
+      { "name": "Hammy", "years": "2012, 2025" },
+      { "name": "Meek", "years": "2012, 2020" }
+    ],
+    "houston": [
+      { "name": "Mitchell", "years": "2011, 2015, 2026" },
+      { "name": "Law Dog", "years": "2011, 2019" },
+      { "name": "Hollywood", "years": "2013, 2017" }
+    ]
+  },
+
+  "zeroAndThree": {
+    "dallas": [
+      { "name": "Faulkner", "years": "2012, 2016, 2019, 2020, 2025" },
+      { "name": "Taylor", "years": "2014, 2017, 2023" },
+      { "name": "Hammy", "years": "2013, 2018, 2023" }
+    ],
+    "houston": [
+      { "name": "Dewey", "years": "2011, 2025" },
+      { "name": "Lednicky", "years": "2011, 2023" },
+      { "name": "Mitchell", "years": "2020, 2022" },
+      { "name": "Gabe", "years": "2018, 2020" }
+    ]
+  },
+
   "blowouts": {
+
     "overall": [
-      {
-        "year": 2001,
-        "format": "Mixed",
-        "players": "Team Houston",
-        "winner": "Team Houston",
-        "result": "17 to 7"
-      }
+      { "year": 2013, "format": "Alternate Shot", "players": "Faulkner/Cat vs Stinneford/Hanski", "winner": "Dallas", "result": "10 & 8" },
+      { "year": 2016, "format": "Singles", "players": "Hunter vs Faulkner", "winner": "Houston", "result": "10 & 8" },
+      { "year": 2014, "format": "Singles", "players": "Roger vs Slocomb", "winner": "Dallas", "result": "9 & 8" },
+      { "year": 2014, "format": "Singles", "players": "Law Dog vs Wortsmith", "winner": "Houston", "result": "9 & 8" },
+      { "year": 2014, "format": "Singles", "players": "Sherm vs Stinneford", "winner": "Dallas", "result": "8 & 7" }
     ],
 
     "singles": [
-      {
-        "year": 2010,
-        "players": "Player A vs Player B",
-        "winner": "Player A",
-        "result": "7 & 6"
-      }
+      { "year": 2016, "players": "Hunter vs Faulkner", "winner": "Houston", "result": "10 & 8" },
+      { "year": 2014, "players": "Roger vs Slocomb", "winner": "Dallas", "result": "9 & 8" },
+      { "year": 2014, "players": "Law Dog vs Wortsmith", "winner": "Houston", "result": "9 & 8" },
+      { "year": 2014, "players": "Sherm vs Stinneford", "winner": "Dallas", "result": "8 & 7" }
     ],
 
     "scramble": [
-      {
-        "year": 2022,
-        "players": "Team A vs Team B",
-        "winner": "Team A",
-        "result": "5 & 4"
-      }
+      { "year": 2015, "players": "Coby/Cat vs A. Rice/Stinneford", "winner": "Dallas", "result": "6 & 5" },
+      { "year": 2017, "players": "Gabe/Poxy vs Wortsmith/Faulkner", "winner": "Houston", "result": "6 & 5" },
+      { "year": 2018, "players": "Dewey/Wortsmith vs Stinneford/Poxy", "winner": "Dallas", "result": "6 & 5" }
     ],
 
     "bestBall": [
-      {
-        "year": 2015,
-        "players": "Player A/B vs Player C/D",
-        "winner": "A/B",
-        "result": "6 & 5"
-      }
+      { "year": 2019, "players": "Meek/Hammy vs A. Rice/Country", "winner": "Dallas", "result": "5 & 4" },
+      { "year": 2019, "players": "Lednicky/Stinneford vs Faulkner/Drew", "winner": "Houston", "result": "5 & 4" }
     ],
 
     "alternateShot": [
-      {
-        "year": 2018,
-        "players": "Team Pair 1 vs Team Pair 2",
-        "winner": "Pair 1",
-        "result": "5 & 4"
-      }
+      { "year": 2013, "players": "Faulkner/Cat vs Stinneford/Hanski", "winner": "Dallas", "result": "10 & 8" }
     ]
+
   }
 }
