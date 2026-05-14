@@ -55,17 +55,11 @@
       font-weight: bold;
     }
 
-    .nav-links a:hover {
-      color: gold;
-    }
-
-    /* ✅ ACTIVE PAGE */
     .nav-links a.active {
       color: gold;
       text-decoration: underline;
     }
 
-    /* ✅ MOBILE NAV STACK */
     @media (max-width: 768px) {
       .nav {
         flex-direction: column;
@@ -90,7 +84,6 @@
     .hero h1 {
       color: gold;
       font-size: 55px;
-      margin-bottom: 10px;
     }
 
     .hero p {
@@ -108,6 +101,11 @@
     h2 {
       color: gold;
       margin-top: 40px;
+    }
+
+    h3 {
+      color: #60a5fa;
+      margin-top: 20px;
     }
 
     /* TABLE */
@@ -137,13 +135,11 @@
       background: #374151;
     }
 
-    /* MOBILE */
     @media (max-width: 768px) {
       .hero h1 {
         font-size: 36px;
       }
     }
-
   </style>
 </head>
 
@@ -160,7 +156,7 @@
     <a href="index.html">Home</a>
     <a href="timeline.html">Timeline</a>
     <a href="history.html">History</a>
-    <a class="active" href="highlights.html">Highlights</a>
+    <a href="highlights.html" class="active">Highlights</a>
     <a href="players.html">Players</a>
     <a href="streaks.html">Streaks</a>
     <a href="teammates.html">Teammates</a>
@@ -172,7 +168,7 @@
 <!-- HERO -->
 <div class="hero">
   <h1>DH Cup Highlights</h1>
-  <p>The biggest performances, biggest wins, and biggest meltdowns.</p>
+  <p>The greatest performances, dominance, and disasters.</p>
 </div>
 
 <div class="content" id="content"></div>
@@ -185,7 +181,7 @@ fetch('highlights.json')
   const c = document.getElementById('content');
 
   function buildTable(title, rows, headers) {
-    let html = `<h2>${title}</h2><div class="table-container"><table><tr>`;
+    let html = `<h3>${title}</h3><div class="table-container"><table><tr>`;
     headers.forEach(h => html += `<th>${h}</th>`);
     html += `</tr>`;
 
@@ -201,37 +197,50 @@ fetch('highlights.json')
     return html;
   }
 
-  // ✅ OVERALL
+  // ✅ MVPs
+  c.innerHTML += `<h2>MVP Leaders</h2>`;
+  c.innerHTML += buildTable("Dallas", data.mvpLeaders.dallas, ["Name","MVPs","Years"]);
+  c.innerHTML += buildTable("Houston", data.mvpLeaders.houston, ["Name","MVPs","Years"]);
+
+  // ✅ 3-0
+  c.innerHTML += `<h2>3–0 Performances</h2>`;
+  c.innerHTML += buildTable("Dallas", data.threeAndZero.dallas, ["Name","Years"]);
+  c.innerHTML += buildTable("Houston", data.threeAndZero.houston, ["Name","Years"]);
+
+  // ✅ 0-3
+  c.innerHTML += `<h2>0–3 Performances</h2>`;
+  c.innerHTML += buildTable("Dallas", data.zeroAndThree.dallas, ["Name","Years"]);
+  c.innerHTML += buildTable("Houston", data.zeroAndThree.houston, ["Name","Years"]);
+
+  // ✅ Blowouts
+  c.innerHTML += `<h2>Biggest Blowouts</h2>`;
+
   c.innerHTML += buildTable(
-    "Biggest Blowouts (Top 5 Overall)",
+    "Overall",
     data.blowouts.overall,
     ["Year","Format","Players","Winner","Result"]
   );
 
-  // ✅ SINGLES
   c.innerHTML += buildTable(
-    "Biggest Blowouts – Singles",
+    "Singles",
     data.blowouts.singles,
     ["Year","Players","Winner","Result"]
   );
 
-  // ✅ SCRAMBLE
   c.innerHTML += buildTable(
-    "Biggest Blowouts – Scramble",
+    "Scramble",
     data.blowouts.scramble,
     ["Year","Players","Winner","Result"]
   );
 
-  // ✅ BEST BALL
   c.innerHTML += buildTable(
-    "Biggest Blowouts – Best Ball",
+    "Best Ball",
     data.blowouts.bestBall,
     ["Year","Players","Winner","Result"]
   );
 
-  // ✅ ALT SHOT
   c.innerHTML += buildTable(
-    "Biggest Blowouts – Alternate Shot",
+    "Alternate Shot",
     data.blowouts.alternateShot,
     ["Year","Players","Winner","Result"]
   );
