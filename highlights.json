@@ -2,128 +2,141 @@
 {
   "mvpLeaders": {
     "dallas": [
-      { "name": "Meek", "count": 2, "years": "2009, 2020" },
-      { "name": "Hammy", "count": 1, "years": "2025 (Co)" },
-      { "name": "Red Pants", "count": 1, "years": "2025 (Co)" },
-      { "name": "Squabbit", "count": 1, "years": "2025 (Co)" },
-      { "name": "Drew", "count": 1, "years": "2024" },
-      { "name": "Faulkner", "count": 1, "years": "2022" },
-      { "name": "Mutha Nature", "count": 1, "years": "2021" },
-      { "name": "Nugget", "count": 1, "years": "2012" },
-      { "name": "Coby", "count": 1, "years": "2011" },
-      { "name": "Bedpost", "count": 1, "years": "2010 (Co)" },
-      { "name": "Hotdame", "count": 1, "years": "2007" },
-      { "name": "Lednicky", "count": 1, "years": "2007 (Co)" },
-      { "name": "Roger", "count": 1, "years": "2003" },
-      { "name": "Travis", "count": 1, "years": "2002" }
+      { "player": "Meek", "count": 2, "years": ["2009","2020"] },
+      { "player": "Hammy", "count": 1, "years": ["2025"] },
+      { "player": "Red Pants", "count": 1, "years": ["2025"] },
+      { "player": "Squabbit", "count": 1, "years": ["2025"] },
+      { "player": "Drew", "count": 1, "years": ["2024"] },
+      { "player": "Faulkner", "count": 1, "years": ["2022"] },
+      { "player": "Mutha Nature", "count": 1, "years": ["2021"] },
+      { "player": "Nugget", "count": 1, "years": ["2012"] },
+      { "player": "Coby", "count": 1, "years": ["2011"] },
+      { "player": "Bedpost", "count": 1, "years": ["2010"] },
+      { "player": "Hotdame", "count": 1, "years": ["2007"] },
+      { "player": "Lednicky", "count": 1, "years": ["2007"] },
+      { "player": "Roger", "count": 1, "years": ["2003"] },
+      { "player": "Travis", "count": 1, "years": ["2002"] }
     ],
     "houston": [
-      { "name": "Stinneford", "count": 2, "years": "2005 (Co), 2019 (Co)" },
-      { "name": "Hollywood", "count": 2, "years": "2006, 2017" },
-      { "name": "Travis", "count": 1, "years": "2023" },
-      { "name": "Law Dog", "count": 1, "years": "2019 (Co)" },
-      { "name": "Noble Leslie DeVotie", "count": 1, "years": "2018" },
-      { "name": "Hunter", "count": 1, "years": "2016 (Co)" },
-      { "name": "Poxy", "count": 1, "years": "2016 (Co)" },
-      { "name": "A. Rice", "count": 1, "years": "2015" },
-      { "name": "Hotdame", "count": 1, "years": "2014" },
-      { "name": "Billy Joe Tolliver", "count": 1, "years": "2013" },
-      { "name": "Lednicky", "count": 1, "years": "2008" },
-      { "name": "Schwab", "count": 1, "years": "2005 (Co)" },
-      { "name": "Country", "count": 1, "years": "2004" }
+      { "player": "Stinneford", "count": 2, "years": ["2005","2019"] },
+      { "player": "Hollywood", "count": 2, "years": ["2006","2017"] },
+      { "player": "Travis Singleton", "count": 1, "years": ["2023"] },
+      { "player": "Law Dog", "count": 1, "years": ["2019"] },
+      { "player": "Noble Leslie DeVotie", "count": 1, "years": ["2018"] },
+      { "player": "Hunter", "count": 1, "years": ["2016"] },
+      { "player": "Poxy", "count": 1, "years": ["2016"] },
+      { "player": "A. Rice", "count": 1, "years": ["2015"] },
+      { "player": "Hotdame", "count": 1, "years": ["2014"] },
+      { "player": "Billy Joe Tolliver", "count": 1, "years": ["2013"] },
+      { "player": "Country", "count": 1, "years": ["2004"] }
     ]
   },
 
   "threeAndZero": {
     "dallas": [
-      { "name": "Coby", "count": 4, "years": "2011, 2013, 2022, 2024" },
-      { "name": "Nugget", "count": 3, "years": "2012, 2017, 2023" },
-      { "name": "Hammy", "count": 2, "years": "2012, 2025" },
-      { "name": "Meek", "count": 2, "years": "2012, 2020" },
-      { "name": "Cat", "count": 2, "years": "2018, 2020" },
-      { "name": "Elliott", "count": 1, "years": "2023" },
-      { "name": "Taylor", "count": 1, "years": "2022" },
-      { "name": "Sherm", "count": 1, "years": "2020" },
-      { "name": "Coady", "count": 1, "years": "2020" },
-      { "name": "Wortsmith", "count": 1, "years": "2018" },
-      { "name": "Travis", "count": 1, "years": "2014" },
-      { "name": "Roger", "count": 1, "years": "2014" }
+      { "player": "Coby", "count": 4, "years": ["2011","2013","2022","2024"] },
+      { "player": "Nugget", "count": 3, "years": ["2012","2017","2023"] },
+      { "player": "Hammy", "count": 2, "years": ["2012","2025"] },
+      { "player": "Meek", "count": 2, "years": ["2012","2020"] },
+      { "player": "Cat", "count": 2, "years": ["2018","2020"] },
+      { "player": "Elliott", "count": 1, "years": ["2023"] },
+      { "player": "Taylor", "count": 1, "years": ["2022"] },
+      { "player": "Sherm", "count": 1, "years": ["2020"] },
+      { "player": "Coady", "count": 1, "years": ["2020"] },
+      { "player": "Wortsmith", "count": 1, "years": ["2018"] },
+      { "player": "Travis", "count": 1, "years": ["2014"] },
+      { "player": "Roger", "count": 1, "years": ["2014"] }
     ],
     "houston": [
-      { "name": "Mitchell", "count": 3, "years": "2011, 2015, 2026" },
-      { "name": "Law Dog", "count": 2, "years": "2011, 2019" },
-      { "name": "Hollywood", "count": 2, "years": "2013, 2017" },
-      { "name": "Country", "count": 2, "years": "2013, 2018" },
-      { "name": "Hotdame", "count": 2, "years": "2017, 2025" },
-      { "name": "Dewey", "count": 2, "years": "2023, 2026" },
-      { "name": "A. Rice", "count": 1, "years": "2013" },
-      { "name": "Hunter", "count": 1, "years": "2016" },
-      { "name": "Poxy", "count": 1, "years": "2016" },
-      { "name": "Hardig", "count": 1, "years": "2018" },
-      { "name": "Stinneford", "count": 1, "years": "2019" },
-      { "name": "Gabe", "count": 1, "years": "2026" }
+      { "player": "Mitchell", "count": 3, "years": ["2011","2015","2026"] },
+      { "player": "Law Dog", "count": 2, "years": ["2011","2019"] },
+      { "player": "Hollywood", "count": 2, "years": ["2013","2017"] },
+      { "player": "Country", "count": 2, "years": ["2013","2018"] },
+      { "player": "Hotdame", "count": 2, "years": ["2017","2025"] },
+      { "player": "Dewey", "count": 2, "years": ["2023","2026"] },
+      { "player": "A. Rice", "count": 1, "years": ["2013"] },
+      { "player": "Hunter", "count": 1, "years": ["2016"] },
+      { "player": "Poxy", "count": 1, "years": ["2016"] },
+      { "player": "Hardig", "count": 1, "years": ["2018"] },
+      { "player": "Stinneford", "count": 1, "years": ["2019"] },
+      { "player": "Gabe", "count": 1, "years": ["2026"] }
     ]
   },
 
   "zeroAndThree": {
     "dallas": [
-      { "name": "Faulkner", "count": 5, "years": "2012, 2016, 2019, 2020, 2025" },
-      { "name": "Taylor", "count": 3, "years": "2014, 2017, 2023" },
-      { "name": "Hammy", "count": 3, "years": "2013, 2018, 2023" },
-      { "name": "Travis", "count": 3, "years": "2015, 2017, 2023" },
-      { "name": "Coady", "count": 3, "years": "2012, 2013, 2018" },
-      { "name": "Sherm", "count": 3, "years": "2011, 2013, 2026" },
-      { "name": "Wortsmith", "count": 2, "years": "2015, 2017" },
-      { "name": "Nugget", "count": 1, "years": "2020" },
-      { "name": "Elliott", "count": 1, "years": "2019" },
-      { "name": "Cat", "count": 1, "years": "2019" },
-      { "name": "Mike W.", "count": 1, "years": "2014" },
-      { "name": "Roger", "count": 1, "years": "2013" }
+      { "player": "Faulkner", "count": 5, "years": ["2012","2016","2019","2020","2025"] },
+      { "player": "Taylor", "count": 3, "years": ["2014","2017","2023"] },
+      { "player": "Hammy", "count": 3, "years": ["2013","2018","2023"] },
+      { "player": "Travis", "count": 3, "years": ["2015","2017","2023"] },
+      { "player": "Coady", "count": 3, "years": ["2012","2013","2018"] },
+      { "player": "Sherm", "count": 3, "years": ["2011","2013","2026"] },
+      { "player": "Wortsmith", "count": 2, "years": ["2015","2017"] },
+      { "player": "Nugget", "count": 1, "years": ["2020"] },
+      { "player": "Elliott", "count": 1, "years": ["2019"] },
+      { "player": "Cat", "count": 1, "years": ["2019"] },
+      { "player": "Mike W.", "count": 1, "years": ["2014"] },
+      { "player": "Roger", "count": 1, "years": ["2013"] }
     ],
     "houston": [
-      { "name": "Dewey", "count": 2, "years": "2011, 2025" },
-      { "name": "Lednicky", "count": 2, "years": "2011, 2023" },
-      { "name": "Mitchell", "count": 2, "years": "2020, 2022" },
-      { "name": "Gabe", "count": 2, "years": "2018, 2020" },
-      { "name": "Stinneford", "count": 2, "years": "2015, 2018" },
-      { "name": "Hotdame", "count": 1, "years": "2022" },
-      { "name": "Poxy", "count": 1, "years": "2022" },
-      { "name": "A. Rice", "count": 1, "years": "2020" },
-      { "name": "Hardig", "count": 1, "years": "2020" },
-      { "name": "Law Dog", "count": 1, "years": "2016" },
-      { "name": "Hunter", "count": 1, "years": "2013" }
+      { "player": "Dewey", "count": 2, "years": ["2011","2025"] },
+      { "player": "Lednicky", "count": 2, "years": ["2011","2023"] },
+      { "player": "Mitchell", "count": 2, "years": ["2020","2022"] },
+      { "player": "Gabe", "count": 2, "years": ["2018","2020"] },
+      { "player": "Stinneford", "count": 2, "years": ["2015","2018"] },
+      { "player": "Hotdame", "count": 1, "years": ["2022"] },
+      { "player": "Poxy", "count": 1, "years": ["2022"] },
+      { "player": "A. Rice", "count": 1, "years": ["2020"] },
+      { "player": "Hardig", "count": 1, "years": ["2020"] },
+      { "player": "Law Dog", "count": 1, "years": ["2016"] },
+      { "player": "Hunter", "count": 1, "years": ["2013"] }
     ]
   },
 
   "blowouts": {
-    "overall": [
-      { "year": 2013, "format": "Alternate Shot", "players": "Faulkner/Cat vs Stinneford/Hanski", "winner": "Dallas", "result": "10 & 8" },
-      { "year": 2016, "format": "Singles", "players": "Hunter vs Faulkner", "winner": "Houston", "result": "10 & 8" },
-      { "year": 2014, "format": "Singles", "players": "Roger vs Slocomb", "winner": "Dallas", "result": "9 & 8" },
-      { "year": 2014, "format": "Singles", "players": "Law Dog vs Wortsmith", "winner": "Houston", "result": "9 & 8" },
-      { "year": 2014, "format": "Singles", "players": "Sherm vs Stinneford", "winner": "Dallas", "result": "8 & 7" }
+    "overallTop10": [
+      { "year": 2013, "format": "Alt Shot", "match": "Faulkner/Cat vs Stinneford/Hanski", "result": "10&8", "winner": "Dallas" },
+      { "year": 2016, "format": "Singles", "match": "Faulkner vs Hunter", "result": "10&8", "winner": "Houston" },
+      { "year": 2014, "format": "Singles", "match": "Roger vs Slocomb", "result": "9&8", "winner": "Dallas" },
+      { "year": 2014, "format": "Singles", "match": "Wortsmith vs Law Dog", "result": "9&8", "winner": "Houston" },
+      { "year": 2014, "format": "Singles", "match": "Sherm vs Stinneford", "result": "8&7", "winner": "Dallas" },
+      { "year": 2016, "format": "Singles", "match": "Meek vs Mike W.", "result": "8&7", "winner": "Dallas" },
+      { "year": 2018, "format": "Singles", "match": "Wortsmith vs Stinneford", "result": "8&6", "winner": "Dallas" },
+      { "year": 2026, "format": "Singles", "match": "Cat vs Lednicky", "result": "8&6", "winner": "Dallas" },
+      { "year": 2022, "format": "Scramble", "match": "Travis/Elliott vs Hanski/Country", "result": "7&6", "winner": "Dallas" },
+      { "year": 2022, "format": "Scramble", "match": "Coby/Cat vs Hotdame/Mitchell", "result": "7&6", "winner": "Dallas" }
     ],
 
-    "singles": [
-      { "year": 2016, "players": "Hunter vs Faulkner", "winner": "Houston", "result": "10 & 8" },
-      { "year": 2014, "players": "Roger vs Slocomb", "winner": "Dallas", "result": "9 & 8" },
-      { "year": 2014, "players": "Law Dog vs Wortsmith", "winner": "Houston", "result": "9 & 8" },
-      { "year": 2014, "players": "Sherm vs Stinneford", "winner": "Dallas", "result": "8 & 7" }
+    "singlesTop5": [
+      { "year": 2016, "match": "Faulkner vs Hunter", "result": "10&8", "winner": "Houston" },
+      { "year": 2014, "match": "Roger vs Slocomb", "result": "9&8", "winner": "Dallas" },
+      { "year": 2014, "match": "Wortsmith vs Law Dog", "result": "9&8", "winner": "Houston" },
+      { "year": 2014, "match": "Sherm vs Stinneford", "result": "8&7", "winner": "Dallas" },
+      { "year": 2016, "match": "Meek vs Mike W.", "result": "8&7", "winner": "Dallas" }
     ],
 
-    "scramble": [
-      { "year": 2015, "players": "Coby/Cat vs A. Rice/Stinneford", "winner": "Dallas", "result": "6 & 5" },
-      { "year": 2017, "players": "Gabe/Poxy vs Wortsmith/Faulkner", "winner": "Houston", "result": "6 & 5" },
-      { "year": 2018, "players": "Dewey/Wortsmith vs Stinneford/Poxy", "winner": "Dallas", "result": "6 & 5" }
+    "scrambleTop5": [
+      { "year": 2022, "match": "Travis/Elliott vs Hanski/Country", "result": "7&6", "winner": "Dallas" },
+      { "year": 2022, "match": "Coby/Cat vs Hotdame/Mitchell", "result": "7&6", "winner": "Dallas" },
+      { "year": 2015, "match": "Coby/Cat vs A. Rice/Stinneford", "result": "6&5", "winner": "Dallas" },
+      { "year": 2017, "match": "Wortsmith/Faulkner vs Gabe/Poxy", "result": "6&5", "winner": "Houston" },
+      { "year": 2018, "match": "Dewey/Wortsmith vs Stinneford/Poxy", "result": "6&5", "winner": "Dallas" }
     ],
 
-    "bestBall": [
-      { "year": 2019, "players": "Meek/Hammy vs A. Rice/Country", "winner": "Dallas", "result": "5 & 4" },
-      { "year": 2019, "players": "Lednicky/Stinneford vs Faulkner/Drew", "winner": "Houston", "result": "5 & 4" }
+    "bestBallTop5": [
+      { "year": 2023, "match": "Nugget/Cat vs Hunter/Poxy", "result": "7&5", "winner": "Dallas" },
+      { "year": 2020, "match": "Elliott/Coby vs Hardig/Hollywood", "result": "6&5", "winner": "Dallas" },
+      { "year": 2022, "match": "Taylor/Wortsmith vs Gabe/A. Rice", "result": "6&4", "winner": "Dallas" },
+      { "year": 2022, "match": "Elliott/Coby vs Hollywood/Poxy", "result": "6&4", "winner": "Dallas" },
+      { "year": 2019, "match": "Meek/Hammy vs A. Rice/Country", "result": "5&4", "winner": "Dallas" }
     ],
 
-    "alternateShot": [
-      { "year": 2013, "players": "Faulkner/Cat vs Stinneford/Hanski", "winner": "Dallas", "result": "10 & 8" }
+    "altShotTop5": [
+      { "year": 2013, "match": "Faulkner/Cat vs Stinneford/Hanski", "result": "10&8", "winner": "Dallas" },
+      { "year": 2012, "match": "Hammy/Meek vs Dewey/A. Rice", "result": "6&4", "winner": "Dallas" },
+      { "year": 2013, "match": "Coady/Sherm vs Gabe/Hardig", "result": "6&5", "winner": "Houston" },
+      { "year": 2014, "match": "Taylor/Mike W. vs A. Rice/Hotdame", "result": "6&5", "winner": "Houston" },
+      { "year": 2016, "match": "Meek/Sherm vs Lednicky/Hotdame", "result": "6&5", "winner": "Houston" }
     ]
   }
 }
