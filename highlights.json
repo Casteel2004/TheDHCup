@@ -8,47 +8,94 @@
       { "name": "Squabbit", "count": 1, "years": "2025 (Co)" },
       { "name": "Drew", "count": 1, "years": "2024" },
       { "name": "Faulkner", "count": 1, "years": "2022" },
-      { "name": "Mutha Nature", "count": 1, "years": "2021" }
+      { "name": "Mutha Nature", "count": 1, "years": "2021" },
+      { "name": "Nugget", "count": 1, "years": "2012" },
+      { "name": "Coby", "count": 1, "years": "2011" },
+      { "name": "Bedpost", "count": 1, "years": "2010 (Co)" },
+      { "name": "Hotdame", "count": 1, "years": "2007" },
+      { "name": "Lednicky", "count": 1, "years": "2007 (Co)" },
+      { "name": "Roger", "count": 1, "years": "2003" },
+      { "name": "Travis", "count": 1, "years": "2002" }
     ],
     "houston": [
       { "name": "Stinneford", "count": 2, "years": "2005 (Co), 2019 (Co)" },
       { "name": "Hollywood", "count": 2, "years": "2006, 2017" },
       { "name": "Travis", "count": 1, "years": "2023" },
       { "name": "Law Dog", "count": 1, "years": "2019 (Co)" },
-      { "name": "Hunter", "count": 1, "years": "2016 (Co)" }
+      { "name": "Noble Leslie DeVotie", "count": 1, "years": "2018" },
+      { "name": "Hunter", "count": 1, "years": "2016 (Co)" },
+      { "name": "Poxy", "count": 1, "years": "2016 (Co)" },
+      { "name": "A. Rice", "count": 1, "years": "2015" },
+      { "name": "Hotdame", "count": 1, "years": "2014" },
+      { "name": "Billy Joe Tolliver", "count": 1, "years": "2013" },
+      { "name": "Lednicky", "count": 1, "years": "2008" },
+      { "name": "Schwab", "count": 1, "years": "2005 (Co)" },
+      { "name": "Country", "count": 1, "years": "2004" }
     ]
   },
 
   "threeAndZero": {
     "dallas": [
-      { "name": "Coby", "years": "2011, 2013, 2022, 2024" },
-      { "name": "Nugget", "years": "2012, 2017, 2023" },
-      { "name": "Hammy", "years": "2012, 2025" },
-      { "name": "Meek", "years": "2012, 2020" }
+      { "name": "Coby", "count": 4, "years": "2011, 2013, 2022, 2024" },
+      { "name": "Nugget", "count": 3, "years": "2012, 2017, 2023" },
+      { "name": "Hammy", "count": 2, "years": "2012, 2025" },
+      { "name": "Meek", "count": 2, "years": "2012, 2020" },
+      { "name": "Cat", "count": 2, "years": "2018, 2020" },
+      { "name": "Elliott", "count": 1, "years": "2023" },
+      { "name": "Taylor", "count": 1, "years": "2022" },
+      { "name": "Sherm", "count": 1, "years": "2020" },
+      { "name": "Coady", "count": 1, "years": "2020" },
+      { "name": "Wortsmith", "count": 1, "years": "2018" },
+      { "name": "Travis", "count": 1, "years": "2014" },
+      { "name": "Roger", "count": 1, "years": "2014" }
     ],
     "houston": [
-      { "name": "Mitchell", "years": "2011, 2015, 2026" },
-      { "name": "Law Dog", "years": "2011, 2019" },
-      { "name": "Hollywood", "years": "2013, 2017" }
+      { "name": "Mitchell", "count": 3, "years": "2011, 2015, 2026" },
+      { "name": "Law Dog", "count": 2, "years": "2011, 2019" },
+      { "name": "Hollywood", "count": 2, "years": "2013, 2017" },
+      { "name": "Country", "count": 2, "years": "2013, 2018" },
+      { "name": "Hotdame", "count": 2, "years": "2017, 2025" },
+      { "name": "Dewey", "count": 2, "years": "2023, 2026" },
+      { "name": "A. Rice", "count": 1, "years": "2013" },
+      { "name": "Hunter", "count": 1, "years": "2016" },
+      { "name": "Poxy", "count": 1, "years": "2016" },
+      { "name": "Hardig", "count": 1, "years": "2018" },
+      { "name": "Stinneford", "count": 1, "years": "2019" },
+      { "name": "Gabe", "count": 1, "years": "2026" }
     ]
   },
 
   "zeroAndThree": {
     "dallas": [
-      { "name": "Faulkner", "years": "2012, 2016, 2019, 2020, 2025" },
-      { "name": "Taylor", "years": "2014, 2017, 2023" },
-      { "name": "Hammy", "years": "2013, 2018, 2023" }
+      { "name": "Faulkner", "count": 5, "years": "2012, 2016, 2019, 2020, 2025" },
+      { "name": "Taylor", "count": 3, "years": "2014, 2017, 2023" },
+      { "name": "Hammy", "count": 3, "years": "2013, 2018, 2023" },
+      { "name": "Travis", "count": 3, "years": "2015, 2017, 2023" },
+      { "name": "Coady", "count": 3, "years": "2012, 2013, 2018" },
+      { "name": "Sherm", "count": 3, "years": "2011, 2013, 2026" },
+      { "name": "Wortsmith", "count": 2, "years": "2015, 2017" },
+      { "name": "Nugget", "count": 1, "years": "2020" },
+      { "name": "Elliott", "count": 1, "years": "2019" },
+      { "name": "Cat", "count": 1, "years": "2019" },
+      { "name": "Mike W.", "count": 1, "years": "2014" },
+      { "name": "Roger", "count": 1, "years": "2013" }
     ],
     "houston": [
-      { "name": "Dewey", "years": "2011, 2025" },
-      { "name": "Lednicky", "years": "2011, 2023" },
-      { "name": "Mitchell", "years": "2020, 2022" },
-      { "name": "Gabe", "years": "2018, 2020" }
+      { "name": "Dewey", "count": 2, "years": "2011, 2025" },
+      { "name": "Lednicky", "count": 2, "years": "2011, 2023" },
+      { "name": "Mitchell", "count": 2, "years": "2020, 2022" },
+      { "name": "Gabe", "count": 2, "years": "2018, 2020" },
+      { "name": "Stinneford", "count": 2, "years": "2015, 2018" },
+      { "name": "Hotdame", "count": 1, "years": "2022" },
+      { "name": "Poxy", "count": 1, "years": "2022" },
+      { "name": "A. Rice", "count": 1, "years": "2020" },
+      { "name": "Hardig", "count": 1, "years": "2020" },
+      { "name": "Law Dog", "count": 1, "years": "2016" },
+      { "name": "Hunter", "count": 1, "years": "2013" }
     ]
   },
 
   "blowouts": {
-
     "overall": [
       { "year": 2013, "format": "Alternate Shot", "players": "Faulkner/Cat vs Stinneford/Hanski", "winner": "Dallas", "result": "10 & 8" },
       { "year": 2016, "format": "Singles", "players": "Hunter vs Faulkner", "winner": "Houston", "result": "10 & 8" },
@@ -78,6 +125,5 @@
     "alternateShot": [
       { "year": 2013, "players": "Faulkner/Cat vs Stinneford/Hanski", "winner": "Dallas", "result": "10 & 8" }
     ]
-
   }
 }
