@@ -32,9 +32,9 @@
       display: flex;
       align-items: center;
       gap: 10px;
-      font-size: 20px;
       color: gold;
       font-weight: bold;
+      font-size: 20px;
     }
 
     .nav-left img {
@@ -42,17 +42,12 @@
       border-radius: 50%;
     }
 
-    .nav-links {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 12px;
-    }
-
     .nav-links a {
       color: #38bdf8;
       text-decoration: none;
       font-size: 13px;
       font-weight: bold;
+      margin-right: 12px;
     }
 
     .nav-links a.active {
@@ -65,7 +60,6 @@
         flex-direction: column;
         align-items: flex-start;
       }
-
       .nav-links {
         margin-top: 10px;
       }
@@ -86,11 +80,6 @@
       font-size: 55px;
     }
 
-    .hero p {
-      font-size: 18px;
-    }
-
-    /* CONTENT */
     .content {
       width: 96%;
       max-width: 1400px;
@@ -108,7 +97,6 @@
       margin-top: 20px;
     }
 
-    /* TABLE */
     .table-container {
       overflow-x: auto;
     }
@@ -120,55 +108,43 @@
       margin-top: 10px;
     }
 
-    th, td {
+    th {
+      color: gold;
+      text-align: center; /* ✅ FIX */
+      padding: 10px;
+      border-bottom: 1px solid #444;
+    }
+
+    td {
       padding: 10px;
       border-bottom: 1px solid #444;
       text-align: left;
-      white-space: nowrap;
-    }
-
-    th {
-      color: gold;
     }
 
     tr:hover {
       background: #374151;
     }
 
-    @media (max-width: 768px) {
-      .hero h1 {
-        font-size: 36px;
-      }
-    }
   </style>
 </head>
 
 <body>
 
-<!-- NAV -->
 <div class="nav">
   <div class="nav-left">
-    <img src="./logo-circle.png">
+    ./logo-circle.png
     DH Cup
   </div>
 
   <div class="nav-links">
-    <a href="index.html">Home</a>
-    <a href="timeline.html">Timeline</a>
-    <a href="history.html">History</a>
-    <a href="highlights.html" class="active">Highlights</a>
-    <a href="players.html">Players</a>
-    <a href="streaks.html">Streaks</a>
-    <a href="teammates.html">Teammates</a>
-    <a href="handicap.html">Handicap History</a>
-    <a href="years.html">Year by Year Results</a>
+    index.htmlHome</a>
+    history.htmlHistory</a>
+    highlights.htmlHighlights</a>
   </div>
 </div>
 
-<!-- HERO -->
 <div class="hero">
   <h1>DH Cup Highlights</h1>
-  <p>The greatest performances, dominance, and disasters.</p>
 </div>
 
 <div class="content" id="content"></div>
@@ -180,6 +156,7 @@ fetch('highlights.json')
 
   const c = document.getElementById('content');
 
+  // ✅ GENERIC TABLE BUILDER
   function buildTable(title, rows, headers) {
     let html = `<h3>${title}</h3><div class="table-container"><table><tr>`;
     headers.forEach(h => html += `<th>${h}</th>`);
@@ -187,8 +164,18 @@ fetch('highlights.json')
 
     rows.forEach(r => {
       html += "<tr>";
-      Object.values(r).forEach(v => {
-        html += `<td>${v}</td>`;
+      headers.forEach(key => {
+        const fieldMap = {
+          "Name": r.name,
+          "#": r.count,
+          "Years": r.years,
+          "Year": r.year,
+          "Format": r.format,
+          "Players": r.players,
+          "Winner": r.winner,
+          "Result": r.result
+        };
+        html += `<td>${fieldMap[key] || ""}</td>`;
       });
       html += "</tr>";
     });
@@ -197,51 +184,62 @@ fetch('highlights.json')
     return html;
   }
 
-  // ✅ MVPs
+  // ✅ SORT + TOP 5 FUNCTION
+  function getTop5(rows) {
+    return rows
+      .map(r => ({
+        ...r,
+        rank: parseInt(r.result) || 0
+      }))
+      .sort((a,b) => b.rank - a.rank)
+      .slice(0,5);
+  }
+
+  // ✅ MVP
   c.innerHTML += `<h2>MVP Leaders</h2>`;
-  c.innerHTML += buildTable("Dallas", data.mvpLeaders.dallas, ["Name","MVPs","Years"]);
-  c.innerHTML += buildTable("Houston", data.mvpLeaders.houston, ["Name","MVPs","Years"]);
+  c.innerHTML += buildTable("Dallas", data.mvpLeaders.dallas, ["Name","#","Years"]);
+  c.innerHTML += buildTable("Houston", data.mvpLeaders.houston, ["Name","#","Years"]);
 
-  // ✅ 3-0
+  // ✅ 3-0 (FIXED HEADERS)
   c.innerHTML += `<h2>3–0 Performances</h2>`;
-  c.innerHTML += buildTable("Dallas", data.threeAndZero.dallas, ["Name","Years"]);
-  c.innerHTML += buildTable("Houston", data.threeAndZero.houston, ["Name","Years"]);
+  c.innerHTML += buildTable("Dallas", data.threeAndZero.dallas, ["Name","#","Years"]);
+  c.innerHTML += buildTable("Houston", data.threeAndZero.houston, ["Name","#","Years"]);
 
-  // ✅ 0-3
+  // ✅ 0-3 (FIXED HEADERS)
   c.innerHTML += `<h2>0–3 Performances</h2>`;
-  c.innerHTML += buildTable("Dallas", data.zeroAndThree.dallas, ["Name","Years"]);
-  c.innerHTML += buildTable("Houston", data.zeroAndThree.houston, ["Name","Years"]);
+  c.innerHTML += buildTable("Dallas", data.zeroAndThree.dallas, ["Name","#","Years"]);
+  c.innerHTML += buildTable("Houston", data.zeroAndThree.houston, ["Name","#","Years"]);
 
-  // ✅ Blowouts
+  // ✅ BLOWOUTS (TOP 5 LOGIC ADDED)
   c.innerHTML += `<h2>Biggest Blowouts</h2>`;
 
   c.innerHTML += buildTable(
     "Overall",
-    data.blowouts.overall,
+    getTop5(data.blowouts.overall),
     ["Year","Format","Players","Winner","Result"]
   );
 
   c.innerHTML += buildTable(
     "Singles",
-    data.blowouts.singles,
+    getTop5(data.blowouts.singles),
     ["Year","Players","Winner","Result"]
   );
 
   c.innerHTML += buildTable(
     "Scramble",
-    data.blowouts.scramble,
+    getTop5(data.blowouts.scramble),
     ["Year","Players","Winner","Result"]
   );
 
   c.innerHTML += buildTable(
     "Best Ball",
-    data.blowouts.bestBall,
+    getTop5(data.blowouts.bestBall),
     ["Year","Players","Winner","Result"]
   );
 
   c.innerHTML += buildTable(
     "Alternate Shot",
-    data.blowouts.alternateShot,
+    getTop5(data.blowouts.alternateShot),
     ["Year","Players","Winner","Result"]
   );
 
