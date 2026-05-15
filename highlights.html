@@ -116,6 +116,15 @@
       margin-top: 10px;
     }
 
+    /* TEAM HEADER COLORS */
+    .dallas-header {
+      color: #60a5fa;
+    }
+
+    .houston-header {
+      color: #f87171;
+    }
+
     .section {
       margin-bottom: 40px;
     }
@@ -136,17 +145,20 @@
       overflow-x: auto;
     }
 
+    /* ✅ TABLE */
     table {
       width: 100%;
       border-collapse: collapse;
       background: #1f2937;
+      table-layout: fixed; /* ✅ forces consistent column widths */
     }
 
     th, td {
       padding: 12px;
       border-bottom: 1px solid #444;
       text-align: center;
-      white-space: nowrap;
+      white-space: normal;
+      word-wrap: break-word;
     }
 
     th {
@@ -167,6 +179,18 @@
       background-color: rgba(220, 38, 38, 0.35);
       font-weight: bold;
     }
+
+    /* ✅ 5-COLUMN TABLES (BLOWOUTS) */
+    table th:nth-child(1), table td:nth-child(1) { width: 10%; }
+    table th:nth-child(2), table td:nth-child(2) { width: 15%; }
+    table th:nth-child(3), table td:nth-child(3) { width: 45%; }
+    table th:nth-child(4), table td:nth-child(4) { width: 15%; }
+    table th:nth-child(5), table td:nth-child(5) { width: 15%; }
+
+    /* ✅ 3-COLUMN TABLES (MVP / 3-0 / 0-3) */
+    .half table th:nth-child(1), .half table td:nth-child(1) { width: 40%; }
+    .half table th:nth-child(2), .half table td:nth-child(2) { width: 20%; }
+    .half table th:nth-child(3), .half table td:nth-child(3) { width: 40%; }
 
     @media (max-width: 768px) {
       .hero {
@@ -222,28 +246,17 @@ fetch("highlights.json")
 
   const container = document.getElementById("content");
 
-  // ✅ Capitalize headers
   function formatHeader(col) {
     return col.charAt(0).toUpperCase() + col.slice(1);
   }
 
-  // ✅ Reorder match so winner appears first
   function formatMatch(match, winner) {
-    if (!match || match.indexOf(" vs ") === -1) return match;
+    if (!match || !match.includes(" vs ")) return match;
 
     const parts = match.split(" vs ");
-    let left = parts[0];
-    let right = parts[1];
-
-    if (winner === "Dallas" && match.includes(left)) {
-      return `${left} def ${right}`;
-    }
-
-    if (winner === "Houston" && match.includes(right)) {
-      return `${right} def ${left}`;
-    }
-
-    return match;
+    return winner === "Houston"
+      ? `${parts[1]} def ${parts[0]}`
+      : `${parts[0]} def ${parts[1]}`;
   }
 
   function buildTable(rows, cols) {
@@ -263,10 +276,7 @@ fetch("highlights.json")
       cols.forEach(c => {
         let val = r[c];
 
-        if (c === "match") {
-          val = formatMatch(r.match, r.winner);
-        }
-
+        if (c === "match") val = formatMatch(r.match, r.winner);
         if (Array.isArray(val)) val = val.join(", ");
 
         html += `<td>${val ?? ""}</td>`;
@@ -284,11 +294,11 @@ fetch("highlights.json")
         <h2>${title}</h2>
         <div class="table-row">
           <div class="half">
-            <h3>Dallas</h3>
+            <h3 class="dallas-header">Dallas</h3>
             ${buildTable(dallas, ["player","count","years"])}
           </div>
           <div class="half">
-            <h3>Houston</h3>
+            <h3 class="houston-header">Houston</h3>
             ${buildTable(houston, ["player","count","years"])}
           </div>
         </div>
