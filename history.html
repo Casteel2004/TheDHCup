@@ -104,12 +104,20 @@
       padding: 20px;
     }
 
+    /* ✅ DYNAMIC RECORD COLORS */
     .record {
       text-align: center;
       font-size: 30px;
-      color: #60a5fa;
       margin-bottom: 30px;
       font-weight: bold;
+    }
+
+    .record.dallas {
+      color: #60a5fa;
+    }
+
+    .record.houston {
+      color: #f87171;
     }
 
     /* TABLE */
@@ -127,12 +135,12 @@
     th, td {
       padding: 12px;
       border-bottom: 1px solid #444;
-      text-align: center; /* ✅ CENTER EVERYTHING */
+      text-align: center;
       white-space: normal;
       word-wrap: break-word;
     }
 
-    /* ✅ ENHANCED HEADER STYLE (MATCHES HIGHLIGHTS) */
+    /* ✅ HEADER STYLE */
     th {
       color: gold;
       border-bottom: 2px solid #facc15;
@@ -147,7 +155,7 @@
       background: #374151;
     }
 
-    /* ROW COLORS */
+    /* ✅ ROW COLORS */
     tr.dallas-win {
       background-color: rgba(37, 99, 235, 0.35);
       font-weight: bold;
@@ -157,6 +165,13 @@
       background-color: rgba(220, 38, 38, 0.35);
       font-weight: bold;
     }
+
+    /* ✅ COLUMN WIDTHS (FIXED PROPORTIONS) */
+    table th:nth-child(1), table td:nth-child(1) { width: 8%; }   /* Year */
+    table th:nth-child(2), table td:nth-child(2) { width: 12%; }  /* Winner */
+    table th:nth-child(3), table td:nth-child(3) { width: 12%; }  /* Score */
+    table th:nth-child(4), table td:nth-child(4) { width: 48%; }  /* Location */
+    table th:nth-child(5), table td:nth-child(5) { width: 20%; }  /* MVP */
 
     @media (max-width: 768px) {
       .hero {
@@ -180,20 +195,20 @@
 <!-- NAV -->
 <div class="nav">
   <div class="nav-left">
-    <img src="./logo-circle.png">
+    ./logo-circle.png
     DH Cup
   </div>
 
   <div class="nav-links">
-    <a href="index.html">Home</a>
-    <a href="timeline.html">Timeline</a>
-    <a href="history.html" class="active">History</a>
-    <a href="highlights.html">Highlights</a>
-    <a href="players.html">Players</a>
-    <a href="streaks.html">Streaks</a>
-    <a href="teammates.html">Teammates</a>
-    <a href="handicap.html">Handicap History</a>
-    <a href="years.html">Year by Year Results</a>
+    index.htmlHome</a>
+    timeline.htmlTimeline</a>
+    history.htmlHistory</a>
+    highlights.htmlHighlights</a>
+    players.htmlPlayers</a>
+    streaks.htmlStreaks</a>
+    teammates.htmlTeammates</a>
+    handicap.htmlHandicap History</a>
+    years.htmlYear by Year Results</a>
   </div>
 </div>
 
@@ -205,7 +220,8 @@
 
 <div class="content">
 
-  <div class="record">
+  <!-- ✅ DYNAMIC RECORD -->
+  <div id="recordLine" class="record">
     Houston Leads All-Time: 15 – 12
   </div>
 
@@ -258,8 +274,17 @@ fetch('history.json')
       table.innerHTML += row;
     });
 
+    /* ✅ COLOR THE RECORD LINE */
+    const recordEl = document.getElementById("recordLine");
+    if (recordEl.innerText.toLowerCase().includes("dallas")) {
+      recordEl.classList.add("dallas");
+    } else if (recordEl.innerText.toLowerCase().includes("houston")) {
+      recordEl.classList.add("houston");
+    }
+
   });
 </script>
 
 </body>
 </html>
+``
