@@ -1,6 +1,8 @@
 
 <!DOCTYPE html>
-<html <title>DH Cup Highlights</title><html>
+<html>
+<head>
+  <title>DH Cup Highlights</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <style>
@@ -118,7 +120,6 @@
       margin-bottom: 40px;
     }
 
-    /* SIDE-BY-SIDE TABLES */
     .table-row {
       display: flex;
       gap: 20px;
@@ -131,7 +132,6 @@
       min-width: 300px;
     }
 
-    /* TABLE */
     .table-container {
       overflow-x: auto;
     }
@@ -157,7 +157,7 @@
       background: #374151;
     }
 
-    /* ✅ ROW HIGHLIGHTING */
+    /* ✅ ROW COLORS */
     tr.dallas-win {
       background-color: rgba(37, 99, 235, 0.35);
       font-weight: bold;
@@ -168,7 +168,6 @@
       font-weight: bold;
     }
 
-    /* MOBILE */
     @media (max-width: 768px) {
       .hero {
         margin-top: 160px;
@@ -223,10 +222,34 @@ fetch("highlights.json")
 
   const container = document.getElementById("content");
 
+  // ✅ Capitalize headers
+  function formatHeader(col) {
+    return col.charAt(0).toUpperCase() + col.slice(1);
+  }
+
+  // ✅ Reorder match so winner appears first
+  function formatMatch(match, winner) {
+    if (!match || match.indexOf(" vs ") === -1) return match;
+
+    const parts = match.split(" vs ");
+    let left = parts[0];
+    let right = parts[1];
+
+    if (winner === "Dallas" && match.includes(left)) {
+      return `${left} def ${right}`;
+    }
+
+    if (winner === "Houston" && match.includes(right)) {
+      return `${right} def ${left}`;
+    }
+
+    return match;
+  }
+
   function buildTable(rows, cols) {
     let html = `<div class="table-container"><table><tr>`;
 
-    cols.forEach(c => html += `<th>${c}</th>`);
+    cols.forEach(c => html += `<th>${formatHeader(c)}</th>`);
     html += `</tr>`;
 
     rows.forEach(r => {
@@ -239,7 +262,13 @@ fetch("highlights.json")
 
       cols.forEach(c => {
         let val = r[c];
+
+        if (c === "match") {
+          val = formatMatch(r.match, r.winner);
+        }
+
         if (Array.isArray(val)) val = val.join(", ");
+
         html += `<td>${val ?? ""}</td>`;
       });
 
@@ -280,7 +309,6 @@ fetch("highlights.json")
     `;
   }
 
-  // ✅ SECTIONS
   container.innerHTML += sideSection("MVP Leaders", data.mvpLeaders.dallas, data.mvpLeaders.houston);
   container.innerHTML += sideSection("3-0 Performances", data.threeAndZero.dallas, data.threeAndZero.houston);
   container.innerHTML += sideSection("0-3 Performances", data.zeroAndThree.dallas, data.zeroAndThree.houston);
@@ -296,5 +324,3 @@ fetch("highlights.json")
 
 </body>
 </html>
-
-<head>
