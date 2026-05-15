@@ -1,5 +1,8 @@
 
-<!DOCTYPE html><!DOCTYPE html>DH Cup Highlights</title>
+<!DOCTYPE html>
+<html>
+<head>
+  <title>DH Cup Highlights</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <style>
@@ -60,19 +63,6 @@
       text-decoration: underline;
     }
 
-    @media (max-width: 768px) {
-      .nav {
-        flex-direction: column;
-        align-items: flex-start;
-      }
-
-      .nav-links {
-        width: 100%;
-        flex-wrap: wrap;
-        margin-top: 10px;
-      }
-    }
-
     /* HERO */
     .hero {
       margin-top: 120px;
@@ -113,14 +103,8 @@
       margin-top: 10px;
     }
 
-    /* TEAM HEADER COLORS */
-    .dallas-header {
-      color: #60a5fa;
-    }
-
-    .houston-header {
-      color: #f87171;
-    }
+    .dallas-header { color: #60a5fa; }
+    .houston-header { color: #f87171; }
 
     .section {
       margin-bottom: 40px;
@@ -141,22 +125,24 @@
       overflow-x: auto;
     }
 
+    /* ✅ KEY CHANGE: AUTO TABLE LAYOUT */
     table {
       width: 100%;
       border-collapse: collapse;
       background: #1f2937;
-      table-layout: fixed;
+      table-layout: auto; /* ✅ allows natural sizing */
     }
 
     th, td {
       padding: 12px;
       border-bottom: 1px solid #444;
       text-align: center;
-      white-space: normal;
-      word-wrap: break-word;
+
+      /* ✅ KEY: STOP WRAPPING */
+      white-space: nowrap;
     }
 
-    /* ✅ ENHANCED HEADER STYLE */
+    /* HEADERS */
     th {
       color: gold;
       border-bottom: 2px solid #facc15;
@@ -182,29 +168,24 @@
       font-weight: bold;
     }
 
-    /* COLUMN WIDTHS */
-    table th:nth-child(1), table td:nth-child(1) { width: 10%; }
-    table th:nth-child(2), table td:nth-child(2) { width: 15%; }
+    /* ✅ BETTER COLUMN BALANCE */
+
+    /* 5-column tables */
+    table th:nth-child(1), table td:nth-child(1) { width: 8%; }
+    table th:nth-child(2), table td:nth-child(2) { width: 12%; }
     table th:nth-child(3), table td:nth-child(3) { width: 45%; }
     table th:nth-child(4), table td:nth-child(4) { width: 15%; }
-    table th:nth-child(5), table td:nth-child(5) { width: 15%; }
+    table th:nth-child(5), table td:nth-child(5) { width: 10%; }
 
-    .half table th:nth-child(1), .half table td:nth-child(1) { width: 40%; }
-    .half table th:nth-child(2), .half table td:nth-child(2) { width: 20%; }
-    .half table th:nth-child(3), .half table td:nth-child(3) { width: 40%; }
+    /* 3-column tables */
+    .half table th:nth-child(1), .half table td:nth-child(1) { width: 35%; }
+    .half table th:nth-child(2), .half table td:nth-child(2) { width: 15%; }
+    .half table th:nth-child(3), .half table td:nth-child(3) { width: 50%; }
 
     @media (max-width: 768px) {
-      .hero {
-        margin-top: 160px;
-      }
-
-      .hero h1 {
-        font-size: 38px;
-      }
-
-      .half {
-        width: 100%;
-      }
+      .hero { margin-top: 160px; }
+      .hero h1 { font-size: 38px; }
+      .half { width: 100%; }
     }
 
   </style>
@@ -212,7 +193,7 @@
 
 <body>
 
-<!-- ✅ FIXED NAV -->
+<!-- NAV -->
 <div class="nav">
   <div class="nav-left">
     <img src="./logo-circle.png">
@@ -232,7 +213,6 @@
   </div>
 </div>
 
-<!-- HERO -->
 <div class="hero">
   <h1>DH Cup Highlights</h1>
   <p>The best (and worst) performances in DH Cup history</p>
@@ -327,6 +307,3 @@ fetch("highlights.json")
 
 </body>
 </html>
-
-<html>
-<head>
