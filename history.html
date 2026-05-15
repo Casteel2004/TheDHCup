@@ -63,7 +63,6 @@
       text-decoration: underline;
     }
 
-    /* MOBILE NAV */
     @media (max-width: 768px) {
       .nav {
         flex-direction: column;
@@ -113,39 +112,42 @@
       font-weight: bold;
     }
 
-    /* TABLE CONTAINER */
+    /* TABLE */
     .table-container {
       overflow-x: auto;
-      -webkit-overflow-scrolling: touch;
     }
 
     table {
       width: 100%;
       border-collapse: collapse;
       background: #1f2937;
+      table-layout: fixed;
     }
 
     th, td {
       padding: 12px;
       border-bottom: 1px solid #444;
-      text-align: left;
-      white-space: nowrap;
-    }
-
-    td.location-col {
+      text-align: center; /* ✅ CENTER EVERYTHING */
       white-space: normal;
-      line-height: 1.3;
+      word-wrap: break-word;
     }
 
+    /* ✅ ENHANCED HEADER STYLE (MATCHES HIGHLIGHTS) */
     th {
       color: gold;
+      border-bottom: 2px solid #facc15;
+      letter-spacing: 0.5px;
+    }
+
+    thead tr {
+      border-bottom: 3px solid #facc15;
     }
 
     tr:hover {
       background: #374151;
     }
 
-    /* ✅ NEW: ROW COLORS */
+    /* ROW COLORS */
     tr.dallas-win {
       background-color: rgba(37, 99, 235, 0.35);
       font-weight: bold;
@@ -156,7 +158,6 @@
       font-weight: bold;
     }
 
-    /* MOBILE TEXT */
     @media (max-width: 768px) {
       .hero {
         margin-top: 160px;
@@ -229,6 +230,7 @@
 fetch('history.json')
   .then(response => response.json())
   .then(data => {
+
     const table = document.getElementById('historyTable');
 
     data.forEach(item => {
@@ -248,13 +250,14 @@ fetch('history.json')
           <td>${item.year}</td>
           <td>${item.winner}</td>
           <td>${item.score}</td>
-          <td class="location-col">${item.location}</td>
+          <td>${item.location}</td>
           <td>${item.mvp}</td>
         </tr>
       `;
 
       table.innerHTML += row;
     });
+
   });
 </script>
 
