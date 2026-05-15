@@ -1,5 +1,6 @@
 
-<!DOCTYPE html><!DOCTYPE html<head>
+<!DOCTYPE html><!DOCTYPE>
+<head>
   <title>DH Cup Highlights</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -21,6 +22,7 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
+      box-sizing: border-box;
       z-index: 999;
       flex-wrap: wrap;
     }
@@ -30,8 +32,8 @@
       align-items: center;
       gap: 10px;
       color: gold;
-      font-size: 20px;
       font-weight: bold;
+      font-size: 20px;
     }
 
     .nav-left img {
@@ -113,6 +115,7 @@
       margin-top: 10px;
     }
 
+    /* TEAM HEADER COLORS */
     .dallas-header {
       color: #60a5fa;
     }
@@ -138,8 +141,6 @@
 
     .table-container {
       overflow-x: auto;
-      max-height: 500px; /* ✅ needed for sticky to shine */
-      overflow-y: auto;
     }
 
     table {
@@ -159,18 +160,13 @@
 
     th {
       color: gold;
-      position: sticky;     /* ✅ STICKY HEADERS */
-      top: 0;
-      background: #1f2937;
-      z-index: 2;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.4);
     }
 
     tr:hover {
       background: #374151;
     }
 
-    /* ROW HIGHLIGHTING */
+    /* ROW COLORS */
     tr.dallas-win {
       background-color: rgba(37, 99, 235, 0.35);
       font-weight: bold;
@@ -258,6 +254,7 @@ fetch("highlights.json")
 
   function buildTable(rows, cols) {
     let html = `<div class="table-container"><table><tr>`;
+
     cols.forEach(c => html += `<th>${formatHeader(c)}</th>`);
     html += `</tr>`;
 
@@ -325,5 +322,3 @@ fetch("highlights.json")
 
 </body>
 </html>
-
-<html>
