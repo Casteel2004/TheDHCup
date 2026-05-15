@@ -104,11 +104,10 @@
       padding: 20px;
     }
 
-    /* ✅ DYNAMIC RECORD COLORS */
     .record {
       text-align: center;
       font-size: 30px;
-      margin-bottom: 30px;
+      margin-bottom: 10px;
       font-weight: bold;
     }
 
@@ -118,6 +117,12 @@
 
     .record.houston {
       color: #f87171;
+    }
+
+    #extraStats {
+      text-align: center;
+      font-size: 18px;
+      margin-bottom: 30px;
     }
 
     /* TABLE */
@@ -140,7 +145,6 @@
       word-wrap: break-word;
     }
 
-    /* ✅ HEADER STYLE */
     th {
       color: gold;
       border-bottom: 2px solid #facc15;
@@ -155,7 +159,6 @@
       background: #374151;
     }
 
-    /* ✅ ROW COLORS */
     tr.dallas-win {
       background-color: rgba(37, 99, 235, 0.35);
       font-weight: bold;
@@ -166,12 +169,12 @@
       font-weight: bold;
     }
 
-    /* ✅ COLUMN WIDTHS (FIXED PROPORTIONS) */
-    table th:nth-child(1), table td:nth-child(1) { width: 8%; }   /* Year */
-    table th:nth-child(2), table td:nth-child(2) { width: 12%; }  /* Winner */
-    table th:nth-child(3), table td:nth-child(3) { width: 12%; }  /* Score */
-    table th:nth-child(4), table td:nth-child(4) { width: 48%; }  /* Location */
-    table th:nth-child(5), table td:nth-child(5) { width: 20%; }  /* MVP */
+    /* COLUMN WIDTHS */
+    table th:nth-child(1), table td:nth-child(1) { width: 8%; }
+    table th:nth-child(2), table td:nth-child(2) { width: 12%; }
+    table th:nth-child(3), table td:nth-child(3) { width: 12%; }
+    table th:nth-child(4), table td:nth-child(4) { width: 48%; }
+    table th:nth-child(5), table td:nth-child(5) { width: 20%; }
 
     @media (max-width: 768px) {
       .hero {
@@ -180,10 +183,6 @@
 
       .hero h1 {
         font-size: 38px;
-      }
-
-      .record {
-        font-size: 22px;
       }
     }
 
@@ -195,20 +194,20 @@
 <!-- NAV -->
 <div class="nav">
   <div class="nav-left">
-    ./logo-circle.png
+    <img src="./logo-circle.png">
     DH Cup
   </div>
 
   <div class="nav-links">
-    index.htmlHome</a>
-    timeline.htmlTimeline</a>
-    history.htmlHistory</a>
-    highlights.htmlHighlights</a>
-    players.htmlPlayers</a>
-    streaks.htmlStreaks</a>
-    teammates.htmlTeammates</a>
-    handicap.htmlHandicap History</a>
-    years.htmlYear by Year Results</a>
+    <a href="index.html">Home</a>
+    <a href="timeline.html">Timeline</a>
+    <a href="history.html" class="active">History</a>
+    <a href="highlights.html">Highlights</a>
+    <a href="players.html">Players</a>
+    <a href="streaks.html">Streaks</a>
+    <a href="teammates.html">Teammates</a>
+    <a href="handicap.html">Handicap History</a>
+    <a href="years.html">Year by Year Results</a>
   </div>
 </div>
 
@@ -220,10 +219,8 @@
 
 <div class="content">
 
-  <!-- ✅ DYNAMIC RECORD -->
-  <div id="recordLine" class="record">
-    Houston Leads All-Time: 15 – 12
-  </div>
+  <div id="recordLine" class="record"></div>
+  <div id="extraStats"></div>
 
   <div class="table-container">
     <table>
@@ -249,19 +246,43 @@ fetch('history.json')
 
     const table = document.getElementById('historyTable');
 
+    let dallasWins = 0;
+    let houstonWins = 0;
+    let totalMatches = data.length;
+
+    let largestMargin = 0;
+    let largestMatch = "";
+    let largestYear = "";
+    let largestTeam = "";
+
     data.forEach(item => {
 
+      let winner = item.winner.toLowerCase();
       let rowClass = "";
 
-      if (item.winner && item.winner.toLowerCase().includes("dallas")) {
+      if (winner.includes("dallas")) {
+        dallasWins++;
         rowClass = "dallas-win";
       }
 
-      if (item.winner && item.winner.toLowerCase().includes("houston")) {
+      if (winner.includes("houston")) {
+        houstonWins++;
         rowClass = "houston-win";
       }
 
-      const row = `
+      // Largest margin logic
+      if (item.score && item.score.includes("&")) {
+        let margin = parseInt(item.score.split("&")[0]);
+
+        if (margin > largestMargin) {
+          largestMargin = margin;
+          largestMatch = item.score;
+          largestYear = item.year;
+          largestTeam = item.winner;
+        }
+      }
+
+      table.innerHTML += `
         <tr class="${rowClass}">
           <td>${item.year}</td>
           <td>${item.winner}</td>
@@ -270,21 +291,44 @@ fetch('history.json')
           <td>${item.mvp}</td>
         </tr>
       `;
-
-      table.innerHTML += row;
     });
 
-    /* ✅ COLOR THE RECORD LINE */
     const recordEl = document.getElementById("recordLine");
-    if (recordEl.innerText.toLowerCase().includes("dallas")) {
+    const extraEl = document.getElementById("extraStats");
+
+    // Leader line
+    if (dallasWins > houstonWins) {
+      recordEl.textContent = `Dallas Leads All-Time: ${dallasWins} – ${houstonWins}`;
       recordEl.classList.add("dallas");
-    } else if (recordEl.innerText.toLowerCase().includes("houston")) {
+    } 
+    else if (houstonWins > dallasWins) {
+      recordEl.textContent = `Houston Leads All-Time: ${houstonWins} – ${houstonWins}`;
       recordEl.classList.add("houston");
+    } 
+    else {
+      recordEl.textContent = `All-Time Series Tied: ${dallasWins} – ${houstonWins}`;
     }
 
+    // Win %
+    let dallasPct = Math.round((dallasWins / totalMatches) * 100);
+    let houstonPct = Math.round((houstonWins / totalMatches) * 100);
+
+    let winPercentText = "";
+
+    if (dallasWins > houstonWins) {
+      winPercentText = `Dallas Win %: ${dallasPct}% | Houston Win %: ${houstonPct}%`;
+    } else {
+      winPercentText = `Houston Win %: ${houstonPct}% | Dallas Win %: ${dallasPct}%`;
+    }
+
+    // Extra stats line
+    extraEl.innerHTML = `
+      Total Matches: ${totalMatches} |
+      ${winPercentText} <br>
+      Largest Margin: ${largestMatch} — ${largestTeam} (${largestYear})
+    `;
   });
 </script>
 
 </body>
 </html>
-``
