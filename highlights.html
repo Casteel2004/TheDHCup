@@ -1,7 +1,5 @@
 
-<!DOCTYPE html>
-<html>
-<head>
+<!DOCTYPE html><!DOCTYPE html<head>
   <title>DH Cup Highlights</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -23,7 +21,6 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      box-sizing: border-box;
       z-index: 999;
       flex-wrap: wrap;
     }
@@ -33,8 +30,8 @@
       align-items: center;
       gap: 10px;
       color: gold;
-      font-weight: bold;
       font-size: 20px;
+      font-weight: bold;
     }
 
     .nav-left img {
@@ -116,7 +113,6 @@
       margin-top: 10px;
     }
 
-    /* TEAM HEADER COLORS */
     .dallas-header {
       color: #60a5fa;
     }
@@ -133,7 +129,6 @@
       display: flex;
       gap: 20px;
       flex-wrap: wrap;
-      margin-top: 10px;
     }
 
     .half {
@@ -143,14 +138,15 @@
 
     .table-container {
       overflow-x: auto;
+      max-height: 500px; /* ✅ needed for sticky to shine */
+      overflow-y: auto;
     }
 
-    /* ✅ TABLE */
     table {
       width: 100%;
       border-collapse: collapse;
       background: #1f2937;
-      table-layout: fixed; /* ✅ forces consistent column widths */
+      table-layout: fixed;
     }
 
     th, td {
@@ -163,13 +159,18 @@
 
     th {
       color: gold;
+      position: sticky;     /* ✅ STICKY HEADERS */
+      top: 0;
+      background: #1f2937;
+      z-index: 2;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.4);
     }
 
     tr:hover {
       background: #374151;
     }
 
-    /* ✅ ROW COLORS */
+    /* ROW HIGHLIGHTING */
     tr.dallas-win {
       background-color: rgba(37, 99, 235, 0.35);
       font-weight: bold;
@@ -180,14 +181,13 @@
       font-weight: bold;
     }
 
-    /* ✅ 5-COLUMN TABLES (BLOWOUTS) */
+    /* COLUMN WIDTHS */
     table th:nth-child(1), table td:nth-child(1) { width: 10%; }
     table th:nth-child(2), table td:nth-child(2) { width: 15%; }
     table th:nth-child(3), table td:nth-child(3) { width: 45%; }
     table th:nth-child(4), table td:nth-child(4) { width: 15%; }
     table th:nth-child(5), table td:nth-child(5) { width: 15%; }
 
-    /* ✅ 3-COLUMN TABLES (MVP / 3-0 / 0-3) */
     .half table th:nth-child(1), .half table td:nth-child(1) { width: 40%; }
     .half table th:nth-child(2), .half table td:nth-child(2) { width: 20%; }
     .half table th:nth-child(3), .half table td:nth-child(3) { width: 40%; }
@@ -252,33 +252,24 @@ fetch("highlights.json")
 
   function formatMatch(match, winner) {
     if (!match || !match.includes(" vs ")) return match;
-
-    const parts = match.split(" vs ");
-    return winner === "Houston"
-      ? `${parts[1]} def ${parts[0]}`
-      : `${parts[0]} def ${parts[1]}`;
+    const [a, b] = match.split(" vs ");
+    return winner === "Houston" ? `${b} def ${a}` : `${a} def ${b}`;
   }
 
   function buildTable(rows, cols) {
     let html = `<div class="table-container"><table><tr>`;
-
     cols.forEach(c => html += `<th>${formatHeader(c)}</th>`);
     html += `</tr>`;
 
     rows.forEach(r => {
-
-      let rowClass = "";
-      if (r.winner === "Dallas") rowClass = "dallas-win";
-      if (r.winner === "Houston") rowClass = "houston-win";
+      let rowClass = r.winner === "Dallas" ? "dallas-win" :
+                     r.winner === "Houston" ? "houston-win" : "";
 
       html += `<tr class="${rowClass}">`;
 
       cols.forEach(c => {
-        let val = r[c];
-
-        if (c === "match") val = formatMatch(r.match, r.winner);
+        let val = c === "match" ? formatMatch(r.match, r.winner) : r[c];
         if (Array.isArray(val)) val = val.join(", ");
-
         html += `<td>${val ?? ""}</td>`;
       });
 
@@ -306,8 +297,8 @@ fetch("highlights.json")
     `;
   }
 
-  function singleSection(title, rows, withFormat=false) {
-    const cols = withFormat
+  function singleSection(title, rows, full=false) {
+    const cols = full
       ? ["year","format","match","result","winner"]
       : ["year","match","result","winner"];
 
@@ -334,3 +325,5 @@ fetch("highlights.json")
 
 </body>
 </html>
+
+<html>
