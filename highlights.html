@@ -1,5 +1,6 @@
 
-<!DOCTYPE html><!DOCTYPE>
+<!DOCTYPE html>
+<html>
 <head>
   <title>DH Cup Highlights</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -158,8 +159,15 @@
       word-wrap: break-word;
     }
 
+    /* ✅ ENHANCED HEADER STYLE (NO STICKY) */
     th {
       color: gold;
+      border-bottom: 2px solid #facc15;
+      letter-spacing: 0.5px;
+    }
+
+    thead tr {
+      border-bottom: 3px solid #facc15;
     }
 
     tr:hover {
@@ -210,20 +218,20 @@
 <!-- NAV -->
 <div class="nav">
   <div class="nav-left">
-    <img src="./logo-circle.png">
+    ./logo-circle.png
     DH Cup
   </div>
 
   <div class="nav-links">
-    <a href="index.html">Home</a>
-    <a href="timeline.html">Timeline</a>
-    <a href="history.html">History</a>
-    <a href="highlights.html" class="active">Highlights</a>
-    <a href="players.html">Players</a>
-    <a href="streaks.html">Streaks</a>
-    <a href="teammates.html">Teammates</a>
-    <a href="handicap.html">Handicap History</a>
-    <a href="years.html">Year by Year Results</a>
+    index.htmlHome</a>
+    timeline.htmlTimeline</a>
+    history.htmlHistory</a>
+    highlights.htmlHighlights</a>
+    players.htmlPlayers</a>
+    streaks.htmlStreaks</a>
+    teammates.htmlTeammates</a>
+    handicap.htmlHandicap History</a>
+    years.htmlYear by Year Results</a>
   </div>
 </div>
 
@@ -253,10 +261,10 @@ fetch("highlights.json")
   }
 
   function buildTable(rows, cols) {
-    let html = `<div class="table-container"><table><tr>`;
+    let html = `<table><thead><tr>`;
 
     cols.forEach(c => html += `<th>${formatHeader(c)}</th>`);
-    html += `</tr>`;
+    html += `</tr></thead><tbody>`;
 
     rows.forEach(r => {
       let rowClass = r.winner === "Dallas" ? "dallas-win" :
@@ -273,7 +281,7 @@ fetch("highlights.json")
       html += `</tr>`;
     });
 
-    return html + `</table></div>`;
+    return html + `</tbody></table>`;
   }
 
   function sideSection(title, dallas, houston) {
@@ -322,3 +330,4 @@ fetch("highlights.json")
 
 </body>
 </html>
+``
