@@ -23,7 +23,6 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      box-sizing: border-box;
       z-index: 999;
       flex-wrap: wrap;
     }
@@ -123,7 +122,6 @@
       padding: 12px;
       border-bottom: 1px solid #444;
       text-align: center;
-      white-space: normal;
     }
 
     th {
@@ -149,13 +147,12 @@
     table th:nth-child(3), table td:nth-child(3) { width: 12%; }
     table th:nth-child(4), table td:nth-child(4) { width: 48%; }
     table th:nth-child(5), table td:nth-child(5) { width: 20%; }
-
   </style>
 </head>
 
 <body>
 
-<!-- ✅ FIXED NAV -->
+<!-- NAV -->
 <div class="nav">
   <div class="nav-left">
     <img src="./logo-circle.png">
@@ -204,31 +201,47 @@
 </div>
 
 <script>
+
 fetch('history.json')
-.then(r => r.json())
+.then(res => res.json())
 .then(data => {
 
-  let dallas = 0, houston = 0;
-  let largestMargin = 0, largestScore="", largestYear="", largestTeam="";
+  let dallas = 0;
+  let houston = 0;
+
+  let largestMargin = 0;
+  let largestScore = "";
+  let largestYear = "";
+  let largestTeam = "";
 
   const table = document.getElementById("historyTable");
 
   data.forEach(item => {
 
-    let winner = item.winner.trim().toLowerCase();
+    let winner = (item.winner || "").toLowerCase();
     let rowClass = "";
 
-    if (winner === "dallas") { dallas++; rowClass="dallas-win"; }
-    else if (winner === "houston") { houston++; rowClass="houston-win"; }
+    // ✅ FIX (handles "Team Dallas")
+    if (winner.includes("dallas")) {
+      dallas++;
+      rowClass = "dallas-win";
+    } 
+    else if (winner.includes("houston")) {
+      houston++;
+      rowClass = "houston-win";
+    }
 
-    // ✅ FIXED score parsing (17-7 etc)
-    let score = item.score.replace(/–|—/g,"-");
-    let parts = score.split("-");
+    // ✅ FIX (handles "13 to 11")
+    if (item.score && item.score.includes("to")) {
 
-    if (parts.length === 2) {
-      let a = parseInt(parts[0]), b = parseInt(parts[1]);
+      let parts = item.score.split("to");
+
+      let a = parseFloat(parts[0]);
+      let b = parseFloat(parts[1]);
+
       if (!isNaN(a) && !isNaN(b)) {
-        let margin = Math.abs(a-b);
+        let margin = Math.abs(a - b);
+
         if (margin > largestMargin) {
           largestMargin = margin;
           largestScore = item.score;
@@ -251,6 +264,7 @@ fetch('history.json')
   const record = document.getElementById("recordLine");
   const stats = document.getElementById("extraStats");
 
+  // ✅ RECORD (now correct)
   if (houston > dallas) {
     record.textContent = `Houston Leads All-Time: ${houston} – ${dallas}`;
     record.classList.add("houston");
@@ -262,19 +276,23 @@ fetch('history.json')
   }
 
   let total = data.length;
-  let dPct = Math.round(dallas/total*100);
-  let hPct = Math.round(houston/total*100);
 
-  let winText = (houston>dallas)
-    ? `Houston Win %: ${hPct}% | Dallas Win %: ${dPct}%`
-    : `Dallas Win %: ${dPct}% | Houston Win %: ${hPct}%`;
+  let dPct = Math.round((dallas / total) * 100);
+  let hPct = Math.round((houston / total) * 100);
+
+  let winText =
+    houston > dallas
+      ? `Houston Win %: ${hPct}% | Dallas Win %: ${dPct}%`
+      : `Dallas Win %: ${dPct}% | Houston Win %: ${hPct}%`;
 
   stats.innerHTML = `
     Total Matches: ${total} | ${winText}<br>
     Largest Margin: ${largestScore} — ${largestTeam} (${largestYear})
   `;
 });
+
 </script>
 
 </body>
 </html>
+``
