@@ -13,7 +13,6 @@
       color: white;
     }
 
-    /* NAV */
     .nav {
       position: fixed;
       top: 0;
@@ -24,61 +23,36 @@
       align-items: center;
       background: #0f172a;
       padding: 12px 30px;
-      box-sizing: border-box;
-      flex-wrap: wrap;
     }
 
     .nav-left {
-      display: flex;
-      align-items: center;
-      gap: 10px;
       color: gold;
       font-weight: bold;
       font-size: 20px;
     }
 
-    .nav-left img { height: 60px; }
-
-    .nav-links {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: flex-end;
-      gap: 10px;
-      margin-top: 5px;
-    }
-
     .nav-links a {
       color: #38bdf8;
+      margin-left: 10px;
       text-decoration: none;
       font-size: 13px;
       font-weight: bold;
     }
-
-    .nav-links a:hover { color: gold; }
 
     .nav-links a.active {
       color: gold;
       text-decoration: underline;
     }
 
-    /* HERO */
     .hero {
       margin-top: 100px;
-      min-height: calc(100vh - 100px);
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-
+      text-align: center;
+      padding: 40px;
       background: linear-gradient(rgba(0,0,0,.3), rgba(0,0,0,.4)),
                   url("./golf-bg-streaks.jpg");
-
       background-size: contain;
       background-position: center;
       background-repeat: no-repeat;
-
-      text-align: center;
-      padding: 20px;
     }
 
     .hero h1 {
@@ -90,15 +64,11 @@
       color: gold;
       font-weight: bold;
       font-size: 20px;
-      text-shadow: 3px 3px 10px black;
     }
 
-    /* CONTENT */
     .content {
-      width: 98%;
-      max-width: 1600px;
+      width: 95%;
       margin: 40px auto;
-      padding: 20px;
     }
 
     h2 {
@@ -107,12 +77,9 @@
       margin-top: 40px;
     }
 
-    h3 { text-align: center; }
-
-    .dallas-header { color: #60a5fa; }
-    .houston-header { color: #f87171; }
-
-    .section { margin-bottom: 40px; }
+    h3 {
+      text-align: center;
+    }
 
     .table-row {
       display: flex;
@@ -122,7 +89,6 @@
 
     .half {
       width: 48%;
-      min-width: 300px;
     }
 
     table {
@@ -132,46 +98,29 @@
     }
 
     th, td {
-      padding: 10px;
+      padding: 8px;
       border-bottom: 1px solid #444;
       text-align: center;
-      white-space: nowrap;
     }
 
     th {
       color: gold;
-      border-bottom: 2px solid gold;
     }
 
-    tr:hover { background: #374151; }
+    tr:hover {
+      background: #374151;
+    }
 
+    .dallas-header { color: #60a5fa; }
+    .houston-header { color: #f87171; }
   </style>
 </head>
 
 <body>
 
-<div class="nav">
-  <div class="nav-left">
-    <img src="./logo-circle.png">
-    DH Cup
-  </div>
-
-  <div class="nav-links">
-    <a href="index.html">Home</a>
-    <a href="timeline.html">Timeline</a>
-    <a href="history.html">History</a>
-    <a href="highlights.html">Highlights</a>
-    <a href="players.html">Players</a>
-    <a href="streaks.html" class="active">Streaks</a>
-    <a href="teammates.html">Teammates</a>
-    <a href="handicap.html">Handicap History</a>
-    <a href="years.html">Year Results</a>
-  </div>
-</div>
-
 <div class="hero">
   <h1>DH Cup Streaks</h1>
-  <p>Who's hot… and who's absolutely not</p>
+  <p>We're going streaking....</p>
 </div>
 
 <div class="content" id="content"></div>
@@ -183,17 +132,65 @@ fetch("streaks.json")
 
   const container = document.getElementById("content");
 
-  function buildTable(rows) {
-    let html = "<table><thead><tr><th>Player</th><th># of Matches</th></tr></thead><tbody>";
+  // ✅ COLOR CELLS
+  function formatCell(val) {
+    let color = "";
+
+    if (val.includes("W")) color = "background: rgba(34,197,94,.4);";
+    else if (val.includes("L")) color = "background: rgba(239,68,68,.4);";
+    else color = "background: rgba(250,204,21,.4);";
+
+    return `<td style="${color}">${val}</td>`;
+  }
+
+  // ✅ CURRENT PLAYER TABLE
+  function buildPlayerTable(rows) {
+
+    rows.sort((a, b) =>
+      a.Player.replace(/\./g,'').localeCompare(b.Player.replace(/\./g,''))
+    );
+
+    let html = `
+      <table>
+        <thead>
+          <tr>
+            <th>Player</th>
+            <th>Best Ball</th>
+            <th>Scramble</th>
+            <th>Singles</th>
+          </tr>
+        </thead>
+        <tbody>
+    `;
+
     rows.forEach(r => {
-      html += `<tr><td>${r.Player}</td><td>${r.Matches}</td></tr>`;
+      html += `
+        <tr>
+          <td>${r.Player}</td>
+          ${formatCell(r.BestBall)}
+          ${formatCell(r.Scramble)}
+          ${formatCell(r.Singles)}
+        </tr>
+      `;
     });
+
     return html + "</tbody></table>";
   }
 
-  function sideSection(title, dallas, houston) {
+  // ✅ GENERIC SIDE TABLE
+  function buildTable(rows) {
+    let html = "<table><thead><tr><th>Player</th><th># of Matches</th></tr></thead><tbody>";
+
+    rows.forEach(r => {
+      html += `<tr><td>${r.Player}</td><td>${r.Matches}</td></tr>`;
+    });
+
+    return html + "</tbody></table>";
+  }
+
+  function section(title, dallas, houston) {
     return `
-      <div class="section">
+      <div>
         <h2>${title}</h2>
         <div class="table-row">
           <div class="half">
@@ -209,45 +206,59 @@ fetch("streaks.json")
     `;
   }
 
-  // ✅ TOTAL SECTION
-  container.innerHTML += sideSection("Longest Active Winning Streaks - Total",
-    data.total.currentWins.dallas,
-    data.total.currentWins.houston
-  );
+  // ✅ CURRENT PLAYER STREAKS
+  container.innerHTML += `
+    <h2>Current Player Streaks</h2>
+    <div class="table-row">
+      <div class="half">
+        <h3 class="dallas-header">Team Dallas</h3>
+        ${buildPlayerTable(data.currentPlayerStreaks.dallas)}
+      </div>
+      <div class="half">
+        <h3 class="houston-header">Team Houston</h3>
+        ${buildPlayerTable(data.currentPlayerStreaks.houston)}
+      </div>
+    </div>
+  `;
 
-  container.innerHTML += sideSection("Longest Active Losing Streaks - Total",
-    data.total.currentLosses.dallas,
-    data.total.currentLosses.houston
-  );
+  // ✅ TOTAL
+  container.innerHTML += section("Longest Active Winning Streaks - Total",
+    data.total.currentWins.dallas, data.total.currentWins.houston);
 
-  container.innerHTML += sideSection("Longest Winning Streaks - Total (Min 10 Cups)",
-    data.total.allTimeWins.dallas,
-    data.total.allTimeWins.houston
-  );
+  container.innerHTML += section("Longest Winning Streaks - Total (Min 10 Cups)",
+    data.total.allTimeWins.dallas, data.total.allTimeWins.houston);
 
-  container.innerHTML += sideSection("Longest Losing Streaks - Total (Min 10 Cups)",
-    data.total.allTimeLosses.dallas,
-    data.total.allTimeLosses.houston
-  );
+  container.innerHTML += section("Longest Active Losing Streaks - Total",
+    data.total.currentLosses.dallas, data.total.currentLosses.houston);
 
-  // ✅ FORMAT SECTION BUILDER
-  function formatSection(title, obj) {
-    container.innerHTML += sideSection(
-      "Longest Active Winning Streaks - " + title,
-      obj.currentWins.dallas,
-      obj.currentWins.houston
-    );
+  container.innerHTML += section("Longest Losing Streaks - Total (Min 10 Cups)",
+    data.total.allTimeLosses.dallas, data.total.allTimeLosses.houston);
 
-    container.innerHTML += sideSection(
-      "Longest Active Losing Streaks - " + title,
-      obj.currentLosses.dallas,
-      obj.currentLosses.houston
-    );
+  // ✅ FORMAT BUILDER
+  function formatBlock(name, obj) {
+
+    container.innerHTML += `<h2>${name} Streaks</h2>`;
+
+    container.innerHTML += section("Longest Active Winning",
+      obj.currentWins.dallas, obj.currentWins.houston);
+
+    if(obj.allTimeWins){
+      container.innerHTML += section("Longest Winning Streaks",
+        obj.allTimeWins.dallas, obj.allTimeWins.houston);
+    }
+
+    container.innerHTML += section("Longest Active Losing",
+      obj.currentLosses.dallas, obj.currentLosses.houston);
+
+    if(obj.allTimeLosses){
+      container.innerHTML += section("Longest Losing Streaks",
+        obj.allTimeLosses.dallas, obj.allTimeLosses.houston);
+    }
   }
 
-  formatSection("Scramble", data.scramble);
-  formatSection("Best Ball", data.bestBall);
-  formatSection("Singles", data.singles);
+  formatBlock("Scramble", data.scramble);
+  formatBlock("Best Ball", data.bestBall);
+  formatBlock("Singles", data.singles);
 
 });
 </script>
