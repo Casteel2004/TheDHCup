@@ -13,7 +13,7 @@
       color: white;
     }
 
-    /* ✅ NAV FIXED */
+    /* ✅ NAV (MATCHES YOUR OTHER PAGES) */
     .nav {
       position: fixed;
       top: 0;
@@ -29,10 +29,10 @@
     .nav-left {
       display: flex;
       align-items: center;
+      gap: 10px;
       color: gold;
       font-weight: bold;
       font-size: 20px;
-      gap: 10px;
     }
 
     .nav-left img {
@@ -41,14 +41,10 @@
 
     .nav-links a {
       color: #38bdf8;
-      margin-left: 12px;
       text-decoration: none;
       font-size: 13px;
       font-weight: bold;
-    }
-
-    .nav-links a:hover {
-      color: gold;
+      margin-left: 12px;
     }
 
     .nav-links a.active {
@@ -56,7 +52,11 @@
       text-decoration: underline;
     }
 
-    /* ✅ HERO FIX (THIS WAS BROKEN) */
+    .nav-links a:hover {
+      color: gold;
+    }
+
+    /* ✅ HERO (FIXED) */
     .hero {
       margin-top: 80px;
       height: 400px;
@@ -69,7 +69,7 @@
       background: linear-gradient(rgba(0,0,0,.3), rgba(0,0,0,.4)),
                   url("./golf-bg-streaks.jpg");
 
-      background-size: cover; /* ✅ FIXED */
+      background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
 
@@ -139,12 +139,13 @@
 
     .dallas-header { color: #60a5fa; }
     .houston-header { color: #f87171; }
+
   </style>
 </head>
 
 <body>
 
-<!-- ✅ NAV RESTORED -->
+<!-- ✅ NAV -->
 <div class="nav">
   <div class="nav-left">
     <img src="./logo-circle.png">
@@ -164,6 +165,7 @@
   </div>
 </div>
 
+<!-- ✅ HERO -->
 <div class="hero">
   <h1>DH Cup Streaks</h1>
   <p>We're going streaking....</p>
@@ -178,37 +180,39 @@ fetch("streaks.json")
 
   const container = document.getElementById("content");
 
-  function formatCell(val) {
-    if (!val) return "<td></td>";
+  function colorCell(val) {
+    if (!val) return "<td>-</td>";
 
     if (val.includes("W")) return `<td style="background:rgba(34,197,94,.4);">${val}</td>`;
     if (val.includes("L")) return `<td style="background:rgba(239,68,68,.4);">${val}</td>`;
     return `<td style="background:rgba(250,204,21,.4);">${val}</td>`;
   }
 
-  function buildPlayerTable(rows) {
-    rows.sort((a, b) => a.Player.localeCompare(b.Player));
+  function playerTable(rows) {
+    if (!rows) return "<p>No Data</p>";
+
+    rows.sort((a,b)=>a.Player.localeCompare(b.Player));
 
     let html = `
       <table>
-      <thead>
-        <tr>
-          <th>Player</th>
-          <th>Best Ball</th>
-          <th>Scramble</th>
-          <th>Singles</th>
-        </tr>
-      </thead>
-      <tbody>
+        <thead>
+          <tr>
+            <th>Player</th>
+            <th>Best Ball</th>
+            <th>Scramble</th>
+            <th>Singles</th>
+          </tr>
+        </thead>
+        <tbody>
     `;
 
     rows.forEach(r => {
       html += `
         <tr>
           <td>${r.Player}</td>
-          ${formatCell(r.BestBall)}
-          ${formatCell(r.Scramble)}
-          ${formatCell(r.Singles)}
+          ${colorCell(r.BestBall)}
+          ${colorCell(r.Scramble)}
+          ${colorCell(r.Singles)}
         </tr>
       `;
     });
@@ -216,10 +220,19 @@ fetch("streaks.json")
     return html + "</tbody></table>";
   }
 
-  function buildTable(rows) {
-    if (!rows) return "";
+  function basicTable(rows) {
+    if (!rows) return "<p>No Data</p>";
 
-    let html = "<table><thead><tr><th>Player</th><th>#</th></tr></thead><tbody>";
+    let html = `
+      <table>
+        <thead>
+          <tr>
+            <th>Player</th>
+            <th>#</th>
+          </tr>
+        </thead>
+        <tbody>
+    `;
 
     rows.forEach(r => {
       html += `<tr><td>${r.Player}</td><td>${r.Matches}</td></tr>`;
@@ -234,11 +247,11 @@ fetch("streaks.json")
       <div class="table-row">
         <div class="half">
           <h3 class="dallas-header">Dallas</h3>
-          ${buildTable(obj.dallas)}
+          ${basicTable(obj.dallas)}
         </div>
         <div class="half">
           <h3 class="houston-header">Houston</h3>
-          ${buildTable(obj.houston)}
+          ${basicTable(obj.houston)}
         </div>
       </div>
     `;
@@ -249,34 +262,33 @@ fetch("streaks.json")
     <h2>Current Player Streaks</h2>
     <div class="table-row">
       <div class="half">
-        ${buildPlayerTable(data.currentPlayerStreaks.dallas)}
+        ${playerTable(data.currentPlayerStreaks.dallas)}
       </div>
       <div class="half">
-        ${buildPlayerTable(data.currentPlayerStreaks.houston)}
+        ${playerTable(data.currentPlayerStreaks.houston)}
       </div>
     </div>
   `;
 
-  // ✅ TOTAL SECTION
-  container.innerHTML += section("Longest Active Winning Streaks - Total", data.total.currentWins);
-  container.innerHTML += section("Longest Winning Streaks - Total", data.total.allTimeWins);
-  container.innerHTML += section("Longest Active Losing Streaks - Total", data.total.currentLosses);
-  container.innerHTML += section("Longest Losing Streaks - Total", data.total.allTimeLosses);
+  // ✅ TOTAL
+  container.innerHTML += section("Active Wins - Total", data.total.currentWins);
+  container.innerHTML += section("All-Time Wins - Total", data.total.allTimeWins);
+  container.innerHTML += section("Active Losses - Total", data.total.currentLosses);
+  container.innerHTML += section("All-Time Losses - Total", data.total.allTimeLosses);
 
-  // ✅ FORMAT SECTIONS
-  function formatBlock(name, obj) {
-    container.innerHTML += `<h2>${name} Streaks</h2>`;
+  // ✅ FORMATS
+  function format(name, obj){
+    container.innerHTML += `<h2>${name}</h2>`;
     container.innerHTML += section("Active Wins", obj.currentWins);
     container.innerHTML += section("Active Losses", obj.currentLosses);
   }
 
-  formatBlock("Scramble", data.scramble);
-  formatBlock("Best Ball", data.bestBall);
-  formatBlock("Singles", data.singles);
+  format("Scramble", data.scramble);
+  format("Best Ball", data.bestBall);
+  format("Singles", data.singles);
 
 });
 </script>
 
 </body>
 </html>
-``
