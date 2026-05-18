@@ -66,22 +66,30 @@
     }
 
     /* ✅ HERO (FINAL FIX) */
-    .hero {
-      margin-top: 100px;
-      min-height: 75vh; /* ✅ THIS is what makes it full like homepage */
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
+   
+.hero {
+  margin-top: 100px;
 
-      background: linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,.5)),
-                  url("./golf-bg-history.jpg");
-      background-size: cover;
-      background-position: center;
-      text-align: center;
+  /* ✅ TRUE FULL SCREEN */
+  min-height: calc(100vh - 100px);
 
-      padding: 20px; /* ✅ small padding, not huge */
-    }
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  /* ✅ LIGHTER OVERLAY */
+  background: linear-gradient(rgba(0,0,0,.3), rgba(0,0,0,.4)),
+              url("./golf-bg-history.jpg");
+
+  /* ✅ SHOW FULL TROPHY */
+  background-size: contain;   /* ✅ KEY CHANGE */
+  background-position: center;
+  background-repeat: no-repeat;
+
+  text-align: center;
+  padding: 20px;
+}
 
     .hero h1 {
       color: gold;
