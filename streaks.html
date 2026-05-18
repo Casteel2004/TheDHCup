@@ -37,6 +37,272 @@
       font-size: 20px;
     }
 
+    .nav-left img { height: 60px; }
+
+    .nav-links {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+      gap: 10px;
+      margin-top: 5px;
+    }
+
+    .nav-links a {
+      color: #38bdf8;
+      text-decoration: none;
+      font-size: 13px;
+      font-weight: bold;
+    }
+
+    .nav-links a:hover { color: gold; }
+
+    .nav-links a.active {
+      color: gold;
+      text-decoration: underline;
+    }
+
+    /* HERO */
+    .hero {
+      margin-top: 100px;
+      min-height: calc(100vh - 100px);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      background: linear-gradient(rgba(0,0,0,.3), rgba(0,0,0,.4)),
+                  url("./golf-bg-streaks.jpg");
+
+      background-size: contain;
+      background-position: center;
+      background-repeat: no-repeat;
+
+      text-align: center;
+      padding: 20px;
+    }
+
+    .hero h1 {
+      color: gold;
+      font-size: 60px;
+    }
+
+    .hero p {
+      color: gold;
+      font-weight: bold;
+      font-size: 20px;
+      text-shadow: 3px 3px 10px black;
+    }
+
+    /* CONTENT */
+    .content {
+      width: 98%;
+      max-width: 1600px;
+      margin: 40px auto;
+      padding: 20px;
+    }
+
+    h2 {
+      text-align: center;
+      color: #60a5fa;
+      margin-top: 40px;
+    }
+
+    h3 { text-align: center; }
+
+    .dallas-header { color: #60a5fa; }
+    .houston-header { color: #f87171; }
+
+    .section { margin-bottom: 40px; }
+
+    .table-row {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .half {
+      width: 48%;
+      min-width: 300px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      background: #1f2937;
+    }
+
+    th, td {
+      padding: 10px;
+      border-bottom: 1px solid #444;
+      text-align: center;
+      white-space: nowrap;
+    }
+
+    th {
+      color: gold;
+      border-bottom: 2px solid gold;
+    }
+
+    tr:hover { background: #374151; }
+
+  </style>
+</head>
+
+<body>
+
+<div class="nav">
+  <div class="nav-left">
+    ./logo-circle.png
+    DH Cup
+  </div>
+
+  <div class="nav-links">
+    index.html">Home</a>
+    timeline.htmlTimeline</a>
+    history.htmlHistory</a>
+    highlights.htmlHighlights</a>
+    players.htmlPlayers</a>
+    streaks.htmlStreaks</a>
+    teammates.htmlTeammates</a>
+    handicap.htmlHandicap History</a>
+    years.htmlYear by Year Results</a>
+  </div>
+</div>
+
+<div class="hero">
+  <h1>DH Cup Streaks</h1>
+  <p>Who's hot… and who's absolutely not</p>
+</div>
+
+<div class="content" id="content"></div>
+
+<script>
+fetch("streaks.json")
+.then(res => res.json())
+.then(data => {
+
+  const container = document.getElementById("content");
+
+  function buildTable(rows, cols) {
+    let html = "<table><thead><tr>";
+    cols.forEach(c => html += `<th>${c}</th>`);
+    html += "</tr></thead><tbody>";
+
+    rows.forEach(r => {
+      html += "<tr>";
+      cols.forEach(c => html += `<td>${r[c] ?? ""}</td>`);
+      html += "</tr>";
+    });
+
+    return html + "</tbody></table>";
+  }
+
+  function sideSection(title, dallas, houston, cols) {
+    return `
+      <div class="section">
+        <h2>${title}</h2>
+        <div class="table-row">
+          <div class="half">
+            <h3 class="dallas-header">Dallas</h3>
+            ${buildTable(dallas, cols)}
+          </div>
+          <div class="half">
+            <h3 class="houston-header">Houston</h3>
+            ${buildTable(houston, cols)}
+          </div>
+        </div>
+      </div>
+    `;
+  }
+
+  // ================= MAIN SECTIONS =================
+
+  container.innerHTML += sideSection("Current Player Streaks",
+    data.current.dallas, data.current.houston,
+    ["Player","Best Ball","Scramble","Singles"]);
+
+  container.innerHTML += sideSection("Longest Active Winning Streaks – Total",
+    data.activeWins.dallas, data.activeWins.houston,
+    ["Player","Matches"]);
+
+  container.innerHTML += sideSection("Longest Active Losing Streaks – Total",
+    data.activeLosses.dallas, data.activeLosses.houston,
+    ["Player","Matches"]);
+
+  container.innerHTML += sideSection("Longest Winning Streaks – Total (Min 10 Cups)",
+    data.allTimeWins.dallas, data.allTimeWins.houston,
+    ["Player","Matches"]);
+
+  container.innerHTML += sideSection("Longest Losing Streaks – Total (Min 10 Cups)",
+    data.allTimeLosses.dallas, data.allTimeLosses.houston,
+    ["Player","Matches"]);
+
+  // ================= FORMAT SECTIONS =================
+
+  function formatSection(title, obj) {
+    container.innerHTML += `<h2>${title}</h2>`;
+
+    container.innerHTML += sideSection("Current Winning Streaks",
+      obj.currentWins.dallas, obj.currentWins.houston, ["Player","Matches"]);
+
+    container.innerHTML += sideSection("All-Time Winning Streaks (Min 10 Cups)",
+      obj.allTimeWins.dallas, obj.allTimeWins.houston, ["Player","Matches"]);
+
+    container.innerHTML += sideSection("Current Losing Streaks",
+      obj.currentLosses.dallas, obj.currentLosses.houston, ["Player","Matches"]);
+
+    container.innerHTML += sideSection("All-Time Losing Streaks (Min 10 Cups)",
+      obj.allTimeLosses.dallas, obj.allTimeLosses.houston, ["Player","Matches"]);
+  }
+
+  formatSection("Scramble Streaks", data.scramble);
+  formatSection("Best Ball Streaks", data.bestBall);
+  formatSection("Singles Streaks", data.singles);
+
+});
+</script>
+
+</body>
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>DH Cup Streaks</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <style>
+    body {
+      font-family: Arial;
+      margin: 0;
+      background: #2b3648;
+      color: white;
+    }
+
+    /* NAV */
+    .nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 999;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: #0f172a;
+      padding: 12px 30px;
+      box-sizing: border-box;
+      flex-wrap: wrap;
+    }
+
+    .nav-left {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      color: gold;
+      font-weight: bold;
+      font-size: 20px;
+    }
+
     .nav-left img {
       height: 60px;
     }
