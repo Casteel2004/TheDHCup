@@ -13,6 +13,7 @@
       color: white;
     }
 
+    /* NAV */
     .nav {
       position: fixed;
       top: 0;
@@ -59,9 +60,11 @@
       text-decoration: underline;
     }
 
+    /* HERO */
     .hero {
       margin-top: 100px;
-      min-height: calc(100vh - 100px);
+      min-height: 40vh;
+
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -71,10 +74,11 @@
                   url("./golf-bg-streaks.jpg");
 
       background-size: contain;
-      background-position: center;
       background-repeat: no-repeat;
+      background-position: center;
 
       text-align: center;
+      padding: 20px;
     }
 
     .hero h1 {
@@ -82,17 +86,31 @@
       font-size: 60px;
     }
 
-    .hero p {
-      color: gold;
+    /* ✅ NAV BUTTONS */
+    .streak-nav {
+      text-align: center;
+      margin: 20px 0;
+    }
+
+    .streak-nav a {
+      margin: 0 10px;
+      padding: 10px 20px;
+      background: #1f2937;
+      color: #38bdf8;
+      text-decoration: none;
+      border-radius: 6px;
       font-weight: bold;
-      font-size: 20px;
+    }
+
+    .streak-nav a:hover {
+      background: #374151;
+      color: gold;
     }
 
     .content {
-      width: 98%;
-      max-width: 1600px;
+      width: 95%;
+      max-width: 1400px;
       margin: 40px auto;
-      padding: 20px;
     }
 
     h2 {
@@ -112,6 +130,9 @@
       min-width: 300px;
     }
 
+    h3.dallas { color: #60a5fa; }
+    h3.houston { color: #f87171; }
+
     table {
       width: 100%;
       border-collapse: collapse;
@@ -127,6 +148,7 @@
     th {
       color: gold;
     }
+
   </style>
 </head>
 
@@ -134,26 +156,25 @@
 
 <div class="nav">
   <div class="nav-left">
-    <img src="./logo-circle.png">
+    ./logo-circle.png
     DH Cup
   </div>
-
   <div class="nav-links">
-    <a href="index.html">Home</a>
-    <a href="timeline.html">Timeline</a>
-    <a href="history.html">History</a>
-    <a href="highlights.html">Highlights</a>
-    <a href="players.html">Players</a>
-    <a href="streaks.html" class="active">Streaks</a>
-    <a href="teammates.html">Teammates</a>
-    <a href="handicap.html">Handicap</a>
-    <a href="years.html">Years</a>
+    index.html">Home</a>
+    highlights.htmlHighlights</a>
+    streaks.html" class="active">Streaks</a>
   </div>
 </div>
 
 <div class="hero">
   <h1>DH Cup Streaks</h1>
-  <p>We're going streaking....</p>
+</div>
+
+<!-- ✅ NAV LINKS -->
+<div class="streak-nav">
+  Scramble</a>
+  Best Ball</a>
+  Singles</a>
 </div>
 
 <div class="content" id="content"></div>
@@ -165,27 +186,7 @@ fetch("streaks.json")
 
   const container = document.getElementById("content");
 
-  function buildTable(rows) {
-    let html = "<table><tr><th>Player</th><th># of Matches</th></tr>";
-    rows.forEach(r => {
-      html += `<tr><td>${r.Player}</td><td>${r.Matches}</td></tr>`;
-    });
-    return html + "</table>";
-  }
-
-  function section(title, obj) {
-    return `
-      <h2>${title}</h2>
-      <div class="table-row">
-        <div class="half">${buildTable(obj.dallas)}</div>
-        <div class="half">${buildTable(obj.houston)}</div>
-      </div>
-    `;
-  }
-
-  // ✅ CURRENT PLAYER STREAKS
   function playerTable(rows) {
-    rows.sort((a,b)=>a.Player.localeCompare(b.Player));
 
     let html = `
       <table>
@@ -198,45 +199,37 @@ fetch("streaks.json")
     `;
 
     rows.forEach(r => {
-      html += `<tr>
-        <td>${r.Player}</td>
-        <td>${r.BestBall}</td>
-        <td>${r.Scramble}</td>
-        <td>${r.Singles}</td>
-      </tr>`;
+      html += `
+        <tr>
+          <td>${r.Player}</td>
+          <td>${r.BestBall}</td>
+          <td>${r.Scramble}</td>
+          <td>${r.Singles}</td>
+        </tr>
+      `;
     });
 
     return html + "</table>";
   }
 
-  container.innerHTML += `
+  container.innerHTML = `
     <h2>Current Player Streaks</h2>
+
     <div class="table-row">
-      <div class="half">${playerTable(data.currentPlayerStreaks.dallas)}</div>
-      <div class="half">${playerTable(data.currentPlayerStreaks.houston)}</div>
+      <div class="half">
+        <h3 class="dallas">Team Dallas</h3>
+        ${playerTable(data.currentPlayerStreaks.dallas)}
+      </div>
+
+      <div class="half">
+        <h3 class="houston">Team Houston</h3>
+        ${playerTable(data.currentPlayerStreaks.houston)}
+      </div>
     </div>
   `;
-
-  // ✅ TOTAL
-  container.innerHTML += section("Longest Active Winning Streaks - Total", data.total.currentWins);
-  container.innerHTML += section("Longest Winning Streaks - Total", data.total.allTimeWins);
-  container.innerHTML += section("Longest Active Losing Streaks - Total", data.total.currentLosses);
-  container.innerHTML += section("Longest Losing Streaks - Total", data.total.allTimeLosses);
-
-  // ✅ FORMAT SECTIONS
-  function formatBlock(title, obj) {
-    container.innerHTML += `<h2>${title}</h2>`;
-    container.innerHTML += section("Active Wins", obj.currentWins);
-    container.innerHTML += section("Active Losses", obj.currentLosses);
-  }
-
-  formatBlock("Scramble Streaks", data.scramble);
-  formatBlock("Best Ball Streaks", data.bestBall);
-  formatBlock("Singles Streaks", data.singles);
 
 });
 </script>
 
 </body>
 </html>
-``
