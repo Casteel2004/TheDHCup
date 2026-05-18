@@ -1,5 +1,37 @@
 
 {
+  "currentPlayerStreaks": {
+    "dallas": [
+      {"Player":"Meek","BestBall":"1W","Scramble":"1L","Singles":"1W"},
+      {"Player":"Sherm","BestBall":"1L","Scramble":"3L","Singles":"1L"},
+      {"Player":"Coby","BestBall":"2L","Scramble":"5W","Singles":"Push"},
+      {"Player":"Nugget","BestBall":"1L","Scramble":"Push","Singles":"Push"},
+      {"Player":"Elliott","BestBall":"1W","Scramble":"1W","Singles":"1L"},
+      {"Player":"Travis","BestBall":"1L","Scramble":"1W","Singles":"3W"},
+      {"Player":"Coady","BestBall":"Push","Scramble":"2L","Singles":"1W"},
+      {"Player":"Cat","BestBall":"4W","Scramble":"1L","Singles":"1W"},
+      {"Player":"Taylor","BestBall":"3W","Scramble":"1L","Singles":"1L"},
+      {"Player":"Wortsmith","BestBall":"1L","Scramble":"1W","Singles":"3W"},
+      {"Player":"Hammy","BestBall":"1L","Scramble":"Push","Singles":"1L"},
+      {"Player":"Faulkner","BestBall":"Push","Scramble":"3L","Singles":"4L"}
+    ],
+    "houston": [
+      {"Player":"Country","BestBall":"3L","Scramble":"1W","Singles":"2L"},
+      {"Player":"Hollywood","BestBall":"4L","Scramble":"Push","Singles":"4L"},
+      {"Player":"Hotdame","BestBall":"2W","Scramble":"1L","Singles":"3W"},
+      {"Player":"A. Rice","BestBall":"2L","Scramble":"1L","Singles":"Push"},
+      {"Player":"Hardig","BestBall":"3L","Scramble":"1W","Singles":"1W"},
+      {"Player":"Hunter","BestBall":"Push","Scramble":"Push","Singles":"1L"},
+      {"Player":"Hanski","BestBall":"2W","Scramble":"2L","Singles":"2L"},
+      {"Player":"Mitchell","BestBall":"2W","Scramble":"2W","Singles":"1W"},
+      {"Player":"Lednicky","BestBall":"1L","Scramble":"1W","Singles":"4L"},
+      {"Player":"Gabe","BestBall":"2W","Scramble":"3W","Singles":"1W"},
+      {"Player":"Dewey","BestBall":"1W","Scramble":"1W","Singles":"1W"},
+      {"Player":"Law Dog","BestBall":"1L","Scramble":"1W","Singles":"1L"},
+      {"Player":"Stinneford","BestBall":"1W","Scramble":"1L","Singles":"Push"}
+    ]
+  },
+
   "total": {
     "currentWins": {
       "dallas": [{"Player": "Travis", "Matches": 3}],
@@ -125,3 +157,4 @@
     }
   }
 }
+``
