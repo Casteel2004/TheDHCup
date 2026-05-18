@@ -67,15 +67,21 @@
 
     /* ✅ HERO (UPDATED IMAGE) */
    .hero {
-    margin-top: 100px;
-    padding: 70px 20px 110px; /* ✅ matches homepage */
-    text-align: center;
-    background: linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,.5)),
-              url("./golf-bg-history.jpg");
-    background-size: cover;
-    background-position: center;
-}
+  margin-top: 100px;
+  min-height: 60vh; /* ✅ THIS is the key */
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* ✅ vertically centers text */
+  align-items: center;
 
+  background: linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,.5)),
+              url("./golf-bg-history.jpg");
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+
+  padding: 40px 20px;
+}
 
     .hero h1 {
       color: gold;
