@@ -223,6 +223,10 @@ fetch("streaks.json")
   }
 
   function playerTable(rows) {
+
+  // ✅ SORT ALPHABETICALLY BY PLAYER NAME
+  rows = rows.slice().sort((a, b) => a.Player.localeCompare(b.Player))
+
     let html = `
       <table>
         <tr>
