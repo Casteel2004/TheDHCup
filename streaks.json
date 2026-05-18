@@ -1,0 +1,314 @@
+
+{
+  "total": {
+    "currentWins": {
+      "dallas": [{"Player": "Travis", "Matches": 3}],
+      "houston": [
+        {"Player": "Dewey", "Matches": 3},
+        {"Player": "Gabe", "Matches": 3},
+        {"Player": "Mitchell", "Matches": 3}
+      ]
+    },
+    "currentLosses": {
+      "dallas": [{"Player": "Sherm", "Matches": 3}],
+      "houston": [{"Player": "Hanski", "Matches": 2}]
+    },
+    "allTimeWins": {
+      "dallas": [
+        {"Player": "Meek", "Matches": 8},
+        {"Player": "Sherm", "Matches": 7},
+        {"Player": "Coby", "Matches": 5},
+        {"Player": "Nugget", "Matches": 5},
+        {"Player": "Elliott", "Matches": 4},
+        {"Player": "Travis", "Matches": 4},
+        {"Player": "Coady", "Matches": 4},
+        {"Player": "Cat", "Matches": 3},
+        {"Player": "Taylor", "Matches": 3},
+        {"Player": "Wortsmith", "Matches": 3},
+        {"Player": "Hammy", "Matches": 3},
+        {"Player": "Faulkner", "Matches": 1}
+      ],
+      "houston": [
+        {"Player": "Country", "Matches": 6},
+        {"Player": "Hollywood", "Matches": 6},
+        {"Player": "Hotdame", "Matches": 5},
+        {"Player": "A. Rice", "Matches": 5},
+        {"Player": "Hardig", "Matches": 5},
+        {"Player": "Hunter", "Matches": 5},
+        {"Player": "Hanski", "Matches": 5},
+        {"Player": "Mitchell", "Matches": 4},
+        {"Player": "Lednicky", "Matches": 4},
+        {"Player": "Gabe", "Matches": 4},
+        {"Player": "Dewey", "Matches": 4},
+        {"Player": "Law Dog", "Matches": 3},
+        {"Player": "Stinneford", "Matches": 3}
+      ]
+    },
+    "allTimeLosses": {
+      "dallas": [
+        {"Player": "Faulkner", "Matches": 8},
+        {"Player": "Coady", "Matches": 6},
+        {"Player": "Wortsmith", "Matches": 6},
+        {"Player": "Nugget", "Matches": 5},
+        {"Player": "Elliott", "Matches": 5},
+        {"Player": "Travis", "Matches": 5},
+        {"Player": "Taylor", "Matches": 5},
+        {"Player": "Meek", "Matches": 4},
+        {"Player": "Sherm", "Matches": 4},
+        {"Player": "Hammy", "Matches": 4},
+        {"Player": "Coby", "Matches": 3},
+        {"Player": "Cat", "Matches": 3}
+      ],
+      "houston": [
+        {"Player": "Gabe", "Matches": 10},
+        {"Player": "Stinneford", "Matches": 8},
+        {"Player": "Mitchell", "Matches": 5},
+        {"Player": "A. Rice", "Matches": 4},
+        {"Player": "Lednicky", "Matches": 4},
+        {"Player": "Dewey", "Matches": 4},
+        {"Player": "Law Dog", "Matches": 4},
+        {"Player": "Hollywood", "Matches": 3},
+        {"Player": "Hotdame", "Matches": 3},
+        {"Player": "Hardig", "Matches": 3},
+        {"Player": "Hunter", "Matches": 3},
+        {"Player": "Hanski", "Matches": 3},
+        {"Player": "Country", "Matches": 2}
+      ]
+    }
+  },
+
+{
+  "scramble": {
+    "currentWins": {
+      "dallas": [{"Player": "Coby", "Matches": 5}],
+      "houston": [{"Player": "Gabe", "Matches": 4}]
+    },
+    "currentLosses": {
+      "dallas": [{"Player": "Faulkner", "Matches": 3}],
+      "houston": [{"Player": "Hanski", "Matches": 2}]
+    },
+    "allTimeWins": {
+      "dallas": [
+        {"Player": "Coby", "Matches": 5},
+        {"Player": "Sherm", "Matches": 4},
+        {"Player": "Elliott", "Matches": 4},
+        {"Player": "Travis", "Matches": 4},
+        {"Player": "Meek", "Matches": 3},
+        {"Player": "Cat", "Matches": 3},
+        {"Player": "Taylor", "Matches": 3},
+        {"Player": "Hammy", "Matches": 3},
+        {"Player": "Nugget", "Matches": 2},
+        {"Player": "Wortsmith", "Matches": 2},
+        {"Player": "Coady", "Matches": 1},
+        {"Player": "Faulkner", "Matches": 1}
+      ],
+      "houston": [
+        {"Player": "Mitchell", "Matches": 4},
+        {"Player": "Gabe", "Matches": 4},
+        {"Player": "Country", "Matches": 3},
+        {"Player": "Hotdame", "Matches": 3},
+        {"Player": "Dewey", "Matches": 3},
+        {"Player": "Law Dog", "Matches": 3},
+        {"Player": "Hollywood", "Matches": 2},
+        {"Player": "A. Rice", "Matches": 2},
+        {"Player": "Hardig", "Matches": 2},
+        {"Player": "Hunter", "Matches": 2},
+        {"Player": "Hanski", "Matches": 2},
+        {"Player": "Stinneford", "Matches": 2},
+        {"Player": "Lednicky", "Matches": 1}
+      ]
+    },
+    "allTimeLosses": {
+      "dallas": [
+        {"Player": "Faulkner", "Matches": 4},
+        {"Player": "Wortsmith", "Matches": 4},
+        {"Player": "Coady", "Matches": 3},
+        {"Player": "Travis", "Matches": 3},
+        {"Player": "Nugget", "Matches": 2},
+        {"Player": "Elliott", "Matches": 2},
+        {"Player": "Meek", "Matches": 2},
+        {"Player": "Sherm", "Matches": 2},
+        {"Player": "Cat", "Matches": 2},
+        {"Player": "Taylor", "Matches": 1},
+        {"Player": "Hammy", "Matches": 1},
+        {"Player": "Coby", "Matches": 1}
+      ],
+      "houston": [
+        {"Player": "Lednicky", "Matches": 5},
+        {"Player": "Gabe", "Matches": 4},
+        {"Player": "A. Rice", "Matches": 4},
+        {"Player": "Stinneford", "Matches": 3},
+        {"Player": "Mitchell", "Matches": 3},
+        {"Player": "Hotdame", "Matches": 3},
+        {"Player": "Law Dog", "Matches": 2},
+        {"Player": "Hollywood", "Matches": 2},
+        {"Player": "Hardig", "Matches": 2},
+        {"Player": "Hanski", "Matches": 2},
+        {"Player": "Country", "Matches": 2},
+        {"Player": "Dewey", "Matches": 1},
+        {"Player": "Hunter", "Matches": 1}
+      ]
+    }
+  },
+
+  "bestBall": {
+    "currentWins": {
+      "dallas": [{"Player": "Cat", "Matches": 4}],
+      "houston": [
+        {"Player": "Mitchell", "Matches": 2},
+        {"Player": "Hotdame", "Matches": 2},
+        {"Player": "Gabe", "Matches": 2},
+        {"Player": "Hanski", "Matches": 2}
+      ]
+    },
+    "currentLosses": {
+      "dallas": [{"Player": "Sherm", "Matches": 3}],
+      "houston": [{"Player": "Hollywood", "Matches": 4}]
+    },
+    "allTimeWins": {
+      "dallas": [
+        {"Player": "Meek", "Matches": 5},
+        {"Player": "Sherm", "Matches": 4},
+        {"Player": "Cat", "Matches": 4},
+        {"Player": "Coby", "Matches": 3},
+        {"Player": "Elliott", "Matches": 3},
+        {"Player": "Taylor", "Matches": 3},
+        {"Player": "Nugget", "Matches": 3},
+        {"Player": "Coady", "Matches": 2},
+        {"Player": "Travis", "Matches": 1},
+        {"Player": "Hammy", "Matches": 1},
+        {"Player": "Wortsmith", "Matches": 1},
+        {"Player": "Faulkner", "Matches": 1}
+      ],
+      "houston": [
+        {"Player": "Lednicky", "Matches": 3},
+        {"Player": "Mitchell", "Matches": 2},
+        {"Player": "Gabe", "Matches": 2},
+        {"Player": "Country", "Matches": 2},
+        {"Player": "Hotdame", "Matches": 2},
+        {"Player": "A. Rice", "Matches": 2},
+        {"Player": "Hanski", "Matches": 2},
+        {"Player": "Stinneford", "Matches": 2},
+        {"Player": "Dewey", "Matches": 1},
+        {"Player": "Law Dog", "Matches": 1},
+        {"Player": "Hollywood", "Matches": 1},
+        {"Player": "Hardig", "Matches": 1},
+        {"Player": "Hunter", "Matches": 1}
+      ]
+    },
+    "allTimeLosses": {
+      "dallas": [
+        {"Player": "Faulkner", "Matches": 3},
+        {"Player": "Sherm", "Matches": 3},
+        {"Player": "Wortsmith", "Matches": 2},
+        {"Player": "Travis", "Matches": 2},
+        {"Player": "Nugget", "Matches": 2},
+        {"Player": "Meek", "Matches": 2},
+        {"Player": "Taylor", "Matches": 2},
+        {"Player": "Hammy", "Matches": 2},
+        {"Player": "Coby", "Matches": 2},
+        {"Player": "Coady", "Matches": 1},
+        {"Player": "Elliott", "Matches": 1},
+        {"Player": "Cat", "Matches": 1}
+      ],
+      "houston": [
+        {"Player": "Hollywood", "Matches": 4},
+        {"Player": "Gabe", "Matches": 3},
+        {"Player": "Mitchell", "Matches": 3},
+        {"Player": "Hardig", "Matches": 3},
+        {"Player": "Country", "Matches": 3},
+        {"Player": "Lednicky", "Matches": 2},
+        {"Player": "A. Rice", "Matches": 2},
+        {"Player": "Hanski", "Matches": 2},
+        {"Player": "Dewey", "Matches": 2},
+        {"Player": "Stinneford", "Matches": 1},
+        {"Player": "Hotdame", "Matches": 1},
+        {"Player": "Law Dog", "Matches": 1},
+        {"Player": "Hunter", "Matches": 1}
+      ]
+    }
+  },
+
+  "singles": {
+    "currentWins": {
+      "dallas": [
+        {"Player": "Travis", "Matches": 3},
+        {"Player": "Wortsmith", "Matches": 3}
+      ],
+      "houston": [
+        {"Player": "Hotdame", "Matches": 3}
+      ]
+    },
+    "currentLosses": {
+      "dallas": [
+        {"Player": "Faulkner", "Matches": 4}
+      ],
+      "houston": [
+        {"Player": "Lednicky", "Matches": 4},
+        {"Player": "Hollywood", "Matches": 4}
+      ]
+    },
+    "allTimeWins": {
+      "dallas": [
+        {"Player": "Nugget", "Matches": 4},
+        {"Player": "Meek", "Matches": 3},
+        {"Player": "Elliott", "Matches": 3},
+        {"Player": "Travis", "Matches": 3},
+        {"Player": "Wortsmith", "Matches": 3},
+        {"Player": "Sherm", "Matches": 2},
+        {"Player": "Cat", "Matches": 2},
+        {"Player": "Coby", "Matches": 2},
+        {"Player": "Taylor", "Matches": 2},
+        {"Player": "Coady", "Matches": 2},
+        {"Player": "Hammy", "Matches": 1},
+        {"Player": "Faulkner", "Matches": 1}
+      ],
+      "houston": [
+        {"Player": "Mitchell", "Matches": 7},
+        {"Player": "Hotdame", "Matches": 6},
+        {"Player": "A. Rice", "Matches": 5},
+        {"Player": "Hanski", "Matches": 5},
+        {"Player": "Hardig", "Matches": 5},
+        {"Player": "Country", "Matches": 3},
+        {"Player": "Hollywood", "Matches": 3},
+        {"Player": "Lednicky", "Matches": 2},
+        {"Player": "Gabe", "Matches": 2},
+        {"Player": "Dewey", "Matches": 2},
+        {"Player": "Stinneford", "Matches": 1},
+        {"Player": "Law Dog", "Matches": 1},
+        {"Player": "Hunter", "Matches": 1}
+      ]
+    },
+    "allTimeLosses": {
+      "dallas": [
+        {"Player": "Elliott", "Matches": 6},
+        {"Player": "Faulkner", "Matches": 4},
+        {"Player": "Taylor", "Matches": 4},
+        {"Player": "Meek", "Matches": 3},
+        {"Player": "Hammy", "Matches": 3},
+        {"Player": "Coady", "Matches": 3},
+        {"Player": "Sherm", "Matches": 2},
+        {"Player": "Wortsmith", "Matches": 2},
+        {"Player": "Travis", "Matches": 2},
+        {"Player": "Coby", "Matches": 2},
+        {"Player": "Cat", "Matches": 2},
+        {"Player": "Nugget", "Matches": 1}
+      ],
+      "houston": [
+        {"Player": "Hollywood", "Matches": 4},
+        {"Player": "Lednicky", "Matches": 4},
+        {"Player": "Hardig", "Matches": 3},
+        {"Player": "Stinneford", "Matches": 3},
+        {"Player": "Hotdame", "Matches": 3},
+        {"Player": "Hunter", "Matches": 3},
+        {"Player": "Gabe", "Matches": 2},
+        {"Player": "Mitchell", "Matches": 2},
+        {"Player": "Hanski", "Matches": 2},
+        {"Player": "Law Dog", "Matches": 2},
+        {"Player": "Country", "Matches": 1},
+        {"Player": "A. Rice", "Matches": 1},
+        {"Player": "Dewey", "Matches": 1}
+      ]
+    }
+  }
+}
