@@ -13,7 +13,7 @@
       color: white;
     }
 
-    /* ✅ NAV (FIXED) */
+    /* ✅ NAV */
     .nav {
       position: fixed;
       top: 0;
@@ -55,13 +55,16 @@
       font-weight: bold;
     }
 
-    .nav-links a:hover { color: gold; }
+    .nav-links a:hover {
+      color: gold;
+    }
+
     .nav-links a.active {
       color: gold;
       text-decoration: underline;
     }
 
-    /* ✅ HERO (MATCHES YOUR OTHER PAGES) */
+    /* ✅ HERO */
     .hero {
       margin-top: 100px;
       min-height: calc(100vh - 100px);
@@ -85,10 +88,18 @@
     .hero h1 {
       color: gold;
       font-size: 60px;
-      margin-bottom: 10px;
+      margin: 0;
     }
 
-    /* ✅ LINK BUTTONS */
+    .hero p {
+      color: gold;
+      font-weight: bold;
+      font-size: 20px;
+      margin-top: 10px;
+      text-shadow: 2px 2px 8px black;
+    }
+
+    /* ✅ SUB NAV BUTTONS */
     .streak-nav {
       text-align: center;
       margin-top: 20px;
@@ -97,7 +108,7 @@
     .streak-nav a {
       display: inline-block;
       margin: 10px;
-      padding: 10px 18px;
+      padding: 10px 20px;
       background: #1f2937;
       color: #38bdf8;
       text-decoration: none;
@@ -132,7 +143,6 @@
       min-width: 300px;
     }
 
-    /* ✅ TEAM HEADERS CENTERED */
     h3 {
       text-align: center;
       margin-bottom: 10px;
@@ -153,7 +163,9 @@
       text-align: center;
     }
 
-    th { color: gold; }
+    th {
+      color: gold;
+    }
 
     /* ✅ STREAK COLORS */
     .win { color: #22c55e; font-weight: bold; }
@@ -164,6 +176,7 @@
 
 <body>
 
+<!-- ✅ MATCHES YOUR MAIN NAV -->
 <div class="nav">
   <div class="nav-left">
     <img src="./logo-circle.png">
@@ -172,16 +185,24 @@
 
   <div class="nav-links">
     <a href="index.html">Home</a>
+    <a href="timeline.html">Timeline</a>
+    <a href="history.html">History</a>
     <a href="highlights.html">Highlights</a>
+    <a href="players.html">Players</a>
     <a href="streaks.html" class="active">Streaks</a>
+    <a href="teammates.html">Teammates</a>
+    <a href="handicap.html">Handicap History</a>
+    <a href="years.html">Year by Year Results</a>
   </div>
 </div>
 
+<!-- ✅ HERO -->
 <div class="hero">
   <h1>DH Cup Streaks</h1>
+  <p>We're going streaking....</p>
 </div>
 
-<!-- ✅ NAV LINKS -->
+<!-- ✅ SUBPAGE LINKS -->
 <div class="streak-nav">
   <a href="streaks-scramble.html">Scramble</a>
   <a href="streaks-bestball.html">Best Ball</a>
@@ -196,7 +217,6 @@ fetch("streaks.json")
 .then(data => {
 
   function colorVal(val) {
-    if (!val) return "";
     if (val.includes("W")) return `<span class="win">${val}</span>`;
     if (val.includes("L")) return `<span class="loss">${val}</span>`;
     return val;
