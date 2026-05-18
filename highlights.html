@@ -44,7 +44,10 @@
 
     .nav-links {
       display: flex;
-      gap: 12px;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+      gap: 10px;
+      margin-top: 5px;
     }
 
     .nav-links a {
@@ -63,15 +66,25 @@
       text-decoration: underline;
     }
 
-    /* HERO */
+    /* ✅ HERO (UPDATED TO MATCH HISTORY/HOMEPAGE) */
     .hero {
-      margin-top: 120px;
-      padding: 120px 20px;
+      margin-top: 100px;
+      min-height: calc(100vh - 100px);
+
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      background: linear-gradient(rgba(0,0,0,.3), rgba(0,0,0,.4)),
+                  url("./golf-bg-highlights.jpg");
+
+      background-size: contain;        /* ✅ full image visible */
+      background-position: center;
+      background-repeat: no-repeat;
+
       text-align: center;
-      background:
-        linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,.5)),
-        url("./golf-bg.jpg");
-      background-size: cover;
+      padding: 20px;
     }
 
     .hero h1 {
@@ -125,24 +138,20 @@
       overflow-x: auto;
     }
 
-    /* ✅ KEY CHANGE: AUTO TABLE LAYOUT */
     table {
       width: 100%;
       border-collapse: collapse;
       background: #1f2937;
-      table-layout: auto; /* ✅ allows natural sizing */
+      table-layout: auto;
     }
 
     th, td {
       padding: 12px;
       border-bottom: 1px solid #444;
       text-align: center;
-
-      /* ✅ KEY: STOP WRAPPING */
       white-space: nowrap;
     }
 
-    /* HEADERS */
     th {
       color: gold;
       border-bottom: 2px solid #facc15;
@@ -157,7 +166,6 @@
       background: #374151;
     }
 
-    /* ROW COLORS */
     tr.dallas-win {
       background-color: rgba(37, 99, 235, 0.35);
       font-weight: bold;
@@ -168,22 +176,18 @@
       font-weight: bold;
     }
 
-    /* ✅ BETTER COLUMN BALANCE */
-
-    /* 5-column tables */
     table th:nth-child(1), table td:nth-child(1) { width: 8%; }
     table th:nth-child(2), table td:nth-child(2) { width: 12%; }
     table th:nth-child(3), table td:nth-child(3) { width: 45%; }
     table th:nth-child(4), table td:nth-child(4) { width: 15%; }
     table th:nth-child(5), table td:nth-child(5) { width: 10%; }
 
-    /* 3-column tables */
     .half table th:nth-child(1), .half table td:nth-child(1) { width: 35%; }
     .half table th:nth-child(2), .half table td:nth-child(2) { width: 15%; }
     .half table th:nth-child(3), .half table td:nth-child(3) { width: 50%; }
 
     @media (max-width: 768px) {
-      .hero { margin-top: 160px; }
+      .hero { min-height: 50vh; }
       .hero h1 { font-size: 38px; }
       .half { width: 100%; }
     }
@@ -193,7 +197,6 @@
 
 <body>
 
-<!-- NAV -->
 <div class="nav">
   <div class="nav-left">
     <img src="./logo-circle.png">
@@ -239,7 +242,6 @@ fetch("highlights.json")
 
   function buildTable(rows, cols) {
     let html = `<table><thead><tr>`;
-
     cols.forEach(c => html += `<th>${formatHeader(c)}</th>`);
     html += `</tr></thead><tbody>`;
 
