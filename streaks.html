@@ -13,17 +13,16 @@
       color: white;
     }
 
-    /* ✅ NAV */
     .nav {
       position: fixed;
       top: 0;
       width: 100%;
-      background: #0f172a;
-      padding: 12px 30px;
+      z-index: 999;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      z-index: 999;
+      background: #0f172a;
+      padding: 12px 30px;
     }
 
     .nav-left {
@@ -41,22 +40,19 @@
 
     .nav-links a {
       color: #38bdf8;
-      margin-left: 12px;
       text-decoration: none;
-      font-weight: bold;
+      margin-left: 10px;
       font-size: 13px;
+      font-weight: bold;
     }
 
-    .nav-links a:hover {
-      color: gold;
-    }
+    .nav-links a:hover { color: gold; }
 
     .nav-links a.active {
       color: gold;
       text-decoration: underline;
     }
 
-    /* ✅ HERO */
     .hero {
       margin-top: 80px;
       height: 400px;
@@ -81,6 +77,7 @@
     .hero p {
       color: gold;
       font-weight: bold;
+      font-size: 20px;
       margin-top: 10px;
     }
 
@@ -94,6 +91,10 @@
       text-align: center;
       color: #60a5fa;
       margin-top: 40px;
+    }
+
+    h3 {
+      text-align: center;
     }
 
     .table-row {
@@ -122,15 +123,17 @@
     th {
       color: gold;
     }
+
+    .dallas-header { color: #60a5fa; }
+    .houston-header { color: #f87171; }
   </style>
 </head>
 
 <body>
 
-<!-- ✅ FIXED NAV -->
 <div class="nav">
   <div class="nav-left">
-    <img src="logo-circle.png">
+    <img src="./logo-circle.png">
     DH Cup
   </div>
 
@@ -140,14 +143,13 @@
     <a href="history.html">History</a>
     <a href="highlights.html">Highlights</a>
     <a href="players.html">Players</a>
-    <a href="streaks.html" class="active">Streaks</a>
+    <a class="active" href="streaks.html">Streaks</a>
     <a href="teammates.html">Teammates</a>
     <a href="handicap.html">Handicap</a>
     <a href="years.html">Years</a>
   </div>
 </div>
 
-<!-- ✅ HERO -->
 <div class="hero">
   <h1>DH Cup Streaks</h1>
   <p>We're going streaking....</p>
@@ -160,50 +162,57 @@ fetch("streaks.json")
 .then(res => res.json())
 .then(data => {
 
-  const content = document.getElementById("content");
+  const container = document.getElementById("content");
 
-  function table(rows) {
-    if (!rows) return "<p>No data</p>";
-
-    let html = "<table><tr><th>Player</th><th>#</th></tr>";
+  function buildTable(rows) {
+    let html = "<table><thead><tr><th>Player</th><th># of Matches</th></tr></thead><tbody>";
 
     rows.forEach(r => {
       html += `<tr><td>${r.Player}</td><td>${r.Matches}</td></tr>`;
     });
 
-    return html + "</table>";
+    return html + "</tbody></table>";
   }
 
-  function section(title, obj) {
-    if (!obj) return "";
-
+  function section(title, dallas, houston) {
     return `
       <h2>${title}</h2>
       <div class="table-row">
-        <div class="half">${table(obj.dallas)}</div>
-        <div class="half">${table(obj.houston)}</div>
+        <div class="half">
+          <h3 class="dallas-header">Team Dallas</h3>
+          ${buildTable(dallas)}
+        </div>
+        <div class="half">
+          <h3 class="houston-header">Team Houston</h3>
+          ${buildTable(houston)}
+        </div>
       </div>
     `;
   }
 
-  content.innerHTML += section(
+  // ✅ TOTAL ONLY (THIS WAS WORKING BEFORE)
+  container.innerHTML += section(
     "Longest Active Winning Streaks - Total",
-    data.total.currentWins
+    data.total.currentWins.dallas,
+    data.total.currentWins.houston
   );
 
-  content.innerHTML += section(
+  container.innerHTML += section(
     "Longest Winning Streaks - Total",
-    data.total.allTimeWins
+    data.total.allTimeWins.dallas,
+    data.total.allTimeWins.houston
   );
 
-  content.innerHTML += section(
+  container.innerHTML += section(
     "Longest Active Losing Streaks - Total",
-    data.total.currentLosses
+    data.total.currentLosses.dallas,
+    data.total.currentLosses.houston
   );
 
-  content.innerHTML += section(
+  container.innerHTML += section(
     "Longest Losing Streaks - Total",
-    data.total.allTimeLosses
+    data.total.allTimeLosses.dallas,
+    data.total.allTimeLosses.houston
   );
 
 });
