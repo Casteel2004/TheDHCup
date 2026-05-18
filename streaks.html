@@ -13,7 +13,6 @@
       color: white;
     }
 
-    /* ✅ NAV (IDENTICAL STRUCTURE AS HIGHLIGHTS) */
     .nav {
       position: fixed;
       top: 0;
@@ -47,7 +46,6 @@
       flex-wrap: wrap;
       justify-content: flex-end;
       gap: 10px;
-      margin-top: 5px;
     }
 
     .nav-links a {
@@ -57,18 +55,14 @@
       font-weight: bold;
     }
 
-    .nav-links a:hover { color: gold; }
-
     .nav-links a.active {
       color: gold;
       text-decoration: underline;
     }
 
-    /* ✅ HERO (MATCH YOUR OTHER PAGES) */
     .hero {
       margin-top: 100px;
       min-height: calc(100vh - 100px);
-
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -80,7 +74,6 @@
       background-size: contain;
       background-position: center;
       background-repeat: no-repeat;
-
       text-align: center;
     }
 
@@ -93,7 +86,6 @@
       color: gold;
       font-weight: bold;
       font-size: 20px;
-      text-shadow: 3px 3px 10px black;
     }
 
     .content {
@@ -134,20 +126,19 @@
 
     th {
       color: gold;
-      border-bottom: 2px solid gold;
     }
 
-    tr:hover { background: #374151; }
-
-    .dallas-header { color: #60a5fa; }
-    .houston-header { color: #f87171; }
-
+    .error {
+      color: red;
+      text-align: center;
+      font-size: 18px;
+      margin-top: 30px;
+    }
   </style>
 </head>
 
 <body>
 
-<!-- ✅ NAV (FIXED) -->
 <div class="nav">
   <div class="nav-left">
     <img src="./logo-circle.png">
@@ -162,8 +153,8 @@
     <a href="players.html">Players</a>
     <a href="streaks.html" class="active">Streaks</a>
     <a href="teammates.html">Teammates</a>
-    <a href="handicap.html">Handicap History</a>
-    <a href="years.html">Year by Year Results</a>
+    <a href="handicap.html">Handicap</a>
+    <a href="years.html">Years</a>
   </div>
 </div>
 
@@ -182,56 +173,65 @@ fetch("streaks.json")
   const container = document.getElementById("content");
 
   function buildTable(rows) {
-    let html = "<table><thead><tr><th>Player</th><th># of Matches</th></tr></thead><tbody>";
+    if (!rows || rows.length === 0) {
+      return "<p>No data</p>";
+    }
+
+    let html = "<table><tr><th>Player</th><th># of Matches</th></tr>";
 
     rows.forEach(r => {
       html += `<tr><td>${r.Player}</td><td>${r.Matches}</td></tr>`;
     });
 
-    return html + "</tbody></table>";
+    return html + "</table>";
   }
 
-  function section(title, dallas, houston) {
+  function renderSection(title, section) {
+    if (!section) return "";
+
     return `
       <h2>${title}</h2>
       <div class="table-row">
         <div class="half">
-          <h3 class="dallas-header">Dallas</h3>
-          ${buildTable(dallas)}
+          ${buildTable(section.dallas)}
         </div>
         <div class="half">
-          <h3 class="houston-header">Houston</h3>
-          ${buildTable(houston)}
+          ${buildTable(section.houston)}
         </div>
       </div>
     `;
   }
 
-  // ✅ TOTAL (WORKING BASELINE)
-  container.innerHTML += section(
-    "Longest Active Winning Streaks - Total",
-    data.total.currentWins.dallas,
-    data.total.currentWins.houston
-  );
+  try {
+    container.innerHTML += renderSection(
+      "Longest Active Winning Streaks - Total",
+      data.total.currentWins
+    );
 
-  container.innerHTML += section(
-    "Longest Winning Streaks - Total (Min 10 Cups)",
-    data.total.allTimeWins.dallas,
-    data.total.allTimeWins.houston
-  );
+    container.innerHTML += renderSection(
+      "Longest Winning Streaks - Total",
+      data.total.allTimeWins
+    );
 
-  container.innerHTML += section(
-    "Longest Active Losing Streaks - Total",
-    data.total.currentLosses.dallas,
-    data.total.currentLosses.houston
-  );
+    container.innerHTML += renderSection(
+      "Longest Active Losing Streaks - Total",
+      data.total.currentLosses
+    );
 
-  container.innerHTML += section(
-    "Longest Losing Streaks - Total (Min 10 Cups)",
-    data.total.allTimeLosses.dallas,
-    data.total.allTimeLosses.houston
-  );
+    container.innerHTML += renderSection(
+      "Longest Losing Streaks - Total",
+      data.total.allTimeLosses
+    );
 
+  } catch (err) {
+    container.innerHTML = `<div class="error">JS Error: ${err.message}</div>`;
+    console.error(err);
+  }
+
+})
+.catch(err => {
+  document.getElementById("content").innerHTML =
+    `<div class="error">Fetch Error: ${err.message}</div>`;
 });
 </script>
 
