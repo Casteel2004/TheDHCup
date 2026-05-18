@@ -65,26 +65,23 @@
       text-decoration: underline;
     }
 
-    /* ✅ HERO (UPDATED IMAGE) */
-   
-.hero {
-  margin-top: 100px;
-  min-height: 65vh; /* ✅ keeps the big hero feel */
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+    /* ✅ HERO (FINAL FIX) */
+    .hero {
+      margin-top: 100px;
+      min-height: 75vh; /* ✅ THIS is what makes it full like homepage */
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
 
-  background: linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,.5)),
-              url("./golf-bg-history.jpg");
+      background: linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,.5)),
+                  url("./golf-bg-history.jpg");
+      background-size: cover;
+      background-position: center;
+      text-align: center;
 
-  background-size: cover;          /* ✅ still fills */
-  background-position: center top; /* ✅ THIS fixes zoom feel */
-  background-repeat: no-repeat;
-
-  text-align: center;
-  padding: 40px 20px;
-}
+      padding: 20px; /* ✅ small padding, not huge */
+    }
 
     .hero h1 {
       color: gold;
@@ -119,9 +116,8 @@
       margin-bottom: 30px;
     }
 
-    /* TABLE */
     .table-container {
-      overflow-x: auto;  /* ✅ allows horizontal scroll */
+      overflow-x: auto;
     }
 
     table {
@@ -129,7 +125,7 @@
       border-collapse: collapse;
       background: #1f2937;
       table-layout: fixed;
-      min-width: 650px; /* ✅ prevents crushing */
+      min-width: 650px;
     }
 
     th, td {
@@ -154,18 +150,18 @@
     tr.dallas-win { background-color: rgba(37,99,235,.35); }
     tr.houston-win { background-color: rgba(220,38,38,.35); }
 
-    /* DESKTOP COLUMN WIDTHS */
     table th:nth-child(1), table td:nth-child(1) { width: 8%; }
     table th:nth-child(2), table td:nth-child(2) { width: 12%; }
     table th:nth-child(3), table td:nth-child(3) { width: 12%; }
     table th:nth-child(4), table td:nth-child(4) { width: 48%; }
     table th:nth-child(5), table td:nth-child(5) { width: 20%; }
 
-    /* ✅ MOBILE FIXES */
+    /* MOBILE */
     @media (max-width: 768px) {
 
       .hero {
-        padding: 100px 15px;
+        min-height: 50vh;
+        padding: 20px;
       }
 
       .hero h1 {
@@ -185,15 +181,13 @@
       }
 
       table {
-        table-layout: auto; /* ✅ allows natural spacing */
+        table-layout: auto;
       }
 
       th, td {
-        padding: 10px;
         font-size: 13px;
-        white-space: nowrap; /* ✅ prevents ugly stacking */
+        white-space: nowrap;
       }
-
     }
 
   </style>
@@ -226,7 +220,6 @@
 </div>
 
 <div class="content">
-
   <div id="recordLine" class="record"></div>
   <div id="extraStats"></div>
 
@@ -244,7 +237,6 @@
       <tbody id="historyTable"></tbody>
     </table>
   </div>
-
 </div>
 
 <script>
@@ -252,13 +244,8 @@ fetch('history.json')
 .then(res => res.json())
 .then(data => {
 
-  let dallas = 0;
-  let houston = 0;
-
-  let largestMargin = 0;
-  let largestScore = "";
-  let largestYear = "";
-  let largestTeam = "";
+  let dallas = 0, houston = 0;
+  let largestMargin = 0, largestScore="", largestYear="", largestTeam="";
 
   const table = document.getElementById("historyTable");
 
@@ -267,14 +254,8 @@ fetch('history.json')
     let winner = (item.winner || "").toLowerCase();
     let rowClass = "";
 
-    if (winner.includes("dallas")) {
-      dallas++;
-      rowClass = "dallas-win";
-    } 
-    else if (winner.includes("houston")) {
-      houston++;
-      rowClass = "houston-win";
-    }
+    if (winner.includes("dallas")) { dallas++; rowClass = "dallas-win"; } 
+    else if (winner.includes("houston")) { houston++; rowClass = "houston-win"; }
 
     if (item.score && item.score.includes("to")) {
       let parts = item.score.split("to");
@@ -308,24 +289,17 @@ fetch('history.json')
   if (houston > dallas) {
     record.textContent = `Houston Leads All-Time: ${houston} – ${dallas}`;
     record.classList.add("houston");
-  } else if (dallas > houston) {
+  } else {
     record.textContent = `Dallas Leads All-Time: ${dallas} – ${houston}`;
     record.classList.add("dallas");
-  } else {
-    record.textContent = `All-Time Series Tied: ${dallas} – ${houston}`;
   }
 
   let total = data.length;
-  let dPct = Math.round((dallas / total) * 100);
-  let hPct = Math.round((houston / total) * 100);
-
-  let winText =
-    houston > dallas
-      ? `Houston Win %: ${hPct}% | Dallas Win %: ${dPct}%`
-      : `Dallas Win %: ${dPct}% | Houston Win %: ${hPct}%`;
+  let dPct = Math.round((dallas/total)*100);
+  let hPct = Math.round((houston/total)*100);
 
   stats.innerHTML = `
-    Total Matches: ${total} | ${winText}<br>
+    Total Matches: ${total} | Houston Win %: ${hPct}% | Dallas Win %: ${dPct}%<br>
     Largest Margin: ${largestScore} — ${largestTeam} (${largestYear})
   `;
 });
