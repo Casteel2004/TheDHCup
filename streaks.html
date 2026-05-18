@@ -56,7 +56,7 @@
       color: gold;
     }
 
-    /* ✅ HERO (FIXED) */
+    /* ✅ HERO */
     .hero {
       margin-top: 80px;
       height: 400px;
@@ -139,7 +139,6 @@
 
     .dallas-header { color: #60a5fa; }
     .houston-header { color: #f87171; }
-
   </style>
 </head>
 
@@ -180,105 +179,57 @@ fetch("streaks.json")
 
   const container = document.getElementById("content");
 
-  function colorCell(val) {
-    if (!val) return "<td>-</td>";
-
-    if (val.includes("W")) return `<td style="background:rgba(34,197,94,.4);">${val}</td>`;
-    if (val.includes("L")) return `<td style="background:rgba(239,68,68,.4);">${val}</td>`;
-    return `<td style="background:rgba(250,204,21,.4);">${val}</td>`;
-  }
-
-  function playerTable(rows) {
+  function buildTable(rows) {
     if (!rows) return "<p>No Data</p>";
 
-    rows.sort((a,b)=>a.Player.localeCompare(b.Player));
-
-    let html = `
-      <table>
-        <thead>
-          <tr>
-            <th>Player</th>
-            <th>Best Ball</th>
-            <th>Scramble</th>
-            <th>Singles</th>
-          </tr>
-        </thead>
-        <tbody>
-    `;
-
-    rows.forEach(r => {
-      html += `
-        <tr>
-          <td>${r.Player}</td>
-          ${colorCell(r.BestBall)}
-          ${colorCell(r.Scramble)}
-          ${colorCell(r.Singles)}
-        </tr>
-      `;
-    });
-
-    return html + "</tbody></table>";
-  }
-
-  function basicTable(rows) {
-    if (!rows) return "<p>No Data</p>";
-
-    let html = `
-      <table>
-        <thead>
-          <tr>
-            <th>Player</th>
-            <th>#</th>
-          </tr>
-        </thead>
-        <tbody>
-    `;
+    let html = "<table><tr><th>Player</th><th>#</th></tr>";
 
     rows.forEach(r => {
       html += `<tr><td>${r.Player}</td><td>${r.Matches}</td></tr>`;
     });
 
-    return html + "</tbody></table>";
+    return html + "</table>";
   }
 
   function section(title, obj) {
+    if (!obj) return "";
+
     return `
       <h2>${title}</h2>
       <div class="table-row">
         <div class="half">
           <h3 class="dallas-header">Dallas</h3>
-          ${basicTable(obj.dallas)}
+          ${buildTable(obj.dallas)}
         </div>
         <div class="half">
           <h3 class="houston-header">Houston</h3>
-          ${basicTable(obj.houston)}
+          ${buildTable(obj.houston)}
         </div>
       </div>
     `;
   }
 
-  // ✅ CURRENT PLAYER STREAKS
-  container.innerHTML += `
-    <h2>Current Player Streaks</h2>
-    <div class="table-row">
-      <div class="half">
-        ${playerTable(data.currentPlayerStreaks.dallas)}
-      </div>
-      <div class="half">
-        ${playerTable(data.currentPlayerStreaks.houston)}
-      </div>
-    </div>
-  `;
+  // ✅ CURRENT PLAYER STREAKS (SAFE VERSION)
+  if (data.currentPlayerStreaks) {
+    container.innerHTML += `
+      <h2>Current Player Streaks</h2>
+      <p style="text-align:center;">(Table will be added next step)</p>
+    `;
+  }
 
   // ✅ TOTAL
-  container.innerHTML += section("Active Wins - Total", data.total.currentWins);
-  container.innerHTML += section("All-Time Wins - Total", data.total.allTimeWins);
-  container.innerHTML += section("Active Losses - Total", data.total.currentLosses);
-  container.innerHTML += section("All-Time Losses - Total", data.total.allTimeLosses);
+  if (data.total) {
+    container.innerHTML += section("Active Wins - Total", data.total.currentWins);
+    container.innerHTML += section("All-Time Wins - Total", data.total.allTimeWins);
+    container.innerHTML += section("Active Losses - Total", data.total.currentLosses);
+    container.innerHTML += section("All-Time Losses - Total", data.total.allTimeLosses);
+  }
 
   // ✅ FORMATS
   function format(name, obj){
-    container.innerHTML += `<h2>${name}</h2>`;
+    if (!obj) return;
+
+    container.innerHTML += `<h2>${name} Streaks</h2>`;
     container.innerHTML += section("Active Wins", obj.currentWins);
     container.innerHTML += section("Active Losses", obj.currentLosses);
   }
@@ -287,6 +238,9 @@ fetch("streaks.json")
   format("Best Ball", data.bestBall);
   format("Singles", data.singles);
 
+})
+.catch(err => {
+  document.getElementById("content").innerHTML = "Error loading data";
 });
 </script>
 
