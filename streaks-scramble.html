@@ -54,10 +54,7 @@
       font-weight: bold;
     }
 
-    .nav-links a:hover {
-      color: gold;
-    }
-
+    .nav-links a:hover { color: gold; }
     .nav-links a.active {
       color: gold;
       text-decoration: underline;
@@ -100,12 +97,14 @@
     .streak-nav {
       text-align: center;
       margin-top: 20px;
+      border-bottom: 1px solid #444;
+      padding-bottom: 10px;
     }
 
     .streak-nav a {
       display: inline-block;
       margin: 10px;
-      padding: 10px 20px;
+      padding: 10px 18px;
       background: #1f2937;
       color: #38bdf8;
       text-decoration: none;
@@ -116,6 +115,11 @@
     .streak-nav a:hover {
       color: gold;
       background: #374151;
+    }
+
+    .streak-nav a.active {
+      color: gold;
+      border-bottom: 2px solid gold;
     }
 
     .content {
@@ -162,6 +166,7 @@
     }
 
     th { color: gold; }
+
   </style>
 </head>
 
@@ -188,11 +193,13 @@
 
 <div class="hero">
   <h1>Scramble Streaks</h1>
-  <p>Lookin' for a partner...</p>
+  <p>Partnerships win cups... or lose them.</p>
 </div>
 
 <div class="streak-nav">
-  <a href="streaks-scramble.html">Scramble</a>
+  <a href="streaks.html">Active</a>
+  <a href="streaks-alltime.html">All Time</a>
+  <a href="streaks-scramble.html" class="active">Scramble</a>
   <a href="streaks-bestball.html">Best Ball</a>
   <a href="streaks-singles.html">Singles</a>
 </div>
@@ -214,7 +221,8 @@ fetch("streaks.json")
         <tr>
           <td>${r.Player}</td>
           <td>${r.Matches}</td>
-        </tr>`;
+        </tr>
+      `;
     });
 
     return html + "</table>";
