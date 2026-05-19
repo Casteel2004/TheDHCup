@@ -55,9 +55,7 @@
       font-weight: bold;
     }
 
-    .nav-links a:hover {
-      color: gold;
-    }
+    .nav-links a:hover { color: gold; }
 
     .nav-links a.active {
       color: gold;
@@ -99,7 +97,7 @@
       text-shadow: 2px 2px 8px black;
     }
 
-    /* ✅ SUB NAV BUTTONS */
+    /* ✅ SUBNAV */
     .streak-nav {
       text-align: center;
       margin-top: 20px;
@@ -108,7 +106,7 @@
     .streak-nav a {
       display: inline-block;
       margin: 10px;
-      padding: 10px 20px;
+      padding: 10px 18px;
       background: #1f2937;
       color: #38bdf8;
       text-decoration: none;
@@ -119,6 +117,12 @@
     .streak-nav a:hover {
       color: gold;
       background: #374151;
+    }
+
+    /* ✅ ACTIVE LINK (YELLOW) */
+    .streak-nav a.active {
+      color: gold;
+      border-bottom: 2px solid gold;
     }
 
     .content {
@@ -163,11 +167,8 @@
       text-align: center;
     }
 
-    th {
-      color: gold;
-    }
+    th { color: gold; }
 
-    /* ✅ STREAK COLORS */
     .win { color: #22c55e; font-weight: bold; }
     .loss { color: #ef4444; font-weight: bold; }
 
@@ -176,7 +177,7 @@
 
 <body>
 
-<!-- ✅ MATCHES YOUR MAIN NAV -->
+<!-- ✅ MAIN NAV -->
 <div class="nav">
   <div class="nav-left">
     <img src="./logo-circle.png">
@@ -202,8 +203,10 @@
   <p>We're going streaking....</p>
 </div>
 
-<!-- ✅ SUBPAGE LINKS -->
+<!-- ✅ UPDATED SUB NAV -->
 <div class="streak-nav">
+  <a href="streaks.html" class="active">Active</a>
+  <a href="streaks-alltime.html">All Time</a>
   <a href="streaks-scramble.html">Scramble</a>
   <a href="streaks-bestball.html">Best Ball</a>
   <a href="streaks-singles.html">Singles</a>
@@ -224,8 +227,7 @@ fetch("streaks.json")
 
   function playerTable(rows) {
 
-  // ✅ SORT ALPHABETICALLY BY PLAYER NAME
-  rows = rows.slice().sort((a, b) => a.Player.localeCompare(b.Player))
+    rows = rows.slice().sort((a, b) => a.Player.localeCompare(b.Player));
 
     let html = `
       <table>
