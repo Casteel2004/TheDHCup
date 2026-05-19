@@ -1,1 +1,252 @@
 
+<!DOCTYPE html>
+<html>
+<head>
+  <title>DH Cup Singles Streaks</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <style>
+    body {
+      font-family: Arial;
+      margin: 0;
+      background: #2b3648;
+      color: white;
+    }
+
+    .nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: #0f172a;
+      padding: 12px 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-sizing: border-box;
+      z-index: 999;
+      flex-wrap: wrap;
+    }
+
+    .nav-left {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      color: gold;
+      font-weight: bold;
+      font-size: 20px;
+    }
+
+    .nav-left img {
+      height: 55px;
+      border-radius: 50%;
+    }
+
+    .nav-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .nav-links a {
+      color: #38bdf8;
+      text-decoration: none;
+      font-size: 13px;
+      font-weight: bold;
+    }
+
+    .nav-links a:hover {
+      color: gold;
+    }
+
+    .nav-links a.active {
+      color: gold;
+      text-decoration: underline;
+    }
+
+    .hero {
+      margin-top: 100px;
+      min-height: calc(100vh - 100px);
+
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      background: linear-gradient(rgba(0,0,0,.3), rgba(0,0,0,.4)),
+                  url("./golf-bg-streaks.jpg");
+
+      background-size: contain;
+      background-position: center;
+      background-repeat: no-repeat;
+
+      text-align: center;
+      padding: 20px;
+    }
+
+    .hero h1 {
+      color: gold;
+      font-size: 60px;
+      margin: 0;
+    }
+
+    .hero p {
+      color: gold;
+      font-weight: bold;
+      font-size: 20px;
+      margin-top: 10px;
+      text-shadow: 2px 2px 8px black;
+    }
+
+    .streak-nav {
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    .streak-nav a {
+      display: inline-block;
+      margin: 10px;
+      padding: 10px 20px;
+      background: #1f2937;
+      color: #38bdf8;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 6px;
+    }
+
+    .streak-nav a:hover {
+      color: gold;
+      background: #374151;
+    }
+
+    .content {
+      width: 95%;
+      max-width: 1400px;
+      margin: 40px auto;
+    }
+
+    h2 {
+      text-align: center;
+      color: #60a5fa;
+      margin-top: 40px;
+    }
+
+    .table-row {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .half {
+      width: 48%;
+      min-width: 300px;
+    }
+
+    h3 {
+      text-align: center;
+      margin-bottom: 10px;
+    }
+
+    .dallas { color: #60a5fa; }
+    .houston { color: #f87171; }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      background: #1f2937;
+    }
+
+    th, td {
+      padding: 10px;
+      border-bottom: 1px solid #444;
+      text-align: center;
+    }
+
+    th { color: gold; }
+
+  </style>
+</head>
+
+<body>
+
+<div class="nav">
+  <div class="nav-left">
+    <img src="./logo-circle.png">
+    DH Cup
+  </div>
+
+  <div class="nav-links">
+    <a href="index.html">Home</a>
+    <a href="timeline.html">Timeline</a>
+    <a href="history.html">History</a>
+    <a href="highlights.html">Highlights</a>
+    <a href="players.html">Players</a>
+    <a href="streaks.html" class="active">Streaks</a>
+    <a href="teammates.html">Teammates</a>
+    <a href="handicap.html">Handicap History</a>
+    <a href="years.html">Year by Year Results</a>
+  </div>
+</div>
+
+<div class="hero">
+  <h1>Singles Streaks</h1>
+  <p>No partners...No Excuses!</p>
+</div>
+
+<div class="streak-nav">
+  <a href="streaks-scramble.html">Scramble</a>
+  <a href="streaks-bestball.html">Best Ball</a>
+  <a href="streaks-singles.html">Singles</a>
+</div>
+
+<div class="content" id="content"></div>
+
+<script>
+fetch("streaks.json")
+.then(res => res.json())
+.then(data => {
+
+  const s = data.singles;
+
+  function buildTable(rows) {
+    let html = "<table><tr><th>Player</th><th>Matches</th></tr>";
+
+    rows.forEach(r => {
+      html += `
+        <tr>
+          <td>${r.Player}</td>
+          <td>${r.Matches}</td>
+        </tr>`;
+    });
+
+    return html + "</table>";
+  }
+
+  function section(title, obj) {
+    return `
+      <h2>${title}</h2>
+      <div class="table-row">
+        <div class="half">
+          <h3 class="dallas">Team Dallas</h3>
+          ${buildTable(obj.dallas)}
+        </div>
+        <div class="half">
+          <h3 class="houston">Team Houston</h3>
+          ${buildTable(obj.houston)}
+        </div>
+      </div>
+    `;
+  }
+
+  document.getElementById("content").innerHTML = `
+    ${section("Longest Active Winning Streak - Singles", s.currentWins)}
+    ${section("Longest Winning Streak - Singles (Min 10 Cups)", s.allTimeWins)}
+    ${section("Longest Active Losing Streak - Singles", s.currentLosses)}
+    ${section("Longest Losing Streak - Singles (Min 10 Cups)", s.allTimeLosses)}
+  `;
+
+});
+</script>
+
+</body>
+</html>
+
