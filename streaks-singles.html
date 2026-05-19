@@ -1,9 +1,6 @@
 
 <!DOCTYPE html>
-<html>
-<head>
-  <title>DH Cup Singles Streaks</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+ content="width=device-width, initial-scale=1"><html>
 
   <style>
     body {
@@ -168,12 +165,39 @@
 
     th { color: gold; }
 
+    /* ✅ Tooltip Styling */
+    .tooltip-star {
+      font-size: 0.75em;
+      vertical-align: super;
+      cursor: pointer;
+      color: gold;
+    }
+
+    .tooltip-star:hover::after {
+      content: "Prior to enacting handicaps";
+      position: absolute;
+      background: black;
+      color: white;
+      padding: 5px 8px;
+      border-radius: 5px;
+      font-size: 12px;
+      margin-left: 6px;
+      white-space: nowrap;
+    }
+
+    /* ✅ Footnote */
+    .footnote {
+      text-align: center;
+      color: #facc15;
+      font-size: 13px;
+      margin-top: 8px;
+    }
+
   </style>
 </head>
 
 <body>
 
-<!-- ✅ NAV -->
 <div class="nav">
   <div class="nav-left">
     <img src="./logo-circle.png">
@@ -186,20 +210,18 @@
     <a href="history.html">History</a>
     <a href="highlights.html">Highlights</a>
     <a href="players.html">Players</a>
-    <a href="streaks.html" class="active">Streaks</a>
+    <a href="streaks.html">Streaks</a>
     <a href="teammates.html">Teammates</a>
     <a href="handicap.html">Handicap History</a>
     <a href="years.html">Year by Year Results</a>
   </div>
 </div>
 
-<!-- ✅ HERO -->
 <div class="hero">
   <h1>Singles Streaks</h1>
   <p>No teammate to blame this time.</p>
 </div>
 
-<!-- ✅ SUB NAV -->
 <div class="streak-nav">
   <a href="streaks.html">Active</a>
   <a href="streaks-alltime.html">All Time</a>
@@ -221,9 +243,11 @@ fetch("streaks.json")
     let html = "<table><tr><th>Player</th><th>Matches</th></tr>";
 
     rows.forEach(r => {
+      let name = r.Player.replace("*", `<span class="tooltip-star">*</span>`);
+
       html += `
         <tr>
-          <td>${r.Player}</td>
+          <td>${name}</td>
           <td>${r.Matches}</td>
         </tr>
       `;
@@ -233,6 +257,9 @@ fetch("streaks.json")
   }
 
   function section(title, obj) {
+
+    const showNote = title.includes("Winning Streak - Singles (Min 10 Cups)");
+
     return `
       <h2>${title}</h2>
       <div class="table-row">
@@ -240,9 +267,11 @@ fetch("streaks.json")
           <h3 class="dallas">Team Dallas</h3>
           ${buildTable(obj.dallas)}
         </div>
+
         <div class="half">
           <h3 class="houston">Team Houston</h3>
           ${buildTable(obj.houston)}
+          ${showNote ? `<div class="footnote">* Prior to enacting handicaps</div>` : ""}
         </div>
       </div>
     `;
@@ -259,3 +288,5 @@ fetch("streaks.json")
 
 </body>
 </html>
+<head>
+  <title>DH Cup Singles Streaks</title>
